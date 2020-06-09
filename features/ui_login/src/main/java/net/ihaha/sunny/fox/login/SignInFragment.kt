@@ -65,10 +65,10 @@ class SignInFragment : BaseBindingFragment<FragmentSignInBinding, SignInViewMode
             onListenerNavigationToMainActivity?.onNavigation()
         }
         viewBinding.tvForgetPassword.setOnClickListener {
-//            it.findNavController().navigate(R.id.action_signInFragment_to_resetPasswordFragment)
+            it.findNavController().navigate(R.id.action_signInFragment_to_resetPasswordFragment)
         }
         viewBinding.tvSignUp.setOnClickListener {
-//            it.findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+            it.findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
         }
     }
     //endregion

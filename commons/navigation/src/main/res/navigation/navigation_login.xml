@@ -7,63 +7,64 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="net.ihaha.sunny.fox.login.SignInFragment">
-
-        <action
-            android:id="@+id/action_signInFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_right"/>
-<!--            app:popUpTo="@+id/navigation_login"-->
-<!--            app:popUpToInclusive="true" />-->
-        <action
-            android:id="@+id/action_signInFragment_to_resetPasswordFragment"
-            app:destination="@id/resetPasswordFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_right"/>
-<!--            app:popUpTo="@+id/navigation_login"-->
-<!--            app:popUpToInclusive="true" />-->
-        <argument
-            android:name="prefix"
-            app:argType="string"
-            android:defaultValue="1" />
-    </fragment>
+        android:name="net.ihaha.sunny.fox.login.SignInFragment"/>
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="net.ihaha.sunny.fox.login.SignUpFragment">
-
-        <action
-            android:id="@+id/action_signUpFragment_to_signInFragment"
-            app:destination="@id/signInFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:launchSingleTop="false"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_right" />
-<!--            app:popUpTo="@+id/navigation_login"-->
-<!--            app:popUpToInclusive="true"/>-->
-    </fragment>
+        android:name="net.ihaha.sunny.fox.login.SignUpFragment"/>
 
     <fragment
         android:id="@+id/resetPasswordFragment"
-        android:name="net.ihaha.sunny.fox.login.ResetPasswordFragment">
+        android:name="net.ihaha.sunny.fox.login.ResetPasswordFragment"/>
 
-        <action
-            android:id="@+id/action_resetPasswordFragment_to_signInFragment"
-            app:destination="@id/signInFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_right"/>
-<!--            app:popUpTo="@+id/navigation_login"-->
-<!--            app:popUpToInclusive="true"/>-->
-    </fragment>
+    <action
+        android:id="@+id/action_splashFragment_to_signInFragment"
+        app:destination="@id/signInFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@+id/navigation_welcome"
+        app:popUpToInclusive="true" />
 
-    <include app:graph="@navigation/navigation_welcome" />
+    <action
+        android:id="@+id/action_signInFragment_to_signUpFragment"
+        app:destination="@id/signUpFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@+id/navigation_welcome"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_signInFragment_to_resetPasswordFragment"
+        app:destination="@id/resetPasswordFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@+id/navigation_welcome"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_signUpFragment_to_signInFragment"
+        app:destination="@id/signInFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@+id/navigation_welcome"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_resetPasswordFragment_to_signInFragment"
+        app:destination="@id/signInFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@+id/navigation_welcome"
+        app:popUpToInclusive="true" />
 
 </navigation>

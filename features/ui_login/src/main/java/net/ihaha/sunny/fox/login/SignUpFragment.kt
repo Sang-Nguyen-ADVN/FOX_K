@@ -60,7 +60,7 @@ class SignUpFragment : BaseBindingFragment<FragmentSignUpBinding, SignUpViewMode
             onListenerNavigationToMainActivity?.onNavigation()
         }
         viewBinding.tvSignIn.setOnClickListener {
-//            it.findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+            it.findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
         }
     }
     //endregion
