@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOX TECH</string>
+
+    <!-- ERRORS -->
+    <string name="error_user_password_incorrect">User password is incorrect or you trying to enter into another account</string>
+    <string name="error_user_repeated_password_incorrect">Repeated password does not equal to password written before</string>
+    <string name="error_user_email_incorrect">User email is incorrect or you trying to enter into another account</string>
+    <string name="error_user_phone_incorrect">User phone is incorrect or you trying to enter into another account</string>
+    <string name="error_user_name_empty">User name is empty. Please enter a valid name first</string>
+    <string name="error_user_email_empty">User email is empty. Please enter a valid email address first</string>
+    <string name="error_terms_of_usage_not_checked">You must agrees with terms of usage before using this application</string>
+    <string name="error_user_password_empty">User password is empty. Please enter a valid password from your account</string>
+    <string name="error_user_password_short">User password is too short. Minimum length is 6 characters</string>
+    <string name="error_user_phone_empty">User phone is empty. Please enter a valid phone number from your account</string>
+    <string name="error_user_phone_email_empty">Please enter a valid phone number or email address from your account</string>
+    <string name="error_user_sms_code_empty">Sms code is empty. Please enter a valid sms code</string>
+    <string name="error_user_not_exist">User account does not exist. Please Register!</string>
+    <string name="error_user_exist">User email account already exist. Please Register with another email!</string>
+    <string name="error_user_invalid_credentials">Incorrect user password or account does not exist!</string>
+    <string name="error_user_event_sign_in_failed">User auth event is broken! Please try later.</string>
+    <string name="error_user_sign_in">There is an error with logging in current account.</string>
+    <string name="error_unexpected">Sorry. Somethings goes wrong. Please try later.</string>
+    <string name="error_reducer_unexpected">Sorry. Somethings goes wrong with reducer call.</string>
+    <string name="error_too_many_request">Too many request. Please try later.</string>
+    <string name="error_internal_exception">Something goes wrong. Please try again later</string>
+    <string name="error_no_internet_connection">Please check your internet connection and try again</string>
+
+    <string name="error_exception_unknown_title">Unknown Error.</string>
+    <string name="error_exception_unknown_message">Please try again in a moment.</string>
+
+    <string name="onboarding_slide1_title">Create an account</string>
+    <string name="onboarding_slide1_subtitle">Connect with people around the world</string>
+    <string name="onboarding_slide1_desc">User will be able to give you live, chat and meetwith people nearby.</string>
+
+    <string name="onboarding_slide2_title">Login to your account</string>
+    <string name="onboarding_slide2_subtitle">Let\'s build connection with new people</string>
+    <string name="onboarding_slide2_desc">Connect helps you locate the people around you whoare closest from your home.</string>
+
+    <string name="onboarding_slide3_title">Login to your account</string>
+    <string name="onboarding_slide3_subtitle">Feel the happiness</string>
+    <string name="onboarding_slide3_desc">User will be able to give you live, chat and meet with people nearby.</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_tags">Tags</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_events">Events</string>
+    <string name="title_origanizations">Origanizations</string>
+    <string name="title_settings">Setting</string>
+    <string name="title_more">More</string>
+    <string name="title_newest">Newest</string>
+    <string name="title_editors_choice">EditorsChoice</string>
+    <string name="title_trending">Trending</string>
+    <string name="title_video">Video</string>
+    <string name="title_series">Series</string>
+
+    <string name="title_warning">Warning</string>
+    <string name="title_cancel">Cancel</string>
+    <string name="title_ok">OK</string>
+    <string name="title_back">Back</string>
+    <string name="title_try_again">Try again</string>
+    <string name="title_apply">Apply</string>
+    <string name="title_loading">Loading…</string>
+    <string name="title_next">Next</string>
+    <string name="title_skip">Skip</string>
+    <string name="title_started">Get started</string>
+    <string name="title_language_english">English</string>
+    <string name="title_account">Account</string>
+    <string name="title_search">Search</string>
+
+    <string name="title_sign_in_welcome_back">Welcome back</string>
+    <string name="title_sign_in_welcome_continue">Sign in to continue</string>
+    <string name="title_sign_in_user_name">User name</string>
+    <string name="title_sign_in_user_password">Password</string>
+    <string name="title_sign_in_user_forget_password">Forget password</string>
+    <string name="title_sign_in_log_in">Login</string>
+    <string name="title_sign_in_facebook">Sign in with facebook</string>
+    <string name="title_sign_in_google">Sign in with google</string>
+    <string name="title_sign_up">Sign Up</string>
+    <string name="title_sign_up_create_account">Create an account</string>
+    <string name="title_sign_up_create_continue">Create account to continue</string>
+    <string name="title_sign_up_user_name">User name</string>
+    <string name="title_sign_up_email_address">Email address</string>
+    <string name="title_sign_up_password">Password</string>
+    <string name="title_sign_up_re_password">Re enter password</string>
+    <string name="title_sign_up_already_account">"Already have account? "</string>
+    <string name="title_sign_up_to_sign_in">"Log in "</string>
+    <string name="title_reset_password">Forget Password</string>
+    <string name="title_reset_password_contain">Input info get password</string>
+    <string name="title_reset_password_input">Email</string>
+    <string name="title_reset_password_send">Send</string>
+
+
+</resources>

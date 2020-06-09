@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_change_theme">Giao diện :</string>
+    <string name="title_theme_light">Sáng</string>
+    <string name="title_theme_dark">Tối</string>
+    <string name="title_setting">Cài đặt</string>
+    <string name="title_change_language">Ngôn ngữ :</string>
+    <string name="title_language_vietnamese">Việt Nam</string>
+    <string name="title_language_english">Tiếng anh</string>
+</resources>

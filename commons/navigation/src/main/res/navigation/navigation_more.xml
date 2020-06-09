@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_more_horiz"
+    app:startDestination="@id/moreFragment">
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="net.ihaha.sunny.fox.more.MoreFragment"
+        app:moduleName="FOX.features.ui_more"
+        tools:layout="@layout/fragment_more"
+        android:label="@string/title_more" />
+
+</navigation>

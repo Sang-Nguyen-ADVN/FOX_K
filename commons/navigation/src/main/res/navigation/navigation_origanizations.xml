@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_origanizations"
+    app:startDestination="@id/origanizationsFragment">
+
+    <fragment
+        android:id="@+id/origanizationsFragment"
+        android:name="net.ihaha.sunny.fox.organizations.OriganizationsFragment"
+        app:moduleName="FOX.features.ui_organizations"
+        tools:layout="@layout/fragment_origanizations"
+        android:label="@string/title_origanizations" />
+</navigation>

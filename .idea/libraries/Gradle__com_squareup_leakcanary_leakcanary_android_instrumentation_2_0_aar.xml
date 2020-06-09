@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.leakcanary:leakcanary-android-instrumentation:2.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6c825e1bc49e23087504dc8d43d89250/jetified-leakcanary-android-instrumentation-2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6c825e1bc49e23087504dc8d43d89250/jetified-leakcanary-android-instrumentation-2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6c825e1bc49e23087504dc8d43d89250/jetified-leakcanary-android-instrumentation-2.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-android-instrumentation/2.0/324c30abbc18dac13b91ad850c9629dd8cd3c23c/leakcanary-android-instrumentation-2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-android-instrumentation/2.0/82b4b1326e8af8b64e16cc716536bd6736dad5b/leakcanary-android-instrumentation-2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

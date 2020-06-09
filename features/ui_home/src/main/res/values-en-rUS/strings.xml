@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_home">Home</string>
+    <string name="title_tags">Tags</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_events">Events</string>
+    <string name="title_origanizations">Origanizations</string>
+    <string name="title_settings">Setting</string>
+    <string name="title_more">More</string>
+    <string name="title_newest">Newest</string>
+    <string name="title_editors_choice">EditorsChoice</string>
+    <string name="title_trending">Trending</string>
+    <string name="title_video">Video</string>
+    <string name="title_series">Series</string>
+
+    <string-array name="title_array_home">
+        <item>@string/title_newest</item>
+        <item>@string/title_editors_choice</item>
+        <item>@string/title_trending</item>
+        <item>@string/title_video</item>
+        <item>@string/title_series</item>
+    </string-array>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_tags"
+    app:startDestination="@id/tagsFragment">
+
+    <fragment
+        android:id="@+id/tagsFragment"
+        android:name="net.ihaha.sunny.fox.tags.TagsFragment"
+        app:moduleName="FOX.features.ui_tags"
+        android:label="@string/title_tags" />
+</navigation>

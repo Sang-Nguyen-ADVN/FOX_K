@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_notifications">Thông báo</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_tags">Chuyên mục</string>
+    <string name="title_events">Sự kiện</string>
+    <string name="title_origanizations">Tổ chức</string>
+    <string name="title_settings">Cài đặt</string>
+    <string name="title_more">Thêm</string>
+    <string name="title_newest">Newest</string>
+    <string name="title_trending">Trending</string>
+    <string name="title_video">Video</string>
+    <string name="title_series">Series</string>
+    <string name="title_editors_choice">EditorsChoice</string>
+
+    <string-array name="title_array_home">
+        <item>@string/title_newest</item>
+        <item>@string/title_editors_choice</item>
+        <item>@string/title_trending</item>
+        <item>@string/title_video</item>
+        <item>@string/title_series</item>
+    </string-array>
+</resources>

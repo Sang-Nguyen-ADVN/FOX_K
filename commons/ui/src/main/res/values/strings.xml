@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">FOX TECH</string>
+
+    <!-- ERRORS -->
+    <string name="error_user_password_incorrect">User password is incorrect or you trying to enter into another account</string>
+    <string name="error_user_repeated_password_incorrect">Repeated password does not equal to password written before</string>
+    <string name="error_user_email_incorrect">User email is incorrect or you trying to enter into another account</string>
+    <string name="error_user_phone_incorrect">User phone is incorrect or you trying to enter into another account</string>
+    <string name="error_user_name_empty">User name is empty. Please enter a valid name first</string>
+    <string name="error_user_email_empty">User email is empty. Please enter a valid email address first</string>
+    <string name="error_terms_of_usage_not_checked">You must agrees with terms of usage before using this application</string>
+    <string name="error_user_password_empty">User password is empty. Please enter a valid password from your account</string>
+    <string name="error_user_password_short">User password is too short. Minimum length is 6 characters</string>
+    <string name="error_user_phone_empty">User phone is empty. Please enter a valid phone number from your account</string>
+    <string name="error_user_phone_email_empty">Please enter a valid phone number or email address from your account</string>
+    <string name="error_user_sms_code_empty">Sms code is empty. Please enter a valid sms code</string>
+    <string name="error_user_not_exist">User account does not exist. Please Register!</string>
+    <string name="error_user_exist">User email account already exist. Please Register with another email!</string>
+    <string name="error_user_invalid_credentials">Incorrect user password or account does not exist!</string>
+    <string name="error_user_event_sign_in_failed">User auth event is broken! Please try later.</string>
+    <string name="error_user_sign_in">There is an error with logging in current account.</string>
+    <string name="error_unexpected">Sorry. Somethings goes wrong. Please try later.</string>
+    <string name="error_reducer_unexpected">Sorry. Somethings goes wrong with reducer call.</string>
+    <string name="error_too_many_request">Too many request. Please try later.</string>
+    <string name="error_internal_exception">Something goes wrong. Please try again later</string>
+    <string name="error_no_internet_connection">Please check your internet connection and try again</string>
+
+    <string name="error_exception_unknown_title">Unknown Error.</string>
+    <string name="error_exception_unknown_message">Please try again in a moment.</string>
+
+    <string name="onboarding_slide1_title">Create an account</string>
+    <string name="onboarding_slide1_subtitle">Connect with people around the world</string>
+    <string name="onboarding_slide1_desc">User will be able to give you live, chat and meetwith people nearby.</string>
+
+    <string name="onboarding_slide2_title">Login to your account</string>
+    <string name="onboarding_slide2_subtitle">Let\'s build connection with new people</string>
+    <string name="onboarding_slide2_desc">Connect helps you locate the people around you whoare closest from your home.</string>
+
+    <string name="onboarding_slide3_title">Login to your account</string>
+    <string name="onboarding_slide3_subtitle">Feel the happiness</string>
+    <string name="onboarding_slide3_desc">User will be able to give you live, chat and meet with people nearby.</string>
+
+    <string name="title_notifications">Thông báo</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_tags">Chuyên mục</string>
+    <string name="title_events">Sự kiện</string>
+    <string name="title_origanizations">Tổ chức</string>
+    <string name="title_settings">Cài đặt</string>
+    <string name="title_more">Thêm</string>
+    <string name="title_newest">Newest</string>
+    <string name="title_trending">Trending</string>
+    <string name="title_video">Video</string>
+    <string name="title_series">Series</string>
+    <string name="title_editors_choice">EditorsChoice</string>
+
+    <string name="title_warning">Cảnh báo</string>
+    <string name="title_cancel">Hủy</string>
+    <string name="title_ok">Đồng ý</string>
+    <string name="title_back">Quay lại</string>
+    <string name="title_try_again">Thử lại</string>
+    <string name="title_apply">Chấp nhận</string>
+    <string name="title_loading">Loading…</string>
+    <string name="title_next">Next</string>
+    <string name="title_skip">Skip</string>
+    <string name="title_started">Bắt đầu</string>
+    <string name="title_account">Tài khoản</string>
+    <string name="title_search">Tìm kiếm</string>
+    <string name="title_language_english">Tiếng anh</string>
+    <string name="title_sign_in_welcome_back">Chào mừng trở lại</string>
+    <string name="title_sign_in_welcome_continue">Đăng nhập để tiếp tục</string>
+    <string name="title_sign_in_user_name">Tên đăng nhập</string>
+    <string name="title_sign_in_user_password">Mật khẩu</string>
+    <string name="title_sign_in_user_forget_password">Quên mật khẩu</string>
+    <string name="title_sign_in_log_in">Đăng nhập</string>
+    <string name="title_sign_in_facebook">Đăng nhập với facebook</string>
+    <string name="title_sign_in_google">Đăng nhập với google</string>
+    <string name="title_sign_up">Đăng ký</string>
+    <string name="title_sign_up_create_account">Tạo tài khoản</string>
+    <string name="title_sign_up_create_continue">Tạo tài khoản để tiếp</string>
+    <string name="title_sign_up_user_name">Tên đăng nhập</string>
+    <string name="title_sign_up_email_address">Email</string>
+    <string name="title_sign_up_password">Mật khẩu</string>
+    <string name="title_sign_up_re_password">Nhập lại mật khẩu</string>
+    <string name="title_sign_up_already_account">Bạn đã có tài khoản? </string>
+    <string name="title_sign_up_to_sign_in">Đăng nhập</string>
+    <string name="title_reset_password">Lấy lại mật khẩu</string>
+    <string name="title_reset_password_contain">Nhập thông tin để lấy lại mật khẩu</string>
+    <string name="title_reset_password_input">Nhập địa chỉ email</string>
+    <string name="title_reset_password_send">Gửi</string>
+
+</resources>

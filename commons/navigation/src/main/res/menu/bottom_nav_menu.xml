@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_tags"
+        android:icon="@drawable/ic_tags_24"
+        android:title="@string/title_tags" />
+
+    <item
+        android:id="@+id/navigation_origanizations"
+        android:icon="@drawable/ic_origanizations_24"
+        android:title="@string/title_origanizations" />
+
+    <item
+        android:id="@+id/navigation_events"
+        android:icon="@drawable/ic_events_24"
+        android:title="@string/title_events" />
+
+    <item
+        android:id="@+id/navigation_more_horiz"
+        android:icon="@drawable/ic_more_horiz_24"
+        android:title="@string/title_more" />
+
+</menu>

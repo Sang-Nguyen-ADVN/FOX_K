@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="net.ihaha.sunny.fox.more.MoreViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_20">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_settings"
+            style="@style/textAppearanceHeadline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_theme"
+            style="@style/textAppearanceSubtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:text="@string/title_change_theme"
+            app:layout_constraintEnd_toEndOf="@+id/gl_group"
+            app:layout_constraintTop_toBottomOf="@+id/tv_settings" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swc_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/title_theme_light"
+            android:textOff="@string/title_theme_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_theme"
+            app:layout_constraintStart_toStartOf="@+id/gl_group"
+            app:layout_constraintTop_toTopOf="@+id/tv_theme" />
+
+        <TextView
+            android:id="@+id/tv_theme_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/swc_theme"
+            app:layout_constraintBottom_toBottomOf="@+id/swc_theme"
+            app:layout_constraintStart_toEndOf="@+id/swc_theme"
+            android:layout_marginStart="@dimen/dp_2"
+            android:text="@string/title_theme_light"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_language"
+            style="@style/textAppearanceSubtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:text="@string/title_change_language"
+            app:layout_constraintEnd_toEndOf="@+id/gl_group"
+            app:layout_constraintTop_toBottomOf="@+id/tv_theme" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swc_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_language"
+            app:layout_constraintStart_toStartOf="@+id/gl_group"
+            app:layout_constraintTop_toTopOf="@+id/tv_language" />
+
+        <TextView
+            android:id="@+id/tv_language_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/swc_language"
+            app:layout_constraintBottom_toBottomOf="@+id/swc_language"
+            app:layout_constraintStart_toEndOf="@+id/swc_language"
+            android:layout_marginStart="@dimen/dp_2"
+            android:text="@string/title_language_vietnamese"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp_140" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
