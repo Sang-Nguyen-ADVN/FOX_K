@@ -50,6 +50,9 @@
             android:name="prefix"
             app:argType="string"
             android:defaultValue="1" />
+        <action
+            android:id="@+id/action_splashFragment_to_navigation_login"
+            app:destination="@id/navigation_login" />
 
     </fragment>
 
@@ -67,9 +70,13 @@
             app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@+id/navigation_welcome"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_boardingFragment_to_navigation_login"
+            app:destination="@id/navigation_login" />
     </fragment>
+    <include app:graph="@navigation/navigation_login" />
 
-<!--    <fragment-->
+    <!--    <fragment-->
 <!--        android:id="@+id/signInFragment"-->
 <!--        android:name="net.ihaha.sunny.fox.login.SignInFragment">-->
 

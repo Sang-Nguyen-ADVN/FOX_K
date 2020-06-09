@@ -55,11 +55,15 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding, SplashViewMode
 
     private fun initEventListener() {
         if (viewModel.isCheckOnBoarding()) {
-            onListenerNavigationToMainActivity?.onNavigation()
-        } else {
+//            onListenerNavigationToMainActivity?.onNavigation()
             launch {
                 delay(2000)
                 findNavController().navigate(R.id.action_splashFragment_to_signInFragment)
+            }
+        } else {
+            launch {
+                delay(2000)
+                findNavController().navigate(R.id.action_splashFragment_to_boardingFragment)
             }
 
         }

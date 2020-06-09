@@ -25,10 +25,9 @@ class WelcomeActivity : AppCompatActivity(), OnListenerNavigationToMainActivity,
     }
 
     override fun onNavigation() {
-        Thread.sleep(4000)
-        val intent = Intent(this@WelcomeActivity, MainActivity::class.java)
-        startActivity(intent)
-        finish()
+//        val intent = Intent(this@WelcomeActivity, MainActivity::class.java)
+//        startActivity(intent)
+//        finish()
     }
 
     //endregion

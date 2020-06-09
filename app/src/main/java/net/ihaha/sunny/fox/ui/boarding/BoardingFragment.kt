@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
+import kotlinx.coroutines.launch
 import net.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
 import net.ihaha.sunny.fox.R
 import net.ihaha.sunny.fox.databinding.FragmentBoardingBinding
@@ -56,8 +57,9 @@ class BoardingFragment : BaseBindingFragment<FragmentBoardingBinding, BoardingVi
             OnClickNavigationToMain {
             override fun onClickNavigation() {
                 viewModel.saveKeyOnBoarding()
-//                Thread.sleep(2000)
-                findNavController().navigate(R.id.action_boardingFragment_to_signInFragment)
+                launch {
+                    findNavController().navigate(R.id.action_boardingFragment_to_signInFragment)
+                }
 //                if(onListenerNavigationToMainActivity != null){
 //                    onListenerNavigationToMainActivity?.onNavigation()
 //                }

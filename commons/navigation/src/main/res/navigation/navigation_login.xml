@@ -64,4 +64,6 @@
 <!--            app:popUpToInclusive="true"/>-->
     </fragment>
 
+    <include app:graph="@navigation/navigation_welcome" />
+
 </navigation>

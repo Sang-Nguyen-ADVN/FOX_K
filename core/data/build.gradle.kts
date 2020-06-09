@@ -17,7 +17,7 @@ dependencies {
     implementation(project(BuildModules.CORES.REMOTE))
     //FIREBASE
     implementation(Dependencies.FIREBASE_AUTH)
-    implementation(Dependencies.FIREBASE_CORE)
+//    implementation(Dependencies.FIREBASE_CORE)
     implementation(Dependencies.FIREBASE_ANALYTICS)
     implementation(Dependencies.FIREBASE_FIRESTORE)
     implementation(Dependencies.FIREBASE_CRASHLYTICS)

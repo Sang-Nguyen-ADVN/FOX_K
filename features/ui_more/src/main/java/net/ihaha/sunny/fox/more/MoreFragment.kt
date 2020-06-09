@@ -50,7 +50,7 @@ class MoreFragment : BaseBindingFragment<FragmentMoreBinding, MoreViewModel>() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return super.onCreateView(inflater, container, savedInstanceState)
-        setThemeListener()
+//        setThemeListener()
     }
 
     override fun onAttach(context: Context) {
