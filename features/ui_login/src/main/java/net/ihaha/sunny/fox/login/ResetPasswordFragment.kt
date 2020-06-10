@@ -9,6 +9,7 @@ import net.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
 import net.ihaha.sunny.fox.login.databinding.FragmentResetPasswordBinding
 import net.ihaha.sunny.fox.login.di.injectFeature
 import net.ihaha.sunny.fox.login.di.removeFeature
+import net.ihaha.sunny.navigation.navigateSafe
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ResetPasswordFragment : BaseBindingFragment<FragmentResetPasswordBinding, SignUpViewModel>(){
@@ -48,7 +49,8 @@ class ResetPasswordFragment : BaseBindingFragment<FragmentResetPasswordBinding, 
 
     private fun initEventListeners(){
         viewBinding.btnResetPassword.setOnClickListener {
-            it.findNavController().navigate(R.id.action_resetPasswordFragment_to_signInFragment)
+//            it.findNavController().navigate(R.id.action_resetPasswordFragment_to_signInFragment)
+            this.navigateSafe(R.id.action_resetPasswordFragment_to_signInFragment)
         }
     }
     //endregion

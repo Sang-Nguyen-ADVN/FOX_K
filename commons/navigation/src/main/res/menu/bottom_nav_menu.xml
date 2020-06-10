@@ -12,7 +12,7 @@
         android:title="@string/title_tags" />
 
     <item
-        android:id="@+id/navigation_origanizations"
+        android:id="@+id/navigation_organizations"
         android:icon="@drawable/ic_origanizations_24"
         android:title="@string/title_origanizations" />
 
@@ -22,7 +22,7 @@
         android:title="@string/title_events" />
 
     <item
-        android:id="@+id/navigation_more_horiz"
+        android:id="@+id/navigation_more"
         android:icon="@drawable/ic_more_horiz_24"
         android:title="@string/title_more" />
 

@@ -7,12 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import net.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
 import net.ihaha.sunny.fox.login.databinding.FragmentSignInBinding
 import net.ihaha.sunny.fox.login.di.injectFeature
 import net.ihaha.sunny.fox.login.di.removeFeature
 import net.ihaha.sunny.fox.ui.callback.OnListenerNavigationToMainActivity
 import net.ihaha.sunny.fox.ui.main.MainActivity
+import net.ihaha.sunny.navigation.navigateSafe
+import net.ihaha.sunny.ui.extensions.setOnSingleClickListener
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SignInFragment : BaseBindingFragment<FragmentSignInBinding, SignInViewModel>(){
@@ -64,11 +67,16 @@ class SignInFragment : BaseBindingFragment<FragmentSignInBinding, SignInViewMode
         viewBinding.btnSignIn.setOnClickListener {
             onListenerNavigationToMainActivity?.onNavigation()
         }
-        viewBinding.tvForgetPassword.setOnClickListener {
-            it.findNavController().navigate(R.id.action_signInFragment_to_resetPasswordFragment)
+        viewBinding.tvForgetPassword.setOnSingleClickListener() {
+            if (findNavController().currentDestination?.id == R.id.signInFragment) {
+//                findNavController().navigate(R.id.action_signInFragment_to_resetPasswordFragment)
+                Navigation.findNavController(it).navigate(R.id.action_signInFragment_to_resetPasswordFragment)
+            }
+//            this.navigateSafe(R.id.action_signInFragment_to_resetPasswordFragment)
         }
         viewBinding.tvSignUp.setOnClickListener {
-            it.findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+//            it.findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+            this.navigateSafe(R.id.action_signInFragment_to_signUpFragment)
         }
     }
     //endregion

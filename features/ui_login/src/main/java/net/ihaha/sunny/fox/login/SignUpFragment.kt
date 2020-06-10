@@ -9,6 +9,7 @@ import net.ihaha.sunny.fox.login.databinding.FragmentSignUpBinding
 import net.ihaha.sunny.fox.login.di.injectFeature
 import net.ihaha.sunny.fox.login.di.removeFeature
 import net.ihaha.sunny.fox.ui.callback.OnListenerNavigationToMainActivity
+import net.ihaha.sunny.navigation.navigateSafe
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SignUpFragment : BaseBindingFragment<FragmentSignUpBinding, SignUpViewModel>(){
@@ -60,7 +61,8 @@ class SignUpFragment : BaseBindingFragment<FragmentSignUpBinding, SignUpViewMode
             onListenerNavigationToMainActivity?.onNavigation()
         }
         viewBinding.tvSignIn.setOnClickListener {
-            it.findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+//            it.findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+            this.navigateSafe(R.id.action_signUpFragment_to_signInFragment)
         }
     }
     //endregion
