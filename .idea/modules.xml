@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FOX.iml" filepath="$PROJECT_DIR$/.idea/modules/FOX.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FOX.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FOX.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FOX.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/FOX.buildSrc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/commons/FOX.commons.iml" filepath="$PROJECT_DIR$/.idea/modules/commons/FOX.commons.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/commons/base/FOX.commons.base.iml" filepath="$PROJECT_DIR$/.idea/modules/commons/base/FOX.commons.base.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/commons/navigation/FOX.commons.navigation.iml" filepath="$PROJECT_DIR$/.idea/modules/commons/navigation/FOX.commons.navigation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/commons/ui/FOX.commons.ui.iml" filepath="$PROJECT_DIR$/.idea/modules/commons/ui/FOX.commons.ui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/commons/utils/FOX.commons.utils.iml" filepath="$PROJECT_DIR$/.idea/modules/commons/utils/FOX.commons.utils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/FOX.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/FOX.core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/cache/FOX.core.cache.iml" filepath="$PROJECT_DIR$/.idea/modules/core/cache/FOX.core.cache.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/data/FOX.core.data.iml" filepath="$PROJECT_DIR$/.idea/modules/core/data/FOX.core.data.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/domain/FOX.core.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/core/domain/FOX.core.domain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/local/FOX.core.local.iml" filepath="$PROJECT_DIR$/.idea/modules/core/local/FOX.core.local.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/remote/FOX.core.remote.iml" filepath="$PROJECT_DIR$/.idea/modules/core/remote/FOX.core.remote.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/FOX.features.iml" filepath="$PROJECT_DIR$/.idea/modules/features/FOX.features.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/ui_events/FOX.features.ui_events.iml" filepath="$PROJECT_DIR$/.idea/modules/features/ui_events/FOX.features.ui_events.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/ui_home/FOX.features.ui_home.iml" filepath="$PROJECT_DIR$/.idea/modules/features/ui_home/FOX.features.ui_home.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/ui_login/FOX.features.ui_login.iml" filepath="$PROJECT_DIR$/.idea/modules/features/ui_login/FOX.features.ui_login.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/ui_more/FOX.features.ui_more.iml" filepath="$PROJECT_DIR$/.idea/modules/features/ui_more/FOX.features.ui_more.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/ui_organizations/FOX.features.ui_organizations.iml" filepath="$PROJECT_DIR$/.idea/modules/features/ui_organizations/FOX.features.ui_organizations.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/ui_settings/FOX.features.ui_settings.iml" filepath="$PROJECT_DIR$/.idea/modules/features/ui_settings/FOX.features.ui_settings.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/ui_tags/FOX.features.ui_tags.iml" filepath="$PROJECT_DIR$/.idea/modules/features/ui_tags/FOX.features.ui_tags.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FOX_K.iml" filepath="$PROJECT_DIR$/.idea/FOX_K.iml" />
     </modules>
   </component>
 </project>

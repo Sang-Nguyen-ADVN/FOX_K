@@ -3,6 +3,7 @@
  */
 object BuildDependenciesVersions {
     //CORE
+    const val DESUGARJDKLIBS = "1.0.5"
     const val KOTLIN = "1.3.72"
     const val APPCOMPAT = "1.1.0"
     const val CORE_KTX = "1.1.0"

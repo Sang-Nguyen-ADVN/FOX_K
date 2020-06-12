@@ -62,7 +62,6 @@ class SignUpFragment : BaseBindingFragment<FragmentSignUpBinding, SignUpViewMode
         }
         viewBinding.tvSignIn.setOnClickListener {
 //            it.findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
-            this.navigateSafe(R.id.action_signUpFragment_to_signInFragment)
         }
     }
     //endregion

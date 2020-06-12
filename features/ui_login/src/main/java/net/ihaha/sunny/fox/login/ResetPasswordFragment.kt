@@ -50,7 +50,6 @@ class ResetPasswordFragment : BaseBindingFragment<FragmentResetPasswordBinding, 
     private fun initEventListeners(){
         viewBinding.btnResetPassword.setOnClickListener {
 //            it.findNavController().navigate(R.id.action_resetPasswordFragment_to_signInFragment)
-            this.navigateSafe(R.id.action_resetPasswordFragment_to_signInFragment)
         }
     }
     //endregion

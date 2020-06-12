@@ -18,7 +18,7 @@ import net.ihaha.sunny.navigation.navigateSafe
 import net.ihaha.sunny.ui.extensions.setOnSingleClickListener
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class SignInFragment : BaseBindingFragment<FragmentSignInBinding, SignInViewModel>(){
+class SignInFragment : BaseBindingFragment<FragmentSignInBinding, SignInViewModel>() {
 
     //region variable
 
@@ -34,7 +34,7 @@ class SignInFragment : BaseBindingFragment<FragmentSignInBinding, SignInViewMode
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        when(context){
+        when (context) {
             is OnListenerNavigationToMainActivity -> onListenerNavigationToMainActivity = context
         }
     }
@@ -59,24 +59,19 @@ class SignInFragment : BaseBindingFragment<FragmentSignInBinding, SignInViewMode
     //endregion
 
     //region method
-    private fun initComponents(){
+    private fun initComponents() {
 
     }
 
-    private fun initEventListeners(){
+    private fun initEventListeners() {
         viewBinding.btnSignIn.setOnClickListener {
             onListenerNavigationToMainActivity?.onNavigation()
         }
         viewBinding.tvForgetPassword.setOnSingleClickListener() {
-            if (findNavController().currentDestination?.id == R.id.signInFragment) {
-//                findNavController().navigate(R.id.action_signInFragment_to_resetPasswordFragment)
-                Navigation.findNavController(it).navigate(R.id.action_signInFragment_to_resetPasswordFragment)
-            }
-//            this.navigateSafe(R.id.action_signInFragment_to_resetPasswordFragment)
+//            it.findNavController().navigate(R.id.action_signInFragment_to_resetPasswordFragment)
         }
         viewBinding.tvSignUp.setOnClickListener {
-//            it.findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
-            this.navigateSafe(R.id.action_signInFragment_to_signUpFragment)
+            it.findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
         }
     }
     //endregion

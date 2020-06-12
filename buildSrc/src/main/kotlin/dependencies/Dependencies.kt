@@ -11,6 +11,7 @@ object Dependencies {
     const val COROUTINE_PLAY_SERVICE = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:${BuildDependenciesVersions.COROUTINE_PLAY_SERVICE}"
 
     //SUPPORT
+    const val DESUGARJDKLIBS = "com.android.tools:desugar_jdk_libs:${BuildDependenciesVersions.DESUGARJDKLIBS}"
     const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${BuildDependenciesVersions.KOTLIN}"
     const val APPCOMPAT = "androidx.appcompat:appcompat:${BuildDependenciesVersions.APPCOMPAT}"
     const val LEGACY = "androidx.legacy:legacy-support-v4:${BuildDependenciesVersions.LEGACY}"

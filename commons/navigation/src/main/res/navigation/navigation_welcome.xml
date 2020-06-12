@@ -8,6 +8,8 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="net.ihaha.sunny.fox.ui.welcome.WelcomeFragment"
+        android:label="FOX"
+        app:moduleName="app"
         tools:layout="@layout/fragment_welcome">
 
         <action
@@ -25,6 +27,8 @@
     <fragment
         android:id="@+id/splashFragment"
         android:name="net.ihaha.sunny.fox.ui.splash.SplashFragment"
+        android:label="FOX"
+        app:moduleName="app"
         tools:layout="@layout/fragment_splash">
 
         <action
@@ -52,6 +56,8 @@
     <fragment
         android:id="@+id/boardingFragment"
         android:name="net.ihaha.sunny.fox.ui.boarding.BoardingFragment"
+        android:label="FOX"
+        app:moduleName="app"
         tools:layout="@layout/fragment_boarding">
 
         <action
@@ -69,8 +75,70 @@
     <fragment
         android:id="@+id/signInFragment"
         android:name="net.ihaha.sunny.fox.login.SignInFragment"
-        tools:layout="@layout/fragment_sign_in"
-        android:label="SignInFragment" />
+        android:label="Login"
+        app:moduleName="login"
+        tools:layout="@layout/fragment_sign_in">
+
+        <action
+            android:id="@+id/action_signInFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/navigation_welcome"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/navigation_welcome"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="net.ihaha.sunny.fox.login.SignUpFragment"
+        android:label="LOGIN"
+        app:moduleName="ui_login"
+        tools:layout="@layout/fragment_sign_up">
+
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/navigation_welcome"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="net.ihaha.sunny.fox.login.ResetPasswordFragment"
+        android:label="LOGIN"
+        app:moduleName="ui_login"
+        tools:layout="@layout/fragment_reset_password">
+
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/navigation_welcome"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
 
 
 </navigation>

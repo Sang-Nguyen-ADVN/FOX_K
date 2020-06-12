@@ -1,4 +1,3 @@
-import BuildTypeRelease.isTestCoverageEnabled
 import dependencies.AnnotationProcessorsDependencies
 import dependencies.Dependencies
 import extensions.implementation
@@ -22,7 +21,6 @@ plugins {
     id(BuildPlugins.KOTLIN_ANDROID)
     id(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
 }
-
 
 android {
     compileSdkVersion(BuildAndroidConfig.COMPILE_SDK_VERSION)
@@ -119,9 +117,6 @@ android {
         execution = "ANDROIDX_TEST_ORCHESTRATOR"
     }
 
-
-
-
     packagingOptions.exclude("META-INF/DEPENDENCIES")
     packagingOptions.exclude("META-INF/LICENSE")
     packagingOptions.exclude("META-INF/LICENSE.txt")
@@ -207,7 +202,17 @@ dependencies {
     //LOG
     implementation(Dependencies.TIMBER)
 
-    //PROJECT
+
+    //MODULES
+    //implementation(project(BuildModules.APP))
+    //implementation(project(BuildModules.FEATURES.EVENTS))
+    //implementation(project(BuildModules.FEATURES.HOME))
+    //implementation(project(BuildModules.FEATURES.LOGIN))
+    //implementation(project(BuildModules.FEATURES.MORE))
+    //implementation(project(BuildModules.FEATURES.ORGANIZATIONS))
+    //implementation(project(BuildModules.FEATURES.SETTINGS))
+    //implementation(project(BuildModules.FEATURES.TAGS))
+
     implementation(project(BuildModules.COMMONS.BASE))
     implementation(project(BuildModules.COMMONS.UI))
     implementation(project(BuildModules.COMMONS.UTIL))
@@ -220,52 +225,3 @@ dependencies {
 
     kapt(AnnotationProcessorsDependencies.DATABINDING)
 }
-
-junitJacoco {
-    jacocoVersion = "0.8.5"
-    excludes = excludes.orEmpty().toMutableList().apply {
-//        add("**/net/ihaha/iot/doorbell/common/test/*")
-//        add("**/siarhei/luskanau/iot/doorbell/common/test/ui/*")
-//        add("**/di/*")
-
-        add("**/*Application*")
-        add("**/*Activity.*")
-        add("**/*Fragment.*")
-        add("**/*Adapter.*")
-        add("**/*ViewHolder.*")
-        add("**/*Directions*.*")
-        add("**/*Args*.*")
-        add("**/*_Impl*.*")
-
-        add("**/androidx/*")
-        add("**/databinding/*")
-
-        add("**/*\$*\$*.*")
-
-        addAll(
-            listOf(
-                "**/R.class",
-                "**/R2.class", // ButterKnife Gradle Plugin.
-                "**/R$*.class",
-                "**/R2$*.class", // ButterKnife Gradle Plugin.
-                "**/*$$*",
-                "**/*\$ViewInjector*.*", // Older ButterKnife Versions.
-                "**/*\$ViewBinder*.*", // Older ButterKnife Versions.
-                "**/*_ViewBinding*.*", // Newer ButterKnife Versions.
-                "**/BuildConfig.*",
-                "**/Manifest*.*",
-                "**/*\$Lambda$*.*", // Jacoco can not handle several "$" in class name.
-                "**/*Dagger*.*", // Dagger auto-generated code.
-                "**/*MembersInjector*.*", // Dagger auto-generated code.
-                "**/*_Provide*Factory*.*", // Dagger auto-generated code.
-                "**/*_Factory*.*", // Dagger auto-generated code.
-                "**/*\$JsonObjectMapper.*", // LoganSquare auto-generated code.
-                "**/*\$inlined$*.*", // Kotlin specific, Jacoco can not handle several "$" in class name.
-                "**/*\$Icepick.*", // Icepick auto-generated code.
-                "**/*\$StateSaver.*", // android-state auto-generated code.
-                "**/*AutoValue_*.*" // AutoValue auto-generated code.
-            )
-        )
-    }
-}
-
