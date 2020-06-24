@@ -1,21 +1,20 @@
 package net.ihaha.sunny.fox.data.repository.auth
 
 import com.google.firebase.auth.AuthCredential
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.channels.sendBlocking
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.flow
 import net.ihaha.sunny.base.network.firebase.await
+import net.ihaha.sunny.fox.domain.repository.auth.FirebaseAuthRepository
 
-class FirebaseAuthRepositoryImpl(private val firebaseAuth: FirebaseAuth) : FirebaseAuthRepository {
+class FirebaseAuthRepositoryImpl(private val firebaseAuth: FirebaseAuth) :
+    FirebaseAuthRepository {
 
     @ExperimentalCoroutinesApi
-    override suspend fun authStateChanges() = callbackFlow<FirebaseAuth>  {
+    override suspend fun authStateChanges()= callbackFlow<FirebaseAuth>  {
         val listener = FirebaseAuth.AuthStateListener {
             this@callbackFlow.sendBlocking(it)
         }
@@ -24,10 +23,6 @@ class FirebaseAuthRepositoryImpl(private val firebaseAuth: FirebaseAuth) : Fireb
         awaitClose {
             firebaseAuth.removeAuthStateListener(listener)
         }
-    }
-
-    override suspend fun createUserWithEmailAndPassword(email: String, password: String) = flow{
-        emit(firebaseAuth.signInWithEmailAndPassword(email, password).await())
     }
 
     override suspend fun fetchProvidersForEmail(email: String) = flow {
@@ -41,34 +36,29 @@ class FirebaseAuthRepositoryImpl(private val firebaseAuth: FirebaseAuth) : Fireb
         emit(firebaseAuth.currentUser)
     }
 
-    override suspend fun sendPasswordResetEmail(email: String) = flow {
-        firebaseAuth.sendPasswordResetEmail(email).await()
-        emit(true)
-    }
-
     override suspend fun signInAnonymous() = flow {
-        val auth = firebaseAuth.signInAnonymously().await()
-        emit(auth.user)
+        emit(firebaseAuth.signInAnonymously().await().user)
     }
 
     override suspend fun signInWithCredential(credential: AuthCredential) = flow {
-        val auth = firebaseAuth.signInWithCredential(credential).await()
-        emit(auth.user)
+        emit(firebaseAuth.signInWithCredential(credential).await().user)
     }
 
     override suspend fun signInWithCustomToken(token: String) = flow {
-        val auth = firebaseAuth.signInWithCustomToken(token).await()
-        emit(auth.user)
+        emit(firebaseAuth.signInWithCustomToken(token).await().user)
     }
 
     override suspend fun signInWithEmailAndPassword(email: String, password: String) = flow {
-        val auth = firebaseAuth.signInWithEmailAndPassword(email, password).await()
-        emit(auth.user)
+        emit(firebaseAuth.signInWithEmailAndPassword(email, password).await().user)
     }
 
     override suspend fun signUpWithEmailAndPassword(email: String, password: String) = flow {
-        val auth = firebaseAuth.createUserWithEmailAndPassword(email, password).await()
-        emit(auth.user)
+        emit(firebaseAuth.createUserWithEmailAndPassword(email, password).await().user)
+    }
+
+    override suspend fun sendPasswordResetEmail(email: String) = flow {
+        firebaseAuth.sendPasswordResetEmail(email).await()
+        emit(true)
     }
 
     override suspend fun signOut() = flow {

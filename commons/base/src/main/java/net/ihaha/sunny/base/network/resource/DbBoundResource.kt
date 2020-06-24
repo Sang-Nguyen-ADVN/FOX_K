@@ -46,7 +46,7 @@ abstract class DbBoundResource<T : Any> {
 }
 
 @ExperimentalCoroutinesApi
-inline fun <T : Any> dbBoundResource(
+inline fun <T : Any> DbBoundResource(
     crossinline initialParams: () -> Pair<Int, Int> = { pairOf(-1, 0) },
     crossinline dbFetcher: suspend () -> T?,
     crossinline validator: suspend (T?) -> Boolean

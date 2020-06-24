@@ -5,10 +5,10 @@ plugins {
 dependencies {
     //MODULES
     implementation(project(BuildModules.COMMONS.BASE))
-    implementation(project(BuildModules.CORES.DATA))
-    implementation(project(BuildModules.CORES.CACHE))
-    implementation(project(BuildModules.CORES.LOCAL))
-    implementation(project(BuildModules.CORES.REMOTE))
+//    implementation(project(BuildModules.CORES.DATA))
+//    implementation(project(BuildModules.CORES.CACHE))
+//    implementation(project(BuildModules.CORES.LOCAL))
+//    implementation(project(BuildModules.CORES.REMOTE))
     //FIREBASE
     implementation(Dependencies.FIREBASE_AUTH)
 //    implementation(Dependencies.FIREBASE_CORE)

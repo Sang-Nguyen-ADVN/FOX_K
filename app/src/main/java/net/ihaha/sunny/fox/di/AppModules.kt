@@ -1,6 +1,6 @@
 package net.ihaha.sunny.fox.di
 
-import net.ihaha.sunny.fox.data.repository.di.repositoryModule
+import net.ihaha.sunny.fox.data.di.dataModule
 import net.ihaha.sunny.fox.domain.di.domainModules
 import net.ihaha.sunny.fox.local.di.databaseModule
 import net.ihaha.sunny.fox.remote.di.networkModule
@@ -15,7 +15,7 @@ val appModules = listOf(
     appModule,
     domainModules,
     networkModule,
-    repositoryModule,
+    dataModule,
     viewModelModule,
     settingModules,
     databaseModule

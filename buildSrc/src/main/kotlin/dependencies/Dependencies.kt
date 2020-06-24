@@ -44,6 +44,7 @@ object Dependencies {
     const val CONSTRAIN_LAYOUT = "androidx.constraintlayout:constraintlayout:${BuildDependenciesVersions.CONSTRAIN_LAYOUT}"
     const val SWIPE_REFRESH_LAYOUT = "androidx.swiperefreshlayout:swiperefreshlayout:${BuildDependenciesVersions.SWIPE_REFRESH_LAYOUT}"
     const val PAGING = "androidx.paging:paging-runtime-ktx:${BuildDependenciesVersions.PAGING}"
+    const val MATERIAL_DIALOG = "com.afollestad.material-dialogs:core:${BuildDependenciesVersions.MATERIAL_DIALOG}"
 
     //DI
     const val KOIN = "org.koin:koin-androidx-scope:${BuildDependenciesVersions.KOIN_VERSION}"

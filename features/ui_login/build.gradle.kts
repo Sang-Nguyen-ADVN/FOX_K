@@ -4,7 +4,12 @@ plugins {
     id("commons.android-dynamic-feature")
 }
 
+junitJacoco {
+    excludes = listOf("**/extensions/NavigationExtensions*.*")
+}
+
 dependencies {
+    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
     //FIREBASE
 //    implementation(Dependencies.FIREBASE_AUTH)
 //    implementation(Dependencies.FIREBASE_CORE)

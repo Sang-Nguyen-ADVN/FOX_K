@@ -26,13 +26,12 @@ android {
 
 dependencies {
 
+    //MODULE
+//    implementation(project(BuildModules.CORES.DATA))
     implementation(project(BuildModules.COMMONS.BASE))
+
     //DATA
-//    implementation(Dependencies.MOSHI)
-//    implementation(Dependencies.MOSHI_COGEN)
-//    implementation(Dependencies.MOSHI_KTX)
-//    implementation(Dependencies.MOSHI_ADAPTER)
-//    implementation(Dependencies.MOSHI_CONVERTER)
+
     implementation(Dependencies.ROOM)
     implementation(Dependencies.ROOM_KTX)
     kapt(Dependencies.ROOM_COMPILER)

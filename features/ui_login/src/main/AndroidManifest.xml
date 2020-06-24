@@ -5,11 +5,12 @@
 
     <dist:module
         dist:instant="false"
+        dist:onDemand="false"
         dist:title="Login">
-        <dist:delivery>
-            <dist:install-time />
-        </dist:delivery>
-        <dist:fusing dist:include="true" />
+<!--        <dist:delivery>-->
+<!--            <dist:install-time />-->
+<!--        </dist:delivery>-->
+        <dist:fusing dist:include="false" />
     </dist:module>
 
 </manifest>

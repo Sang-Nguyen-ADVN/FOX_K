@@ -1,9 +1,6 @@
 package net.ihaha.sunny.fox.ui.main
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
 import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
@@ -11,15 +8,14 @@ import androidx.lifecycle.observe
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.ui.setupActionBarWithNavController
+import kotlinx.android.synthetic.main.activity_main.*
 import net.ihaha.sunny.base.presentation.activity.BaseActivity
 import net.ihaha.sunny.fox.R
-import net.ihaha.sunny.fox.databinding.ActivityMainBinding
 import net.ihaha.sunny.fox.ui.callback.OnListenerChangeLanguage
 import net.ihaha.sunny.fox.ui.callback.OnListenerChangeTheme
 import net.ihaha.sunny.navigation.setupWithNavController
 import net.ihaha.sunny.ui.extensions.slideDown
 import net.ihaha.sunny.ui.extensions.slideUp
-import net.ihaha.sunny.ui.view.ui.ToggleThemeCheckBoxView
 import net.ihaha.sunny.utils.prefs.SharePrefsManager
 import net.ihaha.sunny.utils.prefs.SharedPrefKeys
 import net.ihaha.sunny.utils.settings.language.LanguageUtilsImpl
@@ -27,8 +23,7 @@ import net.ihaha.sunny.utils.settings.theme.ThemeUtilsImpl
 import org.koin.android.ext.android.inject
 
 
-@Suppress("UNREACHABLE_CODE")
-class MainActivity : BaseActivity<ActivityMainBinding>(), OnListenerChangeTheme, OnListenerChangeLanguage {
+class MainActivity : BaseActivity(R.layout.activity_main), OnListenerChangeTheme, OnListenerChangeLanguage {
 
     //region variable
     private var currentNavController: LiveData<NavController>? = null
@@ -45,12 +40,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), OnListenerChangeTheme,
 
     //region override
 
-    override val layoutId: Int = R.layout.activity_main
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setSupportActionBar(viewBinding.toolbar)
+        setSupportActionBar(toolbar)
 
         if (savedInstanceState == null) {
             setupBottomNavigationBar()
@@ -83,6 +76,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), OnListenerChangeTheme,
         setupBottomNavigationBar()
     }
 
+    override fun displayLoading(isLoading: Boolean) {
+
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         return currentNavController?.value?.navigateUp() ?: false
     }
@@ -99,9 +96,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), OnListenerChangeTheme,
     }
 
     private fun setupBottomNavigationBar() {
-        val bottomNavigationView = viewBinding.bottomNavigation
+        val bottomNavigationView = bottom_navigation
 
         val navGraphIds = listOf(
+            R.navigation.navigation_login,
             R.navigation.navigation_home,
             R.navigation.navigation_tags,
             R.navigation.navigation_event,
@@ -125,9 +123,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), OnListenerChangeTheme,
 
     inner class DestinationChangeListener() : NavController.OnDestinationChangedListener {
         override fun onDestinationChanged(controller: NavController, destination: NavDestination, arguments: Bundle?) {
-            viewBinding.toolbar.title = destination.label
-            viewBinding.collaspingToolbar.isTitleEnabled = false;
-            viewBinding.collaspingToolbar.title = destination.label
+            toolbar.title = destination.label
+            collasping_toolbar.isTitleEnabled = false;
+            collasping_toolbar.title = destination.label
 //            if (destination.id == R.id.detailsFragment) {
 //                findViewById<AppBarLayout>(R.id.app_bar).setExpanded(false)
 //                hideBottomTabs()
@@ -138,14 +136,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), OnListenerChangeTheme,
     }
 
     private fun hideBottomTabs() {
-        if (viewBinding.bottomNavigation.visibility == View.VISIBLE) {
-            viewBinding.bottomNavigation.slideDown()
+        if (bottom_navigation.visibility == View.VISIBLE) {
+            bottom_navigation.slideDown()
         }
     }
 
     private fun showBottomTabs() {
-        if (viewBinding.bottomNavigation.visibility != View.VISIBLE) {
-            viewBinding.bottomNavigation.slideUp()
+        if (bottom_navigation.visibility != View.VISIBLE) {
+            bottom_navigation.slideUp()
         }
     }
 

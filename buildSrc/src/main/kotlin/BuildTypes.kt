@@ -15,13 +15,17 @@ interface BuildTypeCustom {
     }
 
     val isMinifyEnabled: Boolean
+    val isUseProguard: Boolean
+    val isShrinkResources: Boolean
     val isCrashlyticsEnabled: Boolean
     val isTestCoverageEnabled: Boolean
     val isDebuggable: Boolean
 }
 
 object BuildTypeDebug : BuildTypeCustom {
-    override val isMinifyEnabled = false
+    override val isMinifyEnabled = true
+    override val isUseProguard = true
+    override val isShrinkResources = true
     override val isCrashlyticsEnabled = false
     override val isTestCoverageEnabled = true
     override val isDebuggable: Boolean get() = true
@@ -32,6 +36,8 @@ object BuildTypeDebug : BuildTypeCustom {
 
 object BuildTypeRelease : BuildTypeCustom {
     override val isMinifyEnabled = true
+    override val isUseProguard = true
+    override val isShrinkResources = true
     override val isCrashlyticsEnabled = true
     override var isTestCoverageEnabled = false
     override val isDebuggable: Boolean get() = false
@@ -66,6 +72,8 @@ object Debug : BuildTypeCreator {
             versionNameSuffix = BuildTypeDebug.versionNameSuffix
 
             isMinifyEnabled = BuildTypeDebug.isMinifyEnabled
+            isUseProguard = BuildTypeDebug.isUseProguard
+//            isShrinkResources = BuildTypeDebug.isShrinkResources
             isDebuggable = BuildTypeDebug.isDebuggable
 
             isTestCoverageEnabled = BuildTypeDebug.isTestCoverageEnabled
@@ -87,6 +95,7 @@ object Release : BuildTypeCreator {
             buildConfigBooleanField("ENABLE_CRASHLYTICS", BuildTypeRelease.isCrashlyticsEnabled)
 
             isMinifyEnabled = BuildTypeRelease.isMinifyEnabled
+            isUseProguard = BuildTypeRelease.isUseProguard
             isTestCoverageEnabled = BuildTypeRelease.isTestCoverageEnabled
 
             proguardFiles(

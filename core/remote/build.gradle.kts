@@ -24,6 +24,10 @@ android {
 }
 
 dependencies {
+
+    //MODULE
+//    implementation(project(BuildModules.CORES.DATA))
+
     implementation(Dependencies.CORE_KTX)
 
     //LIFECYCLE
@@ -44,10 +48,6 @@ dependencies {
     implementation(Dependencies.MOSHI_KTX)
     implementation(Dependencies.MOSHI_ADAPTER)
     implementation(Dependencies.MOSHI_CONVERTER)
-//    implementation(Dependencies.ROOM)
-//    implementation(Dependencies.ROOM)
-//    implementation(Dependencies.ROOM_KTX)
-//    kapt(Dependencies.ROOM_COMPILER)
 
     addTestsDependencies()
 }

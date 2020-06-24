@@ -17,7 +17,7 @@ abstract class SingleFetchNetworkBoundResource<T : Any, U : Any, V : Any> : Netw
     @ExperimentalCoroutinesApi
     override fun flow(): Flow<Resource<T>> {
         return flow {
-            val cachedData = getFromDatabase(isRefreshed = hasDataBeenFetched, limit = limit, offset = offset)
+            val cachedData = dataFromDatabase(isRefreshed = hasDataBeenFetched, limit = limit, offset = offset)
 
             if (validateCache(cachedData)) {
                 emit(Resource.Success(cachedData!!, isCached = true))
@@ -26,11 +26,11 @@ abstract class SingleFetchNetworkBoundResource<T : Any, U : Any, V : Any> : Netw
             }
 
             if (!hasDataBeenFetched) {
-                when (val apiResponse = getFromApi()) {
+                when (val apiResponse = dataFromServer()) {
                     is NetworkResponse.Success -> {
-                        persistData(apiResponse.body)
+                        dataFromPersist(apiResponse.body)
                         hasDataBeenFetched = true
-                        val refreshedData = getFromDatabase(isRefreshed = true, limit = limit, offset = offset)!!
+                        val refreshedData = dataFromDatabase(isRefreshed = true, limit = limit, offset = offset)!!
                         emit(Resource.Success(refreshedData, isCached = false))
                     }
                     is NetworkResponse.ServerError -> {
@@ -54,10 +54,10 @@ abstract class SingleFetchNetworkBoundResource<T : Any, U : Any, V : Any> : Netw
 @ExperimentalCoroutinesApi
 inline fun <T : Any, U : Any, V : Any> singleFetchNetworkBoundResource(
     crossinline initialParams: () -> Pair<Int, Int> = { -1 to 0 },
-    crossinline dbFetcher: suspend (Boolean, Int, Int) -> T?,
-    crossinline apiFetcher: suspend () -> NetworkResponse<U, V>,
+    crossinline dataToDatabase: suspend (Boolean, Int, Int) -> T?,
+    crossinline dataToServer: suspend () -> NetworkResponse<U, V>,
     crossinline cacheValidator: suspend (T?) -> Boolean,
-    crossinline dataPersister: suspend (U) -> Unit
+    crossinline dataToPersist: suspend (U) -> Unit
 ): SingleFetchNetworkBoundResource<T, U, V> {
     return object : SingleFetchNetworkBoundResource<T, U, V>() {
 
@@ -66,20 +66,20 @@ inline fun <T : Any, U : Any, V : Any> singleFetchNetworkBoundResource(
             updateParams(limit, offset)
         }
 
-        override suspend fun getFromDatabase(isRefreshed: Boolean, limit: Int, offset: Int): T? {
-            return dbFetcher(isRefreshed, limit, offset)
+        override suspend fun dataFromDatabase(isRefreshed: Boolean, limit: Int, offset: Int): T? {
+            return dataToDatabase(isRefreshed, limit, offset)
         }
 
         override suspend fun validateCache(cachedData: T?): Boolean {
             return cacheValidator(cachedData)
         }
 
-        override suspend fun getFromApi(): NetworkResponse<U, V> {
-            return apiFetcher()
+        override suspend fun dataFromServer(): NetworkResponse<U, V> {
+            return dataToServer()
         }
 
-        override suspend fun persistData(apiData: U) {
-            dataPersister(apiData)
+        override suspend fun dataFromPersist(apiData: U) {
+            dataToPersist(apiData)
         }
     }
 }
@@ -87,21 +87,21 @@ inline fun <T : Any, U : Any, V : Any> singleFetchNetworkBoundResource(
 @ExperimentalCoroutinesApi
 inline fun <T : Any, U : Any, V : Any> singleFetchNetworkBoundResourceLazy(
     crossinline initialParams: () -> Pair<Int, Int> = { -1 to 0 },
-    crossinline dbFetcher: suspend (Boolean, Int, Int) -> T?,
-    crossinline apiFetcher: suspend () -> NetworkResponse<U, V>,
+    crossinline dataToDatabase: suspend (Boolean, Int, Int) -> T?,
+    crossinline dataToServer: suspend () -> NetworkResponse<U, V>,
     crossinline cacheValidator: suspend (T?) -> Boolean,
-    crossinline dataPersister: suspend (U) -> Unit
+    crossinline dataToPersist: suspend (U) -> Unit
 ): Lazy<SingleFetchNetworkBoundResource<T, U, V>> {
-    return lazyOf(singleFetchNetworkBoundResource(initialParams, dbFetcher, apiFetcher, cacheValidator, dataPersister))
+    return lazyOf(singleFetchNetworkBoundResource(initialParams, dataToDatabase, dataToServer, cacheValidator, dataToPersist))
 }
 
 @ExperimentalCoroutinesApi
 inline fun <T : Any, U : Any, V : Any> singleFetchNetworkBoundFlow(
     crossinline initialParams: () -> Pair<Int, Int> = { -1 to 0 },
-    crossinline dbFetcher: suspend (Boolean, Int, Int) -> T?,
-    crossinline apiFetcher: suspend () -> NetworkResponse<U, V>,
+    crossinline dataToDatabase: suspend (Boolean, Int, Int) -> T?,
+    crossinline dataToServer: suspend () -> NetworkResponse<U, V>,
     crossinline cacheValidator: suspend (T?) -> Boolean,
-    crossinline dataPersister: suspend (U) -> Unit
+    crossinline dataToPersist: suspend (U) -> Unit
 ): Flow<Resource<T>> {
-    return singleFetchNetworkBoundResource(initialParams, dbFetcher, apiFetcher, cacheValidator, dataPersister).flow()
+    return singleFetchNetworkBoundResource(initialParams, dataToDatabase, dataToServer, cacheValidator, dataToPersist).flow()
 }

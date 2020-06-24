@@ -3,7 +3,7 @@ package net.ihaha.sunny.utils.prefs
 object SharedPrefKeys {
 
     object Welcome {
-        const val ON_BOARDING_KEY = "onboarding_key"
+        const val ON_CURRENT_USER_KEY = "onboarding_key"
         const val TOKEN_KEY = "token"
         const val USER_DATA = "USER"
         const val SUMMARY_DATA = "SUMMARY"

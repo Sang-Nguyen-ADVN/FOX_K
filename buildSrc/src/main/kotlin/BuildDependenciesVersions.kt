@@ -27,7 +27,8 @@ object BuildDependenciesVersions {
     const val VIEWPAGER_DOTSINDICATOR = "4.1.2"
     const val CIRCLE_IMAGE_VIEW = "2.2.0"
     const val HTML_TEXTVIEW = "3.9"
-    const val NAVIGATION = "2.3.0-beta01"
+    const val NAVIGATION = "2.3.0-rc01"
+    const val MATERIAL_DIALOG = "3.3.0"
 
     //LIFECYCLE
     const val LIFECYCLE = "2.2.0"

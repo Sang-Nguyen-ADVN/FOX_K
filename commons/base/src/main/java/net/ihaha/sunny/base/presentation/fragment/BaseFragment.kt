@@ -1,5 +1,6 @@
 package net.ihaha.sunny.base.presentation.fragment
 
+import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +12,15 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.rasalexman.coroutinesmanager.ICoroutinesManager
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 import net.ihaha.sunny.base.R
+import net.ihaha.sunny.base.domain.DataState
+import net.ihaha.sunny.base.domain.MessageType
+import net.ihaha.sunny.base.domain.StateMessage
+import net.ihaha.sunny.base.domain.UIComponentType
+import net.ihaha.sunny.base.presentation.listeners.DataStateChangeListener
+import net.ihaha.sunny.base.presentation.listeners.UICommunicationListener
 import net.ihaha.sunny.base.utils.extentions.processViewEvent
 import net.ihaha.sunny.ui.data.dto.SEvent
 import net.ihaha.sunny.ui.data.dto.SResult
@@ -20,6 +29,8 @@ import net.ihaha.sunny.base.utils.lifecycle.LifeCycleObserverUtils
 import net.ihaha.sunny.ui.typealiases.UnitHandler
 import net.ihaha.sunny.base.viewModels.IBaseViewModel
 
+@FlowPreview
+@ExperimentalCoroutinesApi
 abstract class BaseFragment<out VM : IBaseViewModel> : Fragment(), ICoroutinesManager {
 
     //region variable
@@ -32,6 +43,9 @@ abstract class BaseFragment<out VM : IBaseViewModel> : Fragment(), ICoroutinesMa
     protected open val loadingViewLayout: View? = null
     protected open val viewModel: VM? = null
 
+    protected var dataStateChangeListener: DataStateChangeListener? = null
+    protected var uiCommunicationListener: UICommunicationListener? = null
+
     protected open fun initLayout() = Unit
 
 
@@ -39,6 +53,15 @@ abstract class BaseFragment<out VM : IBaseViewModel> : Fragment(), ICoroutinesMa
     //endregion
 
     //region override
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        try {
+            dataStateChangeListener = context as DataStateChangeListener
+            uiCommunicationListener = context as UICommunicationListener
+        } catch (e: ClassCastException) {
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -65,85 +88,6 @@ abstract class BaseFragment<out VM : IBaseViewModel> : Fragment(), ICoroutinesMa
 
     //region method
 
-    /**
-     * Show alert dialog for [SResult.ErrorResult.Alert]
-     */
-    protected open fun showAlertDialog(
-        message: Any,
-        okTitle: Int = R.string.title_try_again,
-        okHandler: UnitHandler? = null
-    ) {
-        hideKeyboard()
-//        hideLoading()
-        alert(message = message, okTitle = okTitle, okHandler = okHandler)
-    }
-
-    /**
-     * Show toast message for [SResult.ErrorResult.Error]
-     */
-    protected open fun showToast(message: Any, interval: Int = Toast.LENGTH_SHORT) {
-        hideKeyboard()
-//        hideLoading()
-        toast(message, interval)
-    }
-
-//    /**
-//     * Show loading state for [SResult.Loading]
-//     */
-//    open fun showLoading() = launchOnUITryCatch(tryBlock = {
-//        hideKeyboard()
-//        loadingViewLayout?.show()
-//        contentViewLayout?.hide()
-//    }, catchBlock = {
-//        log { "Cannot perform action: `showLoading` with $this@BaseFragment. Error ${it.message}" }
-//    })
-//
-//    open fun hideLoading() = launchOnUITryCatch(tryBlock = {
-//        hideKeyboard()
-//        loadingViewLayout?.hide()
-//        contentViewLayout?.show()
-//    }, catchBlock = {
-//        log { "Cannot perform action: `hideLoading` with $this@BaseFragment. Error ${it.message}" }
-//    })
-
-    /**
-     * Base [SResult] handle function
-     */
-    protected open fun onResultHandler(result: SResult<*>) {
-        if (result.isHandled) return
-        result.handle()
-
-        when (result) {
-//            is SResult.Success -> hideLoading()
-//            is SResult.Loading -> showLoading()
-            is SResult.ErrorResult -> {
-                result.getMessage()?.let {
-                    if (result is SResult.ErrorResult.Error) {
-                        showToast(it)
-                    } else if (result is SResult.ErrorResult.Alert) {
-                        showAlertDialog(it)
-                    }
-                }
-            }
-        }
-    }
-
-    /**
-     * Process [SEvent] to view model
-     */
-    protected open fun processViewEvent(viewEvent: SEvent) {
-        this.viewModel?.processViewEvent(viewEvent)
-    }
-
-    fun requireCompatActivity(): AppCompatActivity {
-        requireActivity()
-        val activity = requireActivity()
-        if (activity is AppCompatActivity) {
-            return activity
-        } else {
-            throw TypeCastException("Main activity should extend from 'AppCompatActivity'")
-        }
-    }
 
     //endregion
 }

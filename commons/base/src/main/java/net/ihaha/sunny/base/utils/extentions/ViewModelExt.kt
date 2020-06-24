@@ -1,9 +1,13 @@
 package net.ihaha.sunny.base.utils.extentions
 
+import android.app.Activity
 import androidx.lifecycle.*
+import com.afollestad.materialdialogs.MaterialDialog
 import com.rasalexman.coroutinesmanager.CoroutinesProvider
+import net.ihaha.sunny.base.domain.AreYouSureCallBack
 import net.ihaha.sunny.base.viewModels.BaseViewModel
 import net.ihaha.sunny.base.viewModels.IBaseViewModel
+import net.ihaha.sunny.ui.R
 import net.ihaha.sunny.ui.data.dto.SEvent
 import net.ihaha.sunny.ui.data.dto.SResult
 import net.ihaha.sunny.ui.extensions.applyForType
@@ -49,4 +53,48 @@ fun SavedStateHandle.getCurrentPage(key: String, latPage: Int): Int {
  */
 fun IBaseViewModel.processViewEvent(viewEvent: SEvent) {
     eventLiveData.value = viewEvent
+}
+
+var materialDialog: MaterialDialog? = null
+
+fun Activity.displaySuccessDialog(message: String) {
+    materialDialog = MaterialDialog(this)
+        .show {
+            title(R.string.text_success)
+            message(text = message)
+            positiveButton(R.string.text_ok)
+        }
+}
+
+fun Activity.displayErrorDialog(message: String) {
+    materialDialog = MaterialDialog(this)
+        .show {
+            title(R.string.text_error)
+            message(text = message)
+            positiveButton(R.string.text_ok)
+        }
+}
+
+fun Activity.displayInfoDialog(message: String?) {
+    materialDialog = MaterialDialog(this)
+        .show {
+            title(R.string.are_you_sure)
+            message(text = message)
+            positiveButton(R.string.text_ok)
+        }
+}
+
+fun Activity.areYouSureDialog(message: String?, callback: AreYouSureCallBack) {
+    materialDialog = MaterialDialog(this)
+        .show {
+            title(R.string.text_info)
+            message(text = message)
+            positiveButton(R.string.text_ok) {
+                callback.proceed()
+            }
+            negativeButton(R.string.text_cancel) {
+                callback.cancel()
+                materialDialog = null
+            }
+        }
 }

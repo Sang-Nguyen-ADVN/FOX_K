@@ -15,6 +15,7 @@ dependencies {
     implementation(project(BuildModules.CORES.CACHE))
     implementation(project(BuildModules.CORES.LOCAL))
     implementation(project(BuildModules.CORES.REMOTE))
+    implementation(project(BuildModules.CORES.DOMAIN))
     //FIREBASE
     implementation(Dependencies.FIREBASE_AUTH)
 //    implementation(Dependencies.FIREBASE_CORE)
@@ -25,6 +26,8 @@ dependencies {
     implementation(Dependencies.GOOGLE_AUTH_LOGIN)
     implementation(Dependencies.GOOGLE_AUTH_PHONE)
     implementation(Dependencies.CRASHLYTICS)
+
+    implementation(Dependencies.NETWORK_RESPONSE)
     //DATA
     implementation(Dependencies.ROOM)
     implementation(Dependencies.ROOM_KTX)

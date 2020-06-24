@@ -41,6 +41,14 @@
     <string name="onboarding_slide3_subtitle">Feel the happiness</string>
     <string name="onboarding_slide3_desc">User will be able to give you live, chat and meet with people nearby.</string>
 
+    <string name="text_error">Error</string>
+    <string name="text_success">Success</string>
+    <string name="text_ok">OK</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="text_info">Info</string>
+    <string name="delete">Delete</string>
+
     <string name="title_home">Home</string>
     <string name="title_tags">Tags</string>
     <string name="title_notifications">Notifications</string>

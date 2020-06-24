@@ -1,13 +1,19 @@
 package net.ihaha.sunny.fox.local
 
-import androidx.databinding.adapters.Converters
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
 import net.ihaha.sunny.fox.local.entity.categories.*
+import net.ihaha.sunny.fox.local.entity.organizations.Organizations
+import net.ihaha.sunny.fox.local.entity.series.Series
 import net.ihaha.sunny.fox.local.entity.tags.Tags
 import net.ihaha.sunny.fox.local.entity.user.User
-import net.ihaha.sunny.fox.local.room.*
+import net.ihaha.sunny.fox.local.room.categories.EditorsChoiceDao
+import net.ihaha.sunny.fox.local.room.categories.NewestDao
+import net.ihaha.sunny.fox.local.room.categories.TrendingDao
+import net.ihaha.sunny.fox.local.room.categories.VideosDao
+import net.ihaha.sunny.fox.local.room.organization.OrganizationsDao
+import net.ihaha.sunny.fox.local.room.series.SeriesDao
+import net.ihaha.sunny.fox.local.room.tags.TagsDao
 
 /**
  * Created by Sunny on 9/29/2019.

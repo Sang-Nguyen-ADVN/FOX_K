@@ -40,6 +40,14 @@
     <string name="onboarding_slide3_subtitle">Feel the happiness</string>
     <string name="onboarding_slide3_desc">User will be able to give you live, chat and meet with people nearby.</string>
 
+    <string name="text_error">Lỗi</string>
+    <string name="text_success">Thành công</string>
+    <string name="text_ok">Đồng ý</string>
+    <string name="text_cancel">Huỷ</string>
+    <string name="are_you_sure">Bạn có đồng ý?</string>
+    <string name="text_info">Thông tin</string>
+    <string name="delete">Xoá</string>
+
     <string name="title_notifications">Thông báo</string>
     <string name="title_home">Trang chủ</string>
     <string name="title_tags">Chuyên mục</string>

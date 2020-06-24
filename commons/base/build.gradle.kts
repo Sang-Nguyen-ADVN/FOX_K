@@ -13,6 +13,9 @@ junitJacoco {
 }
 
 dependencies {
+    //MODULE
+    implementation(project(BuildModules.COMMONS.UI))
+
     //SUPPORT
     implementation(Dependencies.LEAK_CANARY)
     implementation(Dependencies.MULTIDEX)
@@ -34,6 +37,8 @@ dependencies {
     implementation(Dependencies.COIL)
     implementation(Dependencies.PRO_PROGRESS_VIEWS)
     implementation(Dependencies.SWIPE_REFRESH_LAYOUT)
+    implementation(Dependencies.MATERIAL_DIALOG)
+
 
     //PAGER
     implementation(Dependencies.NAVIGATION_FRAGMENT)

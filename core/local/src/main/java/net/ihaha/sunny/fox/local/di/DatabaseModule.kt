@@ -25,7 +25,10 @@ import org.koin.dsl.module
 val databaseModule = module {
   single {
     Room
-      .databaseBuilder(androidApplication(), AppDatabase::class.java, BuildConfig.FOX_DATABASE_NAME)
+      .databaseBuilder(
+        androidApplication(),
+        AppDatabase::class.java,
+        BuildConfig.FOX_DATABASE_NAME)
       .allowMainThreadQueries()
       .fallbackToDestructiveMigration()
       .build()

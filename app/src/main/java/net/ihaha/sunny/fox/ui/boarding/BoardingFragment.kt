@@ -57,12 +57,9 @@ class BoardingFragment : BaseBindingFragment<FragmentBoardingBinding, BoardingVi
             OnClickNavigationToMain {
             override fun onClickNavigation() {
                 viewModel.saveKeyOnBoarding()
-                launch {
-                    findNavController().navigate(R.id.action_boardingFragment_to_signInFragment)
+                if(onListenerNavigationToMainActivity != null){
+                    onListenerNavigationToMainActivity?.onNavigation()
                 }
-//                if(onListenerNavigationToMainActivity != null){
-//                    onListenerNavigationToMainActivity?.onNavigation()
-//                }
             }
         }
         viewBinding.onBroadingView.setOnclickNavigationToMain(onClickNavigationToMain)

@@ -8,9 +8,6 @@ import androidx.annotation.DimenRes
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LiveData
-import net.ihaha.sunny.ui.data.dto.SResult
-import net.ihaha.sunny.ui.typealiases.InHandler
 
 fun Fragment.hideKeyboard() = activity?.hideKeyboard()
 fun Fragment.showKeyboard(view: View) = activity?.showKeyboard(view)

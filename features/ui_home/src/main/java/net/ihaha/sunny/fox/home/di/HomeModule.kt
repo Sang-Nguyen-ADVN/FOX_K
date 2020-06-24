@@ -2,6 +2,7 @@ package net.ihaha.sunny.fox.home.di
 
 import net.ihaha.sunny.fox.home.HomeViewModel
 import net.ihaha.sunny.fox.home.editors_choice.EditorsChoiceViewModel
+import net.ihaha.sunny.fox.ui.main.MainViewModel
 import net.ihaha.sunny.fox.home.newest.NewestViewModel
 import net.ihaha.sunny.fox.home.series.SeriesViewModel
 import net.ihaha.sunny.fox.home.trending.TrendingViewModel
@@ -16,6 +17,7 @@ private val domainModule = module {
 }
 
 private val viewModelModule = module {
+    viewModel { MainViewModel() }
     viewModel { HomeViewModel() }
     viewModel { EditorsChoiceViewModel() }
     viewModel { NewestViewModel() }

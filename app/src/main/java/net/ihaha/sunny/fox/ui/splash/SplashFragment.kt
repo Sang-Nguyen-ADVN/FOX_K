@@ -1,11 +1,9 @@
 package net.ihaha.sunny.fox.ui.splash
 
+import android.content.Context
 import android.os.Bundle
-import android.os.Handler
-import androidx.navigation.Navigation
+import android.view.View
 import androidx.navigation.fragment.findNavController
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import net.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
@@ -19,6 +17,8 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding, SplashViewMode
     //region variable
 
     private var onListenerNavigationToMainActivity: OnListenerNavigationToMainActivity? = null
+
+    private var isAuth : Boolean = false
 
     //endregion
 
@@ -36,17 +36,23 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding, SplashViewMode
 
     override val layoutId: Int = R.layout.fragment_splash
 
-//    override fun onAttach(context: Context) {
-//        super.onAttach(context)
-//        when(context){
-//            is OnListenerNavigationToMainActivity -> onListenerNavigationToMainActivity = context
-//        }
-//    }
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        when (context) {
+            is OnListenerNavigationToMainActivity -> onListenerNavigationToMainActivity = context
+        }
+    }
 
-    override fun initOnViewCreate(savedInstanceState: Bundle?) {
-        super.initOnViewCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initSubscribeRegister()
         initComponents()
         initEventListener()
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        isAuth = arguments?.getBoolean("isAuth")!!
     }
 
     private fun initComponents() {
@@ -54,11 +60,11 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding, SplashViewMode
     }
 
     private fun initEventListener() {
-        if (viewModel.isCheckOnBoarding()) {
-//            onListenerNavigationToMainActivity?.onNavigation()
-            launch {
-                delay(2000)
-                findNavController().navigate(R.id.action_splashFragment_to_signInFragment)
+        if (viewModel.isCurrentBoarding()) {
+            if(isAuth) {
+                onListenerNavigationToMainActivity?.onNavigation()
+            }else{
+                findNavController().navigate(R.id.action_splashFragment_to_SignInFragment)
             }
         } else {
             launch {
@@ -67,6 +73,10 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding, SplashViewMode
             }
 
         }
+    }
+
+    private fun initSubscribeRegister() {
+
     }
 
 

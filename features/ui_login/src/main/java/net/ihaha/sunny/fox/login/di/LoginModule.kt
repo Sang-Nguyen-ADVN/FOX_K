@@ -1,8 +1,5 @@
 package net.ihaha.sunny.fox.login.di
 
-import net.ihaha.sunny.fox.login.ResetPasswordViewModel
-import net.ihaha.sunny.fox.login.SignInViewModel
-import net.ihaha.sunny.fox.login.SignUpViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
 import org.koin.dsl.module
@@ -17,9 +14,9 @@ private val domainModule = module {
 }
 
 private val viewModelModule = module {
-    viewModel { SignInViewModel() }
-    viewModel { SignUpViewModel() }
-    viewModel { ResetPasswordViewModel() }
+//    viewModel { SignInViewModel() }
+//    viewModel { SignUpViewModel() }
+//    viewModel { ResetPasswordViewModel() }
 }
 
 private val repositoriesModule = module {

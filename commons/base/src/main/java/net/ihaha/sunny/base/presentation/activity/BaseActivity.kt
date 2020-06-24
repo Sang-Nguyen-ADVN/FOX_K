@@ -7,22 +7,22 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import net.ihaha.sunny.base.BR
+import net.ihaha.sunny.base.domain.DataState
+import net.ihaha.sunny.base.domain.StateMessage
+import net.ihaha.sunny.base.domain.UIComponentType
+import net.ihaha.sunny.base.presentation.listeners.DataStateChangeListener
+import net.ihaha.sunny.base.presentation.listeners.UICommunicationListener
+import net.ihaha.sunny.base.utils.extentions.areYouSureDialog
+import net.ihaha.sunny.base.utils.extentions.displayErrorDialog
+import net.ihaha.sunny.base.utils.extentions.displayInfoDialog
 import net.ihaha.sunny.ui.extensions.hideKeyboard
 import net.ihaha.sunny.base.utils.lifecycle.LifeCycleObserverUtils
-import net.ihaha.sunny.base.viewModels.BaseViewModel
-import net.ihaha.sunny.base.viewModels.IBaseViewModel
+import net.ihaha.sunny.ui.extensions.displayToast
 import org.koin.android.ext.android.inject
 
 
-abstract class BaseActivity<T: ViewDataBinding>() : AppCompatActivity() {
-
-    @get:LayoutRes
-    abstract val layoutId: Int
-
-    protected lateinit var viewBinding: T
-
-    private val sharedPreferences: SharedPreferences by inject()
+abstract class BaseActivity(@LayoutRes contentLayoutId: Int) : AppCompatActivity(contentLayoutId),
+    DataStateChangeListener, UICommunicationListener {
 
     protected val autoLifeCycleObserver by lazy { LifeCycleObserverUtils(lifecycle) }
 
@@ -30,17 +30,50 @@ abstract class BaseActivity<T: ViewDataBinding>() : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         autoLifeCycleObserver.init(this)
-        if (::viewBinding.isInitialized.not()) {
-            viewBinding = DataBindingUtil.setContentView(this, layoutId)
-            viewBinding.apply {
-                executePendingBindings()
-            }
-            viewBinding.lifecycleOwner = this
-        }
     }
 
     override fun finish() {
         hideKeyboard()
         super.finish()
     }
+
+    override fun onDataStateChangeListener(dataState: DataState<*>?) {
+        dataState?.let {
+            displayLoading(it.loading)
+            it.stateMessage?.let { stateMessage ->
+                handleResponseState(stateMessage)
+            }
+        }
+    }
+
+    override fun onUIMessageReceived(stateMessage: StateMessage) {
+        when (stateMessage.uiComponentType) {
+            is UIComponentType.AreYouSureDialog -> {
+                areYouSureDialog(stateMessage.message, (stateMessage.uiComponentType).callBack)
+            }
+            is UIComponentType.DIALOG -> {
+                displayInfoDialog(stateMessage.message)
+            }
+            is UIComponentType.TOAST -> {
+                displayToast(stateMessage.message)
+            }
+            is UIComponentType.NONE -> {
+            }
+        }
+    }
+
+    private fun handleResponseState(stateMessage: StateMessage?) {
+        stateMessage?.message?.let { message ->
+            when (stateMessage.uiComponentType) {
+                is UIComponentType.DIALOG -> {
+                    displayErrorDialog(message)
+                }
+                is UIComponentType.TOAST -> {
+                    displayToast(message)
+                }
+            }
+        }
+    }
+
+
 }
