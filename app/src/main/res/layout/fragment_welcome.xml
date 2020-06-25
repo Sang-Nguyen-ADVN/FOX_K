@@ -7,7 +7,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="net.ihaha.sunny.fox.ui.welcome.WelcomeViewModel" />
+            type="com.ihaha.sunny.fox.ui.welcome.WelcomeViewModel" />
     </data>
 
     <FrameLayout

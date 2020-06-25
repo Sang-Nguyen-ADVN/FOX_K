@@ -9,8 +9,7 @@ plugins {
     id(BuildPlugins.ANDROID_APPLICATION)
     id(BuildPlugins.CRASHLYTICS)
     id(BuildPlugins.PERFORMANCE)
-//    id(BuildPlugins.GOOGLE_SERVICES)
-//    id(BuildPlugins.FABRIC)
+    id(BuildPlugins.GOOGLE_SERVICES)
     kotlin(BuildPlugins.KOTLIN_PRE_ANDROID)
     kotlin(BuildPlugins.KOTLIN_PRE_ANDROID_EXTENSIONS)
     kotlin(BuildPlugins.KOTLIN_PRE_KAPT)
@@ -167,8 +166,6 @@ dependencies {
     //NETWORK
     implementation(Dependencies.OKHTTP3_LOGGING)
     implementation(Dependencies.RETROFIT)
-    implementation(Dependencies.RETROFIT_RX_ADAPTER)
-    implementation(Dependencies.RETROFIT_CONVERTER)
 
     //FIREBASE
     implementation(Dependencies.FIREBASE_AUTH)
@@ -201,17 +198,6 @@ dependencies {
 
     //LOG
     implementation(Dependencies.TIMBER)
-
-
-    //MODULES
-    //implementation(project(BuildModules.APP))
-    //implementation(project(BuildModules.FEATURES.EVENTS))
-    //implementation(project(BuildModules.FEATURES.HOME))
-    //implementation(project(BuildModules.FEATURES.LOGIN))
-    //implementation(project(BuildModules.FEATURES.MORE))
-    //implementation(project(BuildModules.FEATURES.ORGANIZATIONS))
-    //implementation(project(BuildModules.FEATURES.SETTINGS))
-    //implementation(project(BuildModules.FEATURES.TAGS))
 
     implementation(project(BuildModules.COMMONS.BASE))
     implementation(project(BuildModules.COMMONS.UI))

@@ -48,8 +48,6 @@ dependencies {
     //NETWORK
     implementation(Dependencies.OKHTTP3_LOGGING)
     implementation(Dependencies.RETROFIT)
-    implementation(Dependencies.RETROFIT_RX_ADAPTER)
-    implementation(Dependencies.RETROFIT_CONVERTER)
     implementation(Dependencies.NETWORK_RESPONSE)
 
     //COROUTINE

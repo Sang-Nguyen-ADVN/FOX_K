@@ -6,7 +6,6 @@ import org.gradle.kotlin.dsl.dependencies
 plugins {
     id("commons.android-library")
     id(BuildPlugins.KOTLIN_KAPT)
-    id(BuildPlugins.GOOGLE_SERVICES)
 }
 
 dependencies {

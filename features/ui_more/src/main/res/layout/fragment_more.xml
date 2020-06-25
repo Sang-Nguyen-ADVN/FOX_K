@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="net.ihaha.sunny.fox.more.MoreViewModel" />
+            type="com.ihaha.sunny.fox.more.MoreViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

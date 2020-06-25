@@ -7,7 +7,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="net.ihaha.sunny.fox.ui.splash.SplashViewModel" />
+            type="com.ihaha.sunny.fox.ui.splash.SplashViewModel" />
     </data>
 
     <FrameLayout

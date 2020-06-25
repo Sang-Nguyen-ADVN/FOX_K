@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="net.ihaha.sunny.fox.ui.auth.SignInViewModel" />
+            type="com.ihaha.sunny.fox.ui.auth.SignInViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

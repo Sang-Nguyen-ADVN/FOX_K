@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/eventsFragment"
-        android:name="net.ihaha.sunny.fox.events.EventsFragment"
+        android:name="com.ihaha.sunny.fox.events.EventsFragment"
         app:moduleName="FOX.features.ui_events"
         tools:layout="@layout/fragment_event"
         android:label="@string/title_events" />

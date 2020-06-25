@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="net.ihaha.sunny.fox.ui.auth.SignInFragment"
+        android:name="com.ihaha.sunny.fox.ui.auth.SignInFragment"
         android:label="Login"
         tools:layout="@layout/fragment_sign_in">
 
@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="net.ihaha.sunny.fox.ui.auth.SignUpFragment"
+        android:name="com.ihaha.sunny.fox.ui.auth.SignUpFragment"
         android:label="LOGIN"
         tools:layout="@layout/fragment_sign_up">
 
@@ -54,7 +54,7 @@
 
     <fragment
         android:id="@+id/resetPasswordFragment"
-        android:name="net.ihaha.sunny.fox.ui.auth.ResetPasswordFragment"
+        android:name="com.ihaha.sunny.fox.ui.auth.ResetPasswordFragment"
         android:label="LOGIN"
         tools:layout="@layout/fragment_reset_password">
 

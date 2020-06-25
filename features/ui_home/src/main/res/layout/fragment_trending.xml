@@ -5,7 +5,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="net.ihaha.sunny.fox.home.trending.TrendingViewModel" />
+            type="com.ihaha.sunny.fox.home.trending.TrendingViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

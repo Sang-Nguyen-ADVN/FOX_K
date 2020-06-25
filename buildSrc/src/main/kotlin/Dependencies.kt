@@ -7,7 +7,7 @@ object AndroidSdk {
 }
 
 object AppConstant {
-    const val applicationPackage = "net.ihaha.sunny.fox"
+    const val applicationPackage = "com.ihaha.sunny.fox"
     const val name = "COVID-19"
     const val host = "https://api.eventersapp.com/v1/"
     const val hostConstant = "HOST"

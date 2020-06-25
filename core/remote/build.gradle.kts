@@ -5,7 +5,7 @@ import org.gradle.kotlin.dsl.dependencies
 
 plugins {
     id("commons.android-library")
-//    id(BuildPlugins.KOTLIN_KAPT)
+    id(BuildPlugins.KOTLIN_KAPT)
 }
 
 android {
@@ -38,8 +38,6 @@ dependencies {
     implementation(Dependencies.OKHTTP3)
     implementation(Dependencies.OKHTTP3_LOGGING)
     implementation(Dependencies.RETROFIT)
-    implementation(Dependencies.RETROFIT_RX_ADAPTER)
-    implementation(Dependencies.RETROFIT_CONVERTER)
     implementation(Dependencies.NETWORK_RESPONSE)
 
     //DATA

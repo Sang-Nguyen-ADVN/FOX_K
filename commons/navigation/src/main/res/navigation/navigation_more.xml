@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/moreFragment"
-        android:name="net.ihaha.sunny.fox.more.MoreFragment"
+        android:name="com.ihaha.sunny.fox.more.MoreFragment"
         app:moduleName="FOX.features.ui_more"
         tools:layout="@layout/fragment_more"
         android:label="@string/title_more" />

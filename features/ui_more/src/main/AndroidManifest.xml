@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="net.ihaha.sunny.fox.more">
+    package="com.ihaha.sunny.fox.more">
 
     <dist:module
         dist:instant="false"

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="net.ihaha.sunny.fox.ui.welcome.WelcomeFragment"
+        android:name="com.ihaha.sunny.fox.ui.welcome.WelcomeFragment"
         android:label="FOX"
         tools:layout="@layout/fragment_welcome">
 
@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="net.ihaha.sunny.fox.ui.splash.SplashFragment"
+        android:name="com.ihaha.sunny.fox.ui.splash.SplashFragment"
         android:label="FOX"
         tools:layout="@layout/fragment_splash">
 
@@ -56,9 +56,20 @@
 
     <fragment
         android:id="@+id/boardingFragment"
-        android:name="net.ihaha.sunny.fox.ui.boarding.BoardingFragment"
+        android:name="com.ihaha.sunny.fox.ui.boarding.BoardingFragment"
         android:label="FOX"
         tools:layout="@layout/fragment_boarding"/>
+
+
+    <action
+        android:id="@+id/action_boardingFragment_to_SignInFragment"
+        app:destination="@id/signInFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@+id/navigation_welcome"
+        app:popUpToInclusive="true" />
 
 
 </navigation>

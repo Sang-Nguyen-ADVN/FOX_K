@@ -2,7 +2,7 @@
  * Configuration of android build
  */
 object BuildAndroidConfig {
-    const val APPLICATION_ID = "net.ihaha.sunny.fox"
+    const val APPLICATION_ID = "com.ihaha.sunny.fox"
 
     const val BUILD_TOOLS_VERSION = "29.0.2"
     const val COMPILE_SDK_VERSION = 29

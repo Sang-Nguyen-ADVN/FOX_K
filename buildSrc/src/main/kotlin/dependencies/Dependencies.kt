@@ -27,7 +27,6 @@ object Dependencies {
     const val NAVIGATION_DYNAMIC_FEATURE = "androidx.navigation:navigation-dynamic-features-fragment:${BuildDependenciesVersions.NAVIGATION}"
     const val NAVIGATION_FRAGMENT = "androidx.navigation:navigation-fragment-ktx:${BuildDependenciesVersions.NAVIGATION}"
     const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:${BuildDependenciesVersions.NAVIGATION}"
-    const val NAVIGATION_DFM = "androidx.navigation:navigation-dynamic-features-fragment:${BuildDependenciesVersions.NAVIGATION}"
 
     //LAYOUT
     const val DRAWER_LAYOUT = "androidx.drawerlayout:drawerlayout:${BuildDependenciesVersions.DRAWER_LAYOUT}"
@@ -95,11 +94,11 @@ object Dependencies {
     const val CRASHLYTICS = "com.google.firebase:firebase-crashlytics-ndk:${BuildDependenciesVersions.CRASHLYTICS}"
 
     //NETWORK
-    const val RETROFIT_RX_ADAPTER = "com.squareup.retrofit2:adapter-rxjava2:${BuildDependenciesVersions.RETROFIT_RX}"
+//    const val RETROFIT_RX_ADAPTER = "com.squareup.retrofit2:adapter-rxjava2:${BuildDependenciesVersions.RETROFIT_RX}"
     const val OKHTTP3 = "com.squareup.okhttp3:okhttp:${BuildDependenciesVersions.OKHTTP3}"
     const val OKHTTP3_LOGGING = "com.squareup.okhttp3:logging-interceptor:${BuildDependenciesVersions.OKHTTP3_LOGGING}"
     const val RETROFIT = "com.squareup.retrofit2:retrofit:${BuildDependenciesVersions.RETROFIT}"
-    const val RETROFIT_CONVERTER = "com.squareup.retrofit2:converter-gson:${BuildDependenciesVersions.RETROFIT}"
+//    const val RETROFIT_CONVERTER = "com.squareup.retrofit2:converter-gson:${BuildDependenciesVersions.RETROFIT}"
     const val NETWORK_RESPONSE = "com.github.haroldadmin:NetworkResponseAdapter:${BuildDependenciesVersions.NETWORK_RESPONSE}"
 
     //ROOM

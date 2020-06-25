@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="net.ihaha.sunny.fox.home.HomeViewModel" />
+            type="com.ihaha.sunny.fox.home.HomeViewModel" />
 
     </data>
 

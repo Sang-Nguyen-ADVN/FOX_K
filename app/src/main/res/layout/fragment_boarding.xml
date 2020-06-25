@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="net.ihaha.sunny.fox.ui.boarding.BoardingViewModel" />
+            type="com.ihaha.sunny.fox.ui.boarding.BoardingViewModel" />
     </data>
 
     <FrameLayout
@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/background">
 
-        <net.ihaha.sunny.ui.view.ui.OnBoardingView
+        <com.ihaha.sunny.ui.view.ui.OnBoardingView
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/on_broading_view"

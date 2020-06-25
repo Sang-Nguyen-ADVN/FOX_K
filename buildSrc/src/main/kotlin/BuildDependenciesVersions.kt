@@ -45,7 +45,7 @@ object BuildDependenciesVersions {
     const val PAGING = "2.1.1"
 
     //NETWORK
-    const val RETROFIT = "2.7.0"
+    const val RETROFIT = "2.9.0"
     const val LOGGING = "4.2.2"
     const val RETROFIT_RX = "2.3.0"
     const val OKHTTP3_LOGGING = "3.9.0"

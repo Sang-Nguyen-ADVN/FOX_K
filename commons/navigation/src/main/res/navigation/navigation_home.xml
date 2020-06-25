@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="net.ihaha.sunny.fox.home.HomeFragment"
+        android:name="com.ihaha.sunny.fox.home.HomeFragment"
         app:moduleName="FOX.features.ui_home"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"/>
