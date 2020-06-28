@@ -36,8 +36,6 @@ abstract class BaseFragment<out VM : IBaseViewModel> : Fragment(), ICoroutinesMa
     //region variable
     @get:LayoutRes
     abstract val layoutId: Int
-    protected open fun initOnCreate(savedInstanceState : Bundle?) = Unit
-    protected open fun initOnViewCreate(savedInstanceState: Bundle?) = Unit
 
     protected open val contentViewLayout: View? = null
     protected open val loadingViewLayout: View? = null
@@ -45,8 +43,6 @@ abstract class BaseFragment<out VM : IBaseViewModel> : Fragment(), ICoroutinesMa
 
     protected var dataStateChangeListener: DataStateChangeListener? = null
     protected var uiCommunicationListener: UICommunicationListener? = null
-
-    protected open fun initLayout() = Unit
 
 
     private val autoLifeCycleObserver by lazy { LifeCycleObserverUtils(lifecycle) }
@@ -75,8 +71,6 @@ abstract class BaseFragment<out VM : IBaseViewModel> : Fragment(), ICoroutinesMa
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         autoLifeCycleObserver.init(this)
-        initOnViewCreate(savedInstanceState)
-        initLayout()
     }
 
     override fun onDestroyView() {

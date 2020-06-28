@@ -66,6 +66,11 @@
         <item name="android:textSize">@dimen/sp_16</item>
     </style>
 
+    <style name="textAppearanceLineError" parent="@style/TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/color_error</item>
+    </style>
+
     <style name="textAppearanceHeadlineTextSmall" parent="@style/TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textSize">@dimen/sp_14</item>
     </style>
@@ -91,6 +96,10 @@
         <item name="android:textSize">28sp</item>
         <item name="android:textColor">@color/color_primary_variant</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProgressBarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/color_primary_dark</item>
     </style>
 
     <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">

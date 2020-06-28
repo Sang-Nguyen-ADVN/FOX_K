@@ -4,69 +4,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="android.view.View"/>
+
+        <import type="android.view.View" />
+
         <variable
             name="viewModel"
             type="com.ihaha.sunny.fox.ui.welcome.WelcomeViewModel" />
     </data>
 
-    <FrameLayout
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/ml_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/fragment_welcome_xml_constraint_layout_scene">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/dp_86"
+            android:layout_height="@dimen/dp_86"
+            android:src="@drawable/ic_account_circle_white_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvWelcome"
-                style="@style/TextAppearance.AppCompat.Headline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/welcome_text_title"
-                android:textColor="@color/color_Accent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <include
+            android:id="@+id/include2"
+            layout="@layout/layout_welcome_loading"
+            android:layout_width="@dimen/dp_250"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/material_margin_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvName"
-                style="@style/textAppearanceHeadline4"
-                android:textSize="@dimen/sp_32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/welcome_text_name"
-                android:textColor="@color/color_primary"
-                android:visibility="invisible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivAvatar"
-                android:background="@drawable/background_welcome_image_avatar_circle"
-                android:layout_width="@dimen/dp_48"
-                android:layout_height="@dimen/dp_48"
-                android:layout_marginTop="@dimen/dp_4"
-                android:visibility="gone"
-                app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
-                app:layout_constraintStart_toStartOf="@+id/tvWelcome"
-                app:layout_constraintEnd_toEndOf="@+id/tvWelcome"/>
-
-            <include
-                layout="@layout/layout_loading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dp_10"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="@+id/tvName"
-                app:layout_constraintStart_toStartOf="@+id/tvName"
-                app:layout_constraintTop_toBottomOf="@+id/tvName" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </FrameLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 </layout>

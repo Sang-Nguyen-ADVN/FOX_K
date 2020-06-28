@@ -1,5 +1,6 @@
 package com.ihaha.sunny.fox.ui.welcome
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
@@ -11,11 +12,16 @@ import com.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
 import com.ihaha.sunny.fox.R
 import com.ihaha.sunny.fox.databinding.FragmentWelcomeBinding
 import com.ihaha.sunny.fox.domain.model.auth.User
+import com.ihaha.sunny.ui.extensions.drawable
 import com.ihaha.sunny.ui.extensions.hide
 import com.ihaha.sunny.ui.extensions.show
 import com.ihaha.sunny.ui.extensions.string
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@FlowPreview
+@ExperimentalCoroutinesApi
 class WelcomeFragment : BaseBindingFragment<FragmentWelcomeBinding, WelcomeViewModel>() {
 
     //region variable
@@ -30,7 +36,6 @@ class WelcomeFragment : BaseBindingFragment<FragmentWelcomeBinding, WelcomeViewM
 
     override val layoutId: Int = R.layout.fragment_welcome
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initSubscribeRegister()
@@ -39,25 +44,21 @@ class WelcomeFragment : BaseBindingFragment<FragmentWelcomeBinding, WelcomeViewM
     }
 
     private fun initComponents() {
-
+        viewBinding.mlContainer.transitionToEnd()
     }
 
     private fun initEventListener() {
         launch {
             delay(2000)
             if(currentUser != null){
-                viewBinding.tvWelcome.text = String.format("Chào mừng %s đã trở lại", currentUser?.username)
-                viewBinding.ivAvatar.show()
-                viewBinding.tvName.hide(false)
-                val bundle = bundleOf("isAuth" to true)
-                findNavController().navigate(R.id.action_welcomeFragment_to_splashFragment, bundle)
+                viewBinding.ivAvatar.setImageURI(Uri.parse(currentUser?.pictureUrl))
+                WelcomeFragmentArgs.fromBundle(bundleOf("isAuth" to true))
             }
             else{
-                viewBinding.tvWelcome.text = string(R.string.welcome_text_title)
-                viewBinding.ivAvatar.hide()
-                viewBinding.tvName.show()
-                findNavController().navigate(R.id.action_welcomeFragment_to_splashFragment, null)
+                viewBinding.ivAvatar.setImageDrawable(drawable(R.drawable.ic_account_circle_white_24))
+                WelcomeFragmentArgs.fromBundle(bundleOf("isAuth" to false))
             }
+            findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToSplashFragment())
         }
     }
 
@@ -77,3 +78,4 @@ class WelcomeFragment : BaseBindingFragment<FragmentWelcomeBinding, WelcomeViewM
 
     //endregion
 }
+

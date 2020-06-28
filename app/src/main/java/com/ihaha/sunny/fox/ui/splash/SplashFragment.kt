@@ -7,11 +7,16 @@ import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import com.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
+import com.ihaha.sunny.fox.Constants
 import com.ihaha.sunny.fox.R
 import com.ihaha.sunny.fox.databinding.FragmentSplashBinding
 import com.ihaha.sunny.fox.ui.callback.OnListenerNavigationToMainActivity
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@FlowPreview
+@ExperimentalCoroutinesApi
 class SplashFragment : BaseBindingFragment<FragmentSplashBinding, SplashViewModel>() {
 
     //region variable
@@ -52,7 +57,12 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding, SplashViewMode
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        isAuth = arguments?.getBoolean("isAuth")!!
+        isAuth = arguments?.getBoolean("isAuth", false) ?: false
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewBinding.mlContainer.transitionToEnd()
     }
 
     private fun initComponents() {
@@ -62,14 +72,14 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding, SplashViewMode
     private fun initEventListener() {
         if (viewModel.isCurrentBoarding()) {
             if(isAuth) {
-                onListenerNavigationToMainActivity?.onNavigation()
+                onListenerNavigationToMainActivity?.onNavigation(Constants.ACTIVITY_MAIN)
             }else{
-                findNavController().navigate(R.id.action_splashFragment_to_SignInFragment)
+                onListenerNavigationToMainActivity?.onNavigation(Constants.ACTIVITY_LOGIN)
             }
         } else {
             launch {
                 delay(2000)
-                findNavController().navigate(R.id.action_splashFragment_to_boardingFragment)
+                findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToBoardingFragment())
             }
 
         }

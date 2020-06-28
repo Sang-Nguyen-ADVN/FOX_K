@@ -1,10 +1,10 @@
 package com.ihaha.sunny.fox.ui.auth
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.launch
-import com.ihaha.sunny.base.exception.invalidEmail
-import com.ihaha.sunny.base.exception.invalidPassword
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.AuthResult
 import com.ihaha.sunny.base.viewModels.BaseViewModel
 import com.ihaha.sunny.fox.domain.usecase.auth.AuthUseCase
 
@@ -15,9 +15,11 @@ import com.ihaha.sunny.fox.domain.usecase.auth.AuthUseCase
  */
 class SignInViewModel(private val authUseCase: AuthUseCase) : BaseViewModel() {
 
-    fun signInWithEmailAndPassword(email: String, password: String) = viewModelScope.launch {
-        if(email.invalidEmail() && password.invalidPassword()) {
-            authUseCase.signInWithEmailAndPassword(email, password).asLiveData(viewModelScope.coroutineContext)
-        }
+    suspend fun signInWithEmailAndPassword(email: String, password: String): LiveData<Task<AuthResult?>> {
+        return authUseCase.signInWithEmailAndPassword(email, password).asLiveData(viewModelScope.coroutineContext)
+    }
+
+    suspend fun signInWithPhoneAndPassword(email: String, password: String): LiveData<Task<AuthResult?>> {
+        return authUseCase.signInWithEmailAndPassword(email, password).asLiveData(viewModelScope.coroutineContext)
     }
 }

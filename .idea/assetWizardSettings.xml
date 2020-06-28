@@ -5,7 +5,39 @@
       <map>
         <entry key="vectorWizard">
           <value>
-            <PersistentState />
+            <PersistentState>
+              <option name="children">
+                <map>
+                  <entry key="vectorAssetStep">
+                    <value>
+                      <PersistentState>
+                        <option name="children">
+                          <map>
+                            <entry key="clipartAsset">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="url" value="jar:file:/private/var/folders/wv/253l1q0n0s98ryqhlw2hskt00000gn/T/AppTranslocation/74B7AE3C-5B2F-4E51-8DC4-4FBC7A0717A4/d/Android%20Studio%204.1%20Preview%202.app/Contents/plugins/android/lib/android.jar!/images/material/icons/materialicons/account_circle/baseline_account_circle_24.xml" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                        <option name="values">
+                          <map>
+                            <entry key="color" value="ffffff" />
+                            <entry key="outputName" value="ic_account_circle_white_24" />
+                          </map>
+                        </option>
+                      </PersistentState>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PersistentState>
           </value>
         </entry>
       </map>

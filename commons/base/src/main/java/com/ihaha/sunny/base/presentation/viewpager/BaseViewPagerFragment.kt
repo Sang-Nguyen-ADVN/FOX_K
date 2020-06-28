@@ -1,5 +1,9 @@
 package com.ihaha.sunny.base.presentation.viewpager
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +15,11 @@ import com.ihaha.sunny.base.R
 import com.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
 import com.ihaha.sunny.base.presentation.fragment.BaseFragment
 import com.ihaha.sunny.base.viewModels.IBaseViewModel
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 
+@FlowPreview
+@ExperimentalCoroutinesApi
 abstract class BaseViewPagerFragment< VB : ViewDataBinding,out VM : IBaseViewModel> : BaseBindingFragment<VB,VM>() {
 
     //region variable
@@ -24,7 +32,8 @@ abstract class BaseViewPagerFragment< VB : ViewDataBinding,out VM : IBaseViewMod
 
     override val layoutId: Int get() = R.layout.layout_viewpager
 
-    override fun initLayout() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewPagerLayout?.orientation = viewPagerOrientation
         initViewPagerAdapter()
     }

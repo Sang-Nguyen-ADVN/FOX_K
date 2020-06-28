@@ -44,32 +44,10 @@
 
     </fragment>
 
-    <action
-        android:id="@+id/action_splashFragment_to_SignInFragment"
-        app:destination="@id/signInFragment"
-        app:enterAnim="@anim/nav_default_enter_anim"
-        app:exitAnim="@anim/nav_default_exit_anim"
-        app:popEnterAnim="@anim/slide_in_right"
-        app:popExitAnim="@anim/slide_out_right"
-        app:popUpTo="@+id/navigation_welcome"
-        app:popUpToInclusive="true" />
-
     <fragment
         android:id="@+id/boardingFragment"
         android:name="com.ihaha.sunny.fox.ui.boarding.BoardingFragment"
         android:label="FOX"
         tools:layout="@layout/fragment_boarding"/>
-
-
-    <action
-        android:id="@+id/action_boardingFragment_to_SignInFragment"
-        app:destination="@id/signInFragment"
-        app:enterAnim="@anim/nav_default_enter_anim"
-        app:exitAnim="@anim/nav_default_exit_anim"
-        app:popEnterAnim="@anim/slide_in_right"
-        app:popExitAnim="@anim/slide_out_right"
-        app:popUpTo="@+id/navigation_welcome"
-        app:popUpToInclusive="true" />
-
 
 </navigation>

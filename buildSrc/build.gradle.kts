@@ -18,16 +18,16 @@ kotlinDslPluginOptions {
 }
 
 object PluginsVersions {
-    const val GRADLE_ANDROID = "4.1.0-beta01"
+    const val GRADLE_ANDROID = "4.1.0-beta02"
     const val GRADLE_VERSIONS = "0.28.0"
     const val KOTLIN = "1.3.72"
-    const val NAVIGATION = "2.3.0-beta01"
+    const val NAVIGATION = "2.3.0"
     const val JACOCO = "0.17.0-SNAPSHOT"
     const val FABRIC = "1.31.2"
     const val DOKKA = "0.10.0"
-    const val KTLINT = "0.36.0"
-    const val SPOTLESS = "3.26.1"
-    const val DETEKT = "1.2.2"
+    const val KTLINT = "0.37.2"
+    const val SPOTLESS = "4.4.0"
+    const val DETEKT = "1.10.0-RC1"
     const val GRAPH_GENERATOR = "0.6.0-SNAPSHOT"
     const val GOOGLE_SERVICES = "4.3.3"
     const val CRASHLYTICS = "2.1.1"
@@ -47,7 +47,7 @@ dependencies {
     implementation("com.vanniktech:gradle-dependency-graph-generator-plugin:${PluginsVersions.GRAPH_GENERATOR}")
     implementation("org.jetbrains.dokka:dokka-gradle-plugin:${PluginsVersions.DOKKA}")
     implementation("com.pinterest:ktlint:${PluginsVersions.KTLINT}")
-    implementation("com.diffplug.spotless:spotless-plugin-gradle:${PluginsVersions.SPOTLESS}")
+//    implementation("com.diffplug.spotless:spotless-plugin-gradle:${PluginsVersions.SPOTLESS}")
     implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${PluginsVersions.DETEKT}")
 }
 

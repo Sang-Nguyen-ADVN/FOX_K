@@ -4,9 +4,8 @@ import com.haroldadmin.cnradapter.executeWithRetry
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
-import com.ihaha.sunny.base.network.remote.Resource
+import com.ihaha.sunny.base.network.remote.DataState
 import com.ihaha.sunny.base.network.remote.pairOf
 import com.ihaha.sunny.base.network.resource.SingleFetchNetworkBoundResource
 import com.ihaha.sunny.base.network.resource.singleFetchNetworkBoundResourceLazy
@@ -58,7 +57,7 @@ class NewestRepositoryImpl constructor(
     )
 
     @ExperimentalCoroutinesApi
-    override fun fetchNewestAll(): Flow<Resource<List<Categories>>>? {
+    override fun fetchNewestAll(): Flow<DataState<List<Categories>>>? {
         return null
     }
 
@@ -68,7 +67,7 @@ class NewestRepositoryImpl constructor(
         sort: String,
         limit: Int,
         offset: Int
-    ): Flow<Resource<List<Categories>>>? {
+    ): Flow<DataState<List<Categories>>>? {
         newestRes.updateParams(limit, offset)
         val data = newestRes.flow()
         return null

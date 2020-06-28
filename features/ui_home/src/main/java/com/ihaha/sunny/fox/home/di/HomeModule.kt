@@ -17,7 +17,6 @@ private val domainModule = module {
 }
 
 private val viewModelModule = module {
-    viewModel { MainViewModel() }
     viewModel { HomeViewModel() }
     viewModel { EditorsChoiceViewModel() }
     viewModel { NewestViewModel() }

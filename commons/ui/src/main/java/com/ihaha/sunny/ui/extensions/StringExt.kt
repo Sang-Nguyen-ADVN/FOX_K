@@ -17,7 +17,11 @@ fun String?.invalidEmail(): Boolean = this?.trim()?.let { android.util.Patterns.
 
 fun String?.invalidEmailToCallingUserAccounts(): Boolean = this?.trim()?.let { EMAIL_ADDRESS.matcher(it).matches() } ?: false
 
-fun String?.invalidPassword(): Boolean = this?.trim()?.let { passwordPattern.toRegex().matches(it) } ?: false
+fun String?.invalidHardPassword(): Boolean = this?.trim()?.let { passwordPattern.toRegex().matches(it) } ?: false
+
+fun String?.invalidNormalPassword(): Boolean = this?.isNotEmpty() ?: false
+
+fun String?.invalidString(): Boolean = this?.isNotEmpty() ?: false
 
 
 val EMAIL_ADDRESS = Pattern.compile(

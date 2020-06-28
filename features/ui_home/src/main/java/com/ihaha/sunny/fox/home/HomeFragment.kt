@@ -18,6 +18,8 @@ import com.ihaha.sunny.fox.home.video.VideoFragment
 import com.ihaha.sunny.ui.extensions.color
 import com.ihaha.sunny.ui.extensions.drawable
 import com.ihaha.sunny.ui.extensions.unsafeLazy
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 
 
 /**
@@ -26,6 +28,8 @@ import com.ihaha.sunny.ui.extensions.unsafeLazy
  * Version: 1.0.0
  */
 
+@FlowPreview
+@ExperimentalCoroutinesApi
 class HomeFragment : BaseTabViewPagerFragment<FragmentHomeBinding, HomeViewModel>() {
 
 

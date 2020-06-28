@@ -44,6 +44,8 @@ object Dependencies {
     const val SWIPE_REFRESH_LAYOUT = "androidx.swiperefreshlayout:swiperefreshlayout:${BuildDependenciesVersions.SWIPE_REFRESH_LAYOUT}"
     const val PAGING = "androidx.paging:paging-runtime-ktx:${BuildDependenciesVersions.PAGING}"
     const val MATERIAL_DIALOG = "com.afollestad.material-dialogs:core:${BuildDependenciesVersions.MATERIAL_DIALOG}"
+    const val PROGRESS_BUTTON = "com.github.razir.progressbutton:progressbutton:${BuildDependenciesVersions.PROGRESS_BUTTON}"
+    const val PROGRESS_BAR = "com.github.slaviboy:ProgressBar:${BuildDependenciesVersions.PROGRESS_BAR}"
 
     //DI
     const val KOIN = "org.koin:koin-androidx-scope:${BuildDependenciesVersions.KOIN_VERSION}"

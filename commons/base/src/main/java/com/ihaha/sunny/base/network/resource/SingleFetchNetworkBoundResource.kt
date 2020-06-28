@@ -4,7 +4,8 @@ import com.haroldadmin.cnradapter.NetworkResponse
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import com.ihaha.sunny.base.network.remote.Resource
+import com.ihaha.sunny.base.network.remote.DataState
+import com.ihaha.sunny.base.network.remote.DataType
 
 /**
  * A class that fetches data from the network just once, and then returns
@@ -15,14 +16,14 @@ abstract class SingleFetchNetworkBoundResource<T : Any, U : Any, V : Any> : Netw
     private var hasDataBeenFetched: Boolean = false
 
     @ExperimentalCoroutinesApi
-    override fun flow(): Flow<Resource<T>> {
+    override fun flow(): Flow<DataState<T?>> {
         return flow {
             val cachedData = dataFromDatabase(isRefreshed = hasDataBeenFetched, limit = limit, offset = offset)
 
             if (validateCache(cachedData)) {
-                emit(Resource.Success(cachedData!!, isCached = true))
+                emit(DataState.SUCCESS(data = cachedData, isCached = true, dataType = DataType.DATABASE))
             } else {
-                emit(Resource.Loading)
+                emit(DataState.LOADING)
             }
 
             if (!hasDataBeenFetched) {
@@ -31,21 +32,21 @@ abstract class SingleFetchNetworkBoundResource<T : Any, U : Any, V : Any> : Netw
                         dataFromPersist(apiResponse.body)
                         hasDataBeenFetched = true
                         val refreshedData = dataFromDatabase(isRefreshed = true, limit = limit, offset = offset)!!
-                        emit(Resource.Success(refreshedData, isCached = false))
+                        emit(DataState.SUCCESS(refreshedData, isCached = false, dataType = DataType.REMOTE))
                     }
                     is NetworkResponse.ServerError -> {
                         val error = apiResponse.body
-                        emit(Resource.Error(cachedData, error))
+                        emit(DataState.ERROR(cachedData, error))
                     }
                     is NetworkResponse.NetworkError -> {
                         val error = apiResponse.error
-                        emit(Resource.Error(cachedData, error))
+                        emit(DataState.ERROR(cachedData, error))
                     }
                 }
             } else {
                 cachedData?.let {
-                    emit(Resource.Success(it, isCached = false))
-                } ?: Resource.Error(cachedData, null)
+                    emit(DataState.SUCCESS(data = it, isCached = false, dataType = DataType.UNKNOW))
+                } ?: DataState.ERROR(cachedData, null)
             }
         }
     }
@@ -102,6 +103,6 @@ inline fun <T : Any, U : Any, V : Any> singleFetchNetworkBoundFlow(
     crossinline dataToServer: suspend () -> NetworkResponse<U, V>,
     crossinline cacheValidator: suspend (T?) -> Boolean,
     crossinline dataToPersist: suspend (U) -> Unit
-): Flow<Resource<T>> {
+): Flow<DataState<T?>> {
     return singleFetchNetworkBoundResource(initialParams, dataToDatabase, dataToServer, cacheValidator, dataToPersist).flow()
 }

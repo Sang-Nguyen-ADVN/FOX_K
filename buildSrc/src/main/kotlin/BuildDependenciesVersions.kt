@@ -18,7 +18,7 @@ object BuildDependenciesVersions {
     const val DRAWER_LAYOUT = "1.0.0"
     const val RECYCLE_VIEW = "1.1.0"
     const val FRAGMENT_KTX = "1.3.0-alpha05"
-    const val CONSTRAIN_LAYOUT = "2.0.0-beta4"
+    const val CONSTRAIN_LAYOUT = "2.0.0-beta7"
     const val SWIPE_REFRESH_LAYOUT = "1.1.0-alpha02"
     const val MATERIAL_DESIGN_SPECS = "2.0.1"
     const val PRO_PROGRESS_VIEWS = "1.1"
@@ -29,6 +29,8 @@ object BuildDependenciesVersions {
     const val HTML_TEXTVIEW = "3.9"
     const val NAVIGATION = "2.3.0-rc01"
     const val MATERIAL_DIALOG = "3.3.0"
+    const val PROGRESS_BUTTON = "2.1.0"
+    const val PROGRESS_BAR = "v0.1.0"
 
     //LIFECYCLE
     const val LIFECYCLE = "2.2.0"

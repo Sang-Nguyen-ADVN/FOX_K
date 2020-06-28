@@ -72,9 +72,11 @@ android {
     sourceSets {
         getByName("main") {
             java.srcDir("src/main/kotlin")
+            java.srcDirs("build/generated/source/navigation-args")
         }
         getByName("test") {
             java.srcDir("src/test/kotlin")
+            java.srcDirs("build/generated/source/navigation-args")
         }
 
         getByName("androidTest").java.srcDirs("src/androidTest/kotlin/")
@@ -157,6 +159,8 @@ dependencies {
     implementation(Dependencies.COIL)
     implementation(Dependencies.PRO_PROGRESS_VIEWS)
     implementation(Dependencies.PAGING)
+    implementation(Dependencies.PROGRESS_BUTTON)
+    implementation(Dependencies.PROGRESS_BAR)
 
     //NAVIGATION
     implementation(Dependencies.NAVIGATION_FRAGMENT)

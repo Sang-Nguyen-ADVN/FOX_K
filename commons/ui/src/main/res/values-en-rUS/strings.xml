@@ -10,7 +10,8 @@
     <string name="error_user_name_empty">User name is empty. Please enter a valid name first</string>
     <string name="error_user_email_empty">User email is empty. Please enter a valid email address first</string>
     <string name="error_terms_of_usage_not_checked">You must agrees with terms of usage before using this application</string>
-    <string name="error_user_password_empty">User password is empty. Please enter a valid password from your account</string>
+    <string name="error_user_password_empty">User repeated password is empty. Please enter a valid password from your account</string>
+    <string name="error_user_re_password_empty">User re password is empty. Please enter a valid password from your account</string>
     <string name="error_user_password_short">User password is too short. Minimum length is 6 characters</string>
     <string name="error_user_phone_empty">User phone is empty. Please enter a valid phone number from your account</string>
     <string name="error_user_phone_email_empty">Please enter a valid phone number or email address from your account</string>
@@ -69,6 +70,7 @@
     <string name="title_try_again">Try again</string>
     <string name="title_apply">Apply</string>
     <string name="title_loading">Loading…</string>
+    <string name="title_loading_button">Loading</string>
     <string name="title_next">Next</string>
     <string name="title_skip">Skip</string>
     <string name="title_started">Get started</string>

@@ -1,11 +1,14 @@
 package com.ihaha.sunny.fox.organizations
 
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.activityViewModels
 import com.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
 import com.ihaha.sunny.fox.organizations.databinding.FragmentOriganizationsBinding
 import com.ihaha.sunny.fox.organizations.di.injectFeature
 import com.ihaha.sunny.fox.organizations.di.removeFeature
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 
 
 /**
@@ -13,6 +16,8 @@ import com.ihaha.sunny.fox.organizations.di.removeFeature
  * Version: 1.0.0
  */
 
+@FlowPreview
+@ExperimentalCoroutinesApi
 class OriganizationsFragment : BaseBindingFragment<FragmentOriganizationsBinding, OriganizationsViewModel>() {
 
     //region override
@@ -27,9 +32,15 @@ class OriganizationsFragment : BaseBindingFragment<FragmentOriganizationsBinding
         fun newInstances() = OriganizationsFragment()
     }
 
-    override fun initOnCreate(savedInstanceState: Bundle?) {
-        super.initOnCreate(savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         injectFeature()
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+//        initComponents()
+//        initEventListener()
     }
 
     override fun onDestroy() {

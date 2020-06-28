@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.fragment.app.activityViewModels
 import com.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
 import com.ihaha.sunny.fox.settings.databinding.FragmentSettingsBinding
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
@@ -12,6 +14,8 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
  * Version: 1.0.0
  */
 
+@FlowPreview
+@ExperimentalCoroutinesApi
 class SettingsFragment : BaseBindingFragment<FragmentSettingsBinding, SettingsViewModel>() {
 
     //region override
@@ -24,11 +28,6 @@ class SettingsFragment : BaseBindingFragment<FragmentSettingsBinding, SettingsVi
 
     companion object{
         fun newInstances() = SettingsFragment()
-    }
-
-    override fun initOnCreate(savedInstanceState: Bundle?) {
-        super.initOnCreate(savedInstanceState)
-        TODO("Not yet implemented")
     }
 
 }

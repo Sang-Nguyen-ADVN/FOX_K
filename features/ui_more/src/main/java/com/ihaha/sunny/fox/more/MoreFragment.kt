@@ -16,6 +16,8 @@ import com.ihaha.sunny.fox.ui.callback.OnListenerChangeTheme
 import com.ihaha.sunny.ui.extensions.string
 import com.ihaha.sunny.utils.prefs.SharePrefsManager
 import com.ihaha.sunny.utils.prefs.SharedPrefKeys
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 import org.koin.android.ext.android.inject
 
 /**
@@ -23,6 +25,8 @@ import org.koin.android.ext.android.inject
  * Version: 1.0.0
  */
 
+@FlowPreview
+@ExperimentalCoroutinesApi
 class MoreFragment : BaseBindingFragment<FragmentMoreBinding, MoreViewModel>() {
 
     //region variable
@@ -61,13 +65,13 @@ class MoreFragment : BaseBindingFragment<FragmentMoreBinding, MoreViewModel>() {
         }
     }
 
-    override fun initOnCreate(savedInstanceState: Bundle?) {
-        super.initOnCreate(savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         injectFeature()
     }
 
-    override fun initOnViewCreate(savedInstanceState: Bundle?) {
-        super.initOnViewCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         initComponents()
         initEventListener()
     }

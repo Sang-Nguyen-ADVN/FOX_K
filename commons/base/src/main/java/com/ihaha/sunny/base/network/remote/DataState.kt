@@ -3,7 +3,8 @@ package com.ihaha.sunny.base.network.remote
 /**
  * A sealed class to represent UI states associated with a resource.
  */
-sealed class Resource<out T> {
+sealed class DataState<out T>( var loading: Boolean,
+                               var stateMessage: StateMessage? = null) {
 
     abstract override fun hashCode(): Int
     abstract override fun equals(other: Any?): Boolean
@@ -19,16 +20,16 @@ sealed class Resource<out T> {
      *
      * This is a terminal state, and the Resource object is considered to be completed when it is in this state
      */
-    data class Success <out T>(
+    data class SUCCESS <out T>(
         val data: T,
-        val isCached: Boolean = false
-    ) : Resource<T>() {
+        val isCached: Boolean = false,
+        val dataType: DataType = DataType.UNKNOW,
+        val message: StateMessage? = null)
+        : DataState<T>(loading = !isCached, stateMessage = message) {
 
         override val isComplete: Boolean = !isCached
 
-        operator fun invoke(): T {
-            return data
-        }
+        operator fun invoke(): T { return data }
     }
 
     /**
@@ -36,10 +37,12 @@ sealed class Resource<out T> {
      *
      * This is a terminal state, and the Resource object is considered to be completed when it is in this state
      */
-    data class Error <out T, out E> (
+    data class ERROR <out T, out E> (
         val data: T?,
-        val error: E?
-    ) : Resource<T>() {
+        val error: E?,
+        val dataType: DataType = DataType.UNKNOW,
+        val message: StateMessage? = null)
+        : DataState<T>(loading = false, stateMessage = message) {
 
         override val isComplete: Boolean = true
     }
@@ -49,19 +52,19 @@ sealed class Resource<out T> {
      *
      * This is a non-terminal state.
      */
-    object Loading : Resource<Nothing>() {
+    object LOADING : DataState<Nothing>(loading = false) {
         override fun hashCode(): Int {
             return 2
         }
 
         override fun equals(other: Any?): Boolean {
-            return other is Loading
+            return other is LOADING
         }
 
         override val isComplete: Boolean = false
     }
 
-    object Uninitialized : Resource<Nothing>() {
+    object Uninitialized : DataState<Nothing>(loading = false) {
         override fun hashCode(): Int {
             return 1
         }
@@ -74,10 +77,16 @@ sealed class Resource<out T> {
     }
 }
 
-operator fun <T> Resource<T>.invoke(): T? {
+enum class DataType{
+    UNKNOW,
+    DATABASE,
+    REMOTE
+}
+
+operator fun <T> DataState<T>.invoke(): T? {
     return when {
-        this is Resource.Success -> this.data
-        this is Resource.Error<T, *> && this.data != null -> this.data
+        this is DataState.SUCCESS -> this.data
+        this is DataState.ERROR<T, *> && this.data != null -> this.data
         else -> null
     }
 }

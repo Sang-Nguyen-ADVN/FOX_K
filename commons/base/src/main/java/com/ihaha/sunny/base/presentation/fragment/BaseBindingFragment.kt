@@ -8,7 +8,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.ihaha.sunny.base.viewModels.IBaseViewModel
 import com.ihaha.sunny.base.BR
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 
+@ExperimentalCoroutinesApi @FlowPreview
 abstract class BaseBindingFragment<T : ViewDataBinding, out V : IBaseViewModel> : BaseFragment<V>() {
 
     protected lateinit var viewBinding: T

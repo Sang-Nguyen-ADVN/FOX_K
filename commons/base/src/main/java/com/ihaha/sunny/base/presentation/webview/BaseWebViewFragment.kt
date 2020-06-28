@@ -14,14 +14,18 @@ import com.ihaha.sunny.base.R
 import com.ihaha.sunny.base.databinding.LayoutWebviewBinding
 import com.ihaha.sunny.base.presentation.fragment.BaseFragment
 import com.ihaha.sunny.base.viewModels.IBaseViewModel
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 
+@ExperimentalCoroutinesApi @FlowPreview
 abstract class BaseWebViewFragment<out VM: IBaseViewModel> : BaseFragment<VM>() {
 
-
+    @ExperimentalCoroutinesApi @FlowPreview
     override val layoutId: Int get() = R.layout.layout_webview
 
     protected open var binding: LayoutWebviewBinding? = null
 
+    @ExperimentalCoroutinesApi @FlowPreview
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return DataBindingUtil.inflate<LayoutWebviewBinding>(inflater, layoutId,  container, false).also{
             binding = it
@@ -29,6 +33,7 @@ abstract class BaseWebViewFragment<out VM: IBaseViewModel> : BaseFragment<VM>() 
         }.root
     }
 
+    @ExperimentalCoroutinesApi @FlowPreview
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initSettings()
@@ -129,18 +134,22 @@ abstract class BaseWebViewFragment<out VM: IBaseViewModel> : BaseFragment<VM>() 
 //        }
     }
 
+    @ExperimentalCoroutinesApi @FlowPreview
     override fun onResume() {
         super.onResume()
         binding?.webView?.onResume()
         binding?.webView?.resumeTimers()
     }
 
+    @ExperimentalCoroutinesApi @FlowPreview
     override fun onPause() {
         super.onPause()
         binding?.webView?.onPause()
         binding?.webView?.pauseTimers()
     }
 
+    @ExperimentalCoroutinesApi
+    @FlowPreview
     override fun onDestroyView() {
         binding?.webView?.clearCache(true)
         binding?.webView?.clearFormData()

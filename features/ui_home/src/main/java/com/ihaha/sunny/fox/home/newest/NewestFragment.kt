@@ -4,6 +4,8 @@ import androidx.fragment.app.activityViewModels
 import com.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
 import com.ihaha.sunny.fox.home.R
 import com.ihaha.sunny.fox.home.databinding.FragmentNewestBinding
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 
 
 /**
@@ -11,6 +13,8 @@ import com.ihaha.sunny.fox.home.databinding.FragmentNewestBinding
  * Version: 1.0.0
  */
 
+@FlowPreview
+@ExperimentalCoroutinesApi
 class NewestFragment : BaseBindingFragment<FragmentNewestBinding, NewestViewModel>() {
 
     //region override

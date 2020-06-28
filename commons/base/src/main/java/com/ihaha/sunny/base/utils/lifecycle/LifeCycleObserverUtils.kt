@@ -26,26 +26,26 @@ class LifeCycleObserverUtils(private val lifecycle: Lifecycle) : LifecycleObserv
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    fun onCreate() = logInfo("onCreate()")
+    fun onCreate() = logInfo("onCreate() $className")
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    fun onStart() = logInfo("onStart()")
+    fun onStart() = logInfo("onStart() $className")
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun onResume() {
-        logInfo("onResume()")
+        logInfo("onResume() $className")
         currentClassName = className
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-    fun onPause() = logInfo("onPause()")
+    fun onPause() = logInfo("onPause() $className")
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    fun onStop() = logInfo("onStop()")
+    fun onStop() = logInfo("onStop() $className")
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun onDestroy() {
-        logInfo("onDestroy()")
+        logInfo("onDestroy() $className")
         lifecycle.removeObserver(this)
     }
 

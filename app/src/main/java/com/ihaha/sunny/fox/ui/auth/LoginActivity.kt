@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity(), OnListenerNavigationToMainActivity, I
         initEventListeners()
     }
 
-    override fun onNavigation() {
+    override fun onNavigation(page : String) {
         val intent = Intent(this@LoginActivity, MainActivity::class.java)
         startActivity(intent)
         finish()

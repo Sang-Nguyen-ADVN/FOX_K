@@ -6,12 +6,17 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.launch
 import com.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
+import com.ihaha.sunny.fox.Constants
 import com.ihaha.sunny.fox.R
 import com.ihaha.sunny.fox.databinding.FragmentBoardingBinding
 import com.ihaha.sunny.fox.ui.callback.OnListenerNavigationToMainActivity
 import com.ihaha.sunny.ui.view.ui.OnClickNavigationToMain
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@FlowPreview
+@ExperimentalCoroutinesApi
 class BoardingFragment : BaseBindingFragment<FragmentBoardingBinding, BoardingViewModel>() {
 
     //region variable
@@ -30,7 +35,6 @@ class BoardingFragment : BaseBindingFragment<FragmentBoardingBinding, BoardingVi
     //endregion
 
     //region override
-
     override val viewModel: BoardingViewModel by viewModel()
 
     override val layoutId: Int = R.layout.fragment_boarding
@@ -57,10 +61,7 @@ class BoardingFragment : BaseBindingFragment<FragmentBoardingBinding, BoardingVi
             OnClickNavigationToMain {
             override fun onClickNavigation() {
                 viewModel.saveKeyOnBoarding()
-//                if (onListenerNavigationToMainActivity != null) {
-//                    onListenerNavigationToMainActivity?.onNavigation()
-//                }
-                findNavController().navigate(R.id.action_boardingFragment_to_SignInFragment)
+                onListenerNavigationToMainActivity?.onNavigation(Constants.ACTIVITY_LOGIN)
             }
         }
         viewBinding.onBroadingView.setOnclickNavigationToMain(onClickNavigationToMain)
