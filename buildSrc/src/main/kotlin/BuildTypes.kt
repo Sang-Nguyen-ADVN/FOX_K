@@ -23,7 +23,7 @@ interface BuildTypeCustom {
 }
 
 object BuildTypeDebug : BuildTypeCustom {
-    override val isMinifyEnabled = true
+    override val isMinifyEnabled = false
     override val isUseProguard = false
     override val isShrinkResources = true
     override val isCrashlyticsEnabled = false

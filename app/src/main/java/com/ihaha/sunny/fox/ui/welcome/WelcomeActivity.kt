@@ -36,9 +36,11 @@ class WelcomeActivity : BaseActivity(R.layout.activity_welcome), ICoroutinesMana
             delay(2000)
             if(page == Constants.ACTIVITY_MAIN) {
                 val intent = Intent(this@WelcomeActivity, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP;
                 startActivity(intent)
             }else if(page == Constants.ACTIVITY_LOGIN){
                 val intent = Intent(this@WelcomeActivity, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP;
                 startActivity(intent)
             }
             finish()

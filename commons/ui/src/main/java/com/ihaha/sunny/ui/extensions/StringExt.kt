@@ -3,6 +3,10 @@ package com.ihaha.sunny.base.exception
 import android.os.Build
 import android.text.Html
 import android.text.Spanned
+import java.nio.charset.Charset
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
 import java.util.regex.Pattern
 
 //private const val phoneNumberPattern = "^\\s*(010|011|016|017|018|019)(-|\\)|\\s)*(\\d{3,4})(-|\\s)*(\\d{4})\\s*$"
@@ -34,6 +38,22 @@ val EMAIL_ADDRESS = Pattern.compile(
      ")+"
 )
 // endregion
+
+fun String.generateName(): String {
+
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        val dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy/HH:mm:ss")
+        val localDateTime = LocalDateTime.now()
+        return dateFormat.format(localDateTime)
+    }
+    return randomString()
+}
+
+fun randomString(): String {
+    val array = ByteArray(7) // length is bounded by 7
+    Random().nextBytes(array)
+    return String(array, Charset.forName("UTF-8"))
+}
 
 //fun String.changeMonth(): String = if (this.length == 1) "0$this" else this
 

@@ -13,7 +13,7 @@ import org.koin.dsl.module
 val dataModule = module {
     single { createDatabaseName() }
 
-    factory<FirebaseAuthRepository> { FirebaseAuthRepositoryImpl(get()) }
+    factory<FirebaseAuthRepository> { FirebaseAuthRepositoryImpl(get(), get(), get()) }
     factory<NewestRepository> { NewestRepositoryImpl(get(), get(), get()) }
 
 }

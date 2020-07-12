@@ -9,7 +9,7 @@ import com.ihaha.sunny.fox.domain.usecase.auth.AuthUseCase
 
 class WelcomeViewModel(private val authUseCase: AuthUseCase) : BaseViewModel() {
 
-    suspend fun getCurrentUser() : LiveData<FirebaseUser?> {
-        return authUseCase.getCurrentUser().asLiveData(viewModelScope.coroutineContext)
+    suspend fun getCurrentUser() : FirebaseUser? {
+        return authUseCase.getCurrentUser()
     }
 }

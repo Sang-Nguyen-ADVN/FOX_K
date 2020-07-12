@@ -110,9 +110,11 @@ object BuildDependenciesVersions {
     const val FIREBASE_ANALYTICS = "17.3.0"
     const val FIREBASE_CRASHLYTICS = "17.0.1"
     const val FIREBASE_MESSAGING = "20.1.0"
-    const val FIREBASE_FIRESTORE = "21.4.2"
+    const val FIREBASE_FIRE_STORE = "21.4.2"
+    const val FIREBASE_FIRE_STORAGE = "19.1.1"
     const val FIREBASE_AUTH = "19.2.0"
     const val FIREBASE_PERFORMANCE = "19.0.7"
+    const val FIREBASE_DATABASE = "19.3.1"
     const val GOOGLE_AUTH_LOGIN = "17.0.0"
     const val GOOGLE_AUTH_PHONE = "17.3.0"
 }

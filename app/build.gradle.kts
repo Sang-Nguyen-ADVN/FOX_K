@@ -173,10 +173,12 @@ dependencies {
 
     //FIREBASE
     implementation(Dependencies.FIREBASE_AUTH)
-//    implementation(Dependencies.FIREBASE_CORE)
+    implementation(Dependencies.FIREBASE_CORE)
     implementation(Dependencies.FIREBASE_ANALYTICS)
-    implementation(Dependencies.FIREBASE_FIRESTORE)
+    implementation(Dependencies.FIREBASE_FIRE_STORE)
+    implementation(Dependencies.FIREBASE_FIRE_STORAGE)
     implementation(Dependencies.FIREBASE_PERFORMANCE)
+    implementation(Dependencies.FIREBASE_DATABASE)
     implementation(Dependencies.CRASHLYTICS)
     implementation(Dependencies.GOOGLE_AUTH_LOGIN)
     implementation(Dependencies.GOOGLE_AUTH_PHONE)

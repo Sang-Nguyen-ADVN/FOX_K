@@ -11,15 +11,18 @@ plugins {
 dependencies {
     //MODULES
     implementation(project(BuildModules.COMMONS.BASE))
+    implementation(project(BuildModules.COMMONS.UI))
     implementation(project(BuildModules.CORES.CACHE))
     implementation(project(BuildModules.CORES.LOCAL))
     implementation(project(BuildModules.CORES.REMOTE))
     implementation(project(BuildModules.CORES.DOMAIN))
     //FIREBASE
     implementation(Dependencies.FIREBASE_AUTH)
-//    implementation(Dependencies.FIREBASE_CORE)
+    implementation(Dependencies.FIREBASE_CORE)
+    implementation(Dependencies.FIREBASE_DATABASE)
     implementation(Dependencies.FIREBASE_ANALYTICS)
-    implementation(Dependencies.FIREBASE_FIRESTORE)
+    implementation(Dependencies.FIREBASE_FIRE_STORE)
+    implementation(Dependencies.FIREBASE_FIRE_STORAGE)
     implementation(Dependencies.FIREBASE_CRASHLYTICS)
     implementation(Dependencies.FIREBASE_MESSAGING)
     implementation(Dependencies.GOOGLE_AUTH_LOGIN)

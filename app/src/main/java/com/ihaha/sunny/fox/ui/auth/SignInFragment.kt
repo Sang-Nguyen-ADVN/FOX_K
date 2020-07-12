@@ -78,52 +78,28 @@ class SignInFragment : BaseBindingFragment<FragmentSignInBinding, SignInViewMode
             launch {
                 val email = viewBinding.edtUserName.text.toString()
                 val password = viewBinding.edtUserPassword.text.toString()
-                when {
-                    !email.invalidString() -> {
-                        viewBinding.tvError.text = string(R.string.error_user_phone_email_empty)
-                    }
-                    !password.invalidNormalPassword() -> {
-                        viewBinding.tvError.text = string(R.string.error_user_password_empty)
-                    }
-                    else -> {
-                        when {
-                            email.invalidPhoneNumber() -> {
-
-                            }
-                            else -> {
-                                viewModel.signInWithEmailAndPassword(email = email, password = password)
-                                    .observe(viewLifecycleOwner, Observer {
-                                        it.addOnCompleteListener { result ->
-                                            when {
-                                                result.isSuccessful -> {
-                                                    if (result.result != null) {
-                                                        val userResult = result.result?.user
-                                                        currentUser = User(
-                                                            uid = userResult?.uid,
-                                                            username = userResult?.displayName,
-                                                            email = userResult?.email,
-                                                            phone = userResult?.phoneNumber,
-                                                            pictureUrl = userResult?.photoUrl.toString()
-                                                        )
-                                                        onListenerNavigationToMainActivity?.onNavigation(
-                                                            Constants.ACTIVITY_MAIN
-                                                        )
-                                                    }
-                                                }
-                                                else -> {
-                                                    viewBinding.tvError.text = result.exception?.message
-                                                }
-                                            }
+                if (invalidData(email, password)) {
+                    viewModel.signInWithEmailAndPassword(email = email, password = password)
+                        .observe(viewLifecycleOwner, Observer {
+                            it.addOnCompleteListener { result ->
+                                when {
+                                    result.isSuccessful -> {
+                                        if (result.result != null) {
+                                            onListenerNavigationToMainActivity?.onNavigation(
+                                                Constants.ACTIVITY_MAIN
+                                            )
                                         }
-                                    })
+                                    }
+                                    else -> {
+                                        viewBinding.tvError.text = result.exception?.message
+                                    }
+                                }
                             }
-                        }
-
-                    }
+                        })
                 }
             }
-
         }
+
         viewBinding.tvForgetPassword.setOnSingleClickListener() {
             val action = SignInFragmentDirections.actionSignInFragmentToResetPasswordFragment()
             it.findNavController().navigate(action)
@@ -131,6 +107,25 @@ class SignInFragment : BaseBindingFragment<FragmentSignInBinding, SignInViewMode
         viewBinding.tvSignUp.setOnClickListener {
             val action = SignInFragmentDirections.actionSignInFragmentToSignUpFragment()
             it.findNavController().navigate(action)
+        }
+    }
+
+    private fun invalidData(
+        email: String?,
+        password: String?
+    ): Boolean {
+        when {
+            !email.invalidEmail() -> {
+                viewBinding.tvError.text = string(R.string.error_user_email_empty)
+                return false
+            }
+            !password.invalidNormalPassword() -> {
+                viewBinding.tvError.text = string(R.string.error_user_password_empty)
+                return false
+            }
+            else -> {
+                return true
+            }
         }
     }
     //endregion

@@ -74,7 +74,7 @@ dependencies {
 //    implementation(Dependencies.FIREBASE_CORE)
     implementation(Dependencies.FIREBASE_CONFIG)
     implementation(Dependencies.FIREBASE_ANALYTICS)
-    implementation(Dependencies.FIREBASE_FIRESTORE)
+    implementation(Dependencies.FIREBASE_FIRE_STORE)
     implementation(Dependencies.GOOGLE_AUTH_LOGIN)
     implementation(Dependencies.GOOGLE_AUTH_PHONE)
 

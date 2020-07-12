@@ -1,32 +1,45 @@
 package com.ihaha.sunny.fox.data.repository.auth
 
+import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.haroldadmin.cnradapter.NetworkResponse
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
+import com.ihaha.sunny.base.exception.generateName
+import com.ihaha.sunny.base.network.firebase.await
+import com.ihaha.sunny.fox.domain.model.auth.User
+import com.ihaha.sunny.fox.domain.repository.auth.FirebaseAuthRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.channels.sendBlocking
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.flow
-import com.ihaha.sunny.base.network.firebase.await
-import com.ihaha.sunny.base.network.resource.NetworkBoundResourceNoCache
-import com.ihaha.sunny.base.network.resource.networkBoundResourceNoCacheLazy
-import com.ihaha.sunny.fox.domain.repository.auth.FirebaseAuthRepository
-import com.ihaha.sunny.fox.domain.viewstate.AuthViewState
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.emitAll
-import kotlinx.coroutines.withContext
-import okhttp3.internal.wait
 
 @ExperimentalCoroutinesApi
-class FirebaseAuthRepositoryImpl(private val firebaseAuth: FirebaseAuth) :
-    FirebaseAuthRepository {
+class FirebaseAuthRepositoryImpl(
+    private val firebaseAuth: FirebaseAuth,
+    private val firebaseDatabase: FirebaseDatabase,
+    private val firebaseStorage: FirebaseStorage
+) : FirebaseAuthRepository {
 
     //region variable
     private val email: String? = null
     private val password: String? = null
     //endregion
+
+    //region auth
+
+    override suspend fun getCurrentUser() : FirebaseUser? {
+        return firebaseAuth.currentUser
+    }
+
+    private val generateName = "".generateName()
+
+    private val userId by lazy { firebaseAuth.currentUser?.uid }
+
+    private val storageRef = firebaseStorage.getReference("${PATH_USERS}/$userId/$generateName")
 
     override suspend fun authStateChanges() = callbackFlow<FirebaseAuth> {
         val listener = FirebaseAuth.AuthStateListener {
@@ -46,10 +59,6 @@ class FirebaseAuthRepositoryImpl(private val firebaseAuth: FirebaseAuth) :
         }
     }
 
-    override suspend fun getCurrentUser() = flow {
-        emit(firebaseAuth.currentUser)
-    }
-
     override suspend fun signInAnonymous() = flow {
         emit(firebaseAuth.signInAnonymously())
     }
@@ -66,10 +75,6 @@ class FirebaseAuthRepositoryImpl(private val firebaseAuth: FirebaseAuth) :
         emit(firebaseAuth.signInWithEmailAndPassword(email.toString(), password.toString()))
     }
 
-//    override suspend fun signInWithPhoneAndPassword(phone: String?, password: String?) = flow {
-//        emit(firebaseAuth.signin(email.toString(), password.toString()))
-//    }
-
     override suspend fun signUpWithEmailAndPassword(email: String?, password: String?) = flow {
         emit(firebaseAuth.createUserWithEmailAndPassword(email.toString(), password.toString()))
     }
@@ -83,5 +88,72 @@ class FirebaseAuthRepositoryImpl(private val firebaseAuth: FirebaseAuth) :
         emit(true)
     }
 
+    //endregion
 
+    //region database
+
+
+
+    override suspend fun updateInfoName(data: String?) = flow {
+        emit(firebaseDatabase.getReference("${PATH_USERS}/${getCurrentUser()?.uid}")
+            .child(CHILD_USER_NAME)
+            .setValue(data))
+    }
+
+    override suspend fun updateInfoPhone(data: String?) = flow {
+        emit(firebaseDatabase.getReference("${PATH_USERS}/${getCurrentUser()?.uid}")
+            .child(CHILD_USER_PHONE)
+            .setValue(data))
+    }
+
+    override suspend fun updateInfoBirth(data: Long?) = flow {
+        emit(firebaseDatabase.getReference("${PATH_USERS}/${getCurrentUser()?.uid}")
+            .child(CHILD_USER_BIRTH_DAY)
+            .setValue(data))
+    }
+
+    override suspend fun updateInfoGender(data: String?) = flow {
+        emit(firebaseDatabase.getReference("${PATH_USERS}/${getCurrentUser()?.uid}")
+            .child(CHILD_USER_GENDER)
+            .setValue(data))
+    }
+
+    override suspend fun updateUserData(user: User?) = flow {
+        emit(firebaseDatabase.getReference("${PATH_USERS}/${getCurrentUser()?.uid}")
+            .setValue(user))
+    }
+
+    override suspend fun getUsers() = flow {
+        emit(firebaseDatabase.getReference(PATH_USERS))
+    }
+
+    override suspend fun getInfoUsers() = flow {
+        emit(firebaseDatabase.getReference("${PATH_USERS}/${getCurrentUser()?.uid}"))
+    }
+
+//    override suspend fun updateUserAvatar(bytes: ByteArray?) =
+//        storageRef.putBytes(bytes)
+//            .addOnSuccessListener {
+//                storageRef.downloadUrl.addOnSuccessListener {
+//                    runBlocking {
+//                        firebaseDatabase.getReference("${PATH_USERS}/${getCurrentUser()?.uid}")
+//                            .child(CHILD_USER_AVATAR)
+//                            .setValue(it)
+//                    }
+//                }
+//            }
+
+    //endregion
+
+    companion object{
+        const val PATH_USERS = "users"
+
+        const val CHILD_USER_NAME = "userName"
+        const val CHILD_USER_PHONE = "phone"
+        const val CHILD_USER_BIRTH_DAY = "birthday"
+        const val CHILD_USER_GENDER = "gender"
+        const val CHILD_USER_AVATAR = "avatar"
+
+        const val VALUE_USER_AVATAR = ""
+    }
 }

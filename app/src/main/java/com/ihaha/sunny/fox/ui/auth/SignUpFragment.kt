@@ -1,10 +1,13 @@
 package com.ihaha.sunny.fox.ui.auth
 
 import android.content.Context
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.ihaha.sunny.base.exception.invalidEmail
 import com.ihaha.sunny.base.exception.invalidNormalPassword
 import com.ihaha.sunny.base.exception.invalidString
@@ -19,6 +22,8 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import timber.log.Timber
+
 
 @FlowPreview
 @ExperimentalCoroutinesApi
@@ -27,7 +32,6 @@ class SignUpFragment : BaseBindingFragment<FragmentSignUpBinding, SignUpViewMode
     //region variable
 
     private var onListenerNavigationToMainActivity: OnListenerNavigationToMainActivity? = null
-    private var currentUser: User? = null
 
     //endregion
 
@@ -64,55 +68,27 @@ class SignUpFragment : BaseBindingFragment<FragmentSignUpBinding, SignUpViewMode
     private fun initEventListeners() {
         viewBinding.btnSignUp.setOnClickListener {
             launch {
-                val email = viewBinding.edtUserName.text.toString()
+                val email = viewBinding.edtEmail.text.toString()
                 val password = viewBinding.edtUserPassword.text.toString()
                 val rePassword = viewBinding.edtRePassword.text.toString()
                 val userName = viewBinding.edtUserName.text.toString()
-                when {
-                    !userName.invalidString() -> {
-                        viewBinding.tvError.text = string(R.string.error_user_name_empty)
-                    }
-                    !email.invalidEmail() -> {
-                        viewBinding.tvError.text = string(R.string.error_user_email_empty)
-                    }
-                    !password.invalidNormalPassword() -> {
-                        viewBinding.tvError.text = string(R.string.error_user_password_empty)
-                    }
-                    !rePassword.invalidNormalPassword() -> {
-                        viewBinding.tvError.text = string(R.string.error_user_re_password_empty)
-                    }
-                    password != rePassword -> {
-                        viewBinding.tvError.text = string(R.string.error_user_repeated_password_incorrect)
-                    }
-                    else -> {
-                        viewModel.signUpWithEmailAndPassword(email = email, password = password)
-                            .observe(viewLifecycleOwner, Observer {
-                                it.addOnCompleteListener { result ->
-                                    when {
-                                        result.isSuccessful -> {
-                                            if (result.result != null) {
-                                                val userResult = result.result?.user
-                                                currentUser = User(
-                                                    uid = userResult?.uid,
-                                                    username = userResult?.displayName,
-                                                    email = userResult?.email,
-                                                    phone = userResult?.phoneNumber,
-                                                    pictureUrl = userResult?.photoUrl.toString()
-                                                )
-                                                onListenerNavigationToMainActivity?.onNavigation(
-                                                    Constants.ACTIVITY_MAIN
-                                                )
-                                            }
-                                        }
-                                        else -> {
-                                            viewBinding.tvError.text = result.exception?.message
+                if (invalidData(userName, email, password, rePassword)) {
+                    viewModel.signUpWithEmailAndPassword(email = email, password = password)
+                        .observe(viewLifecycleOwner, Observer { signUp ->
+                            signUp.addOnCompleteListener { result ->
+                                when {
+                                    result.isSuccessful -> {
+                                        if (result.result != null) {
+                                            createUserData(compareUser(result.result?.user))
                                         }
                                     }
+                                    else -> {
+                                        viewBinding.tvError.text = result.exception?.message
+                                    }
                                 }
-                            })
-                    }
+                            }
+                        })
                 }
-
             }
         }
         viewBinding.tvSignIn.setOnClickListener {
@@ -120,5 +96,86 @@ class SignUpFragment : BaseBindingFragment<FragmentSignUpBinding, SignUpViewMode
                 .navigate(SignUpFragmentDirections.actionSignUpFragmentToSignInFragment())
         }
         //endregion
+    }
+
+    private fun createUserData(user: User?) {
+        launch {
+            viewModel.createUserData(user = user)
+                .observe(viewLifecycleOwner, Observer { createUser ->
+                    createUser.addOnCompleteListener { result ->
+                        when {
+                            result.isSuccessful -> {
+                                result.addOnSuccessListener {
+                                    Timber.tag(Constants.TAG_FIREBASE).d("Create User Success")
+                                    onListenerNavigationToMainActivity?.onNavigation(Constants.ACTIVITY_MAIN)
+                                }
+                                result.addOnFailureListener {
+                                    Timber.tag(Constants.TAG_FIREBASE).d("Create User Failed")
+                                    Timber.tag(Constants.TAG_FIREBASE).d(it)
+                                    viewBinding.tvError.text = it.message
+                                }
+                            }
+                            else -> {
+                                viewBinding.tvError.text = result.exception?.message
+                            }
+                        }
+                    }
+                    createUser.addOnFailureListener { result ->
+                        viewBinding.tvError.text = result.message
+                    }
+                })
+        }
+    }
+
+    private fun invalidData(
+        userName: String?,
+        email: String?,
+        password: String?,
+        rePassword: String?
+    ): Boolean {
+        when {
+            !userName.invalidString() -> {
+                viewBinding.tvError.text = string(R.string.error_user_name_empty)
+                return false
+            }
+            !email.invalidEmail() -> {
+                viewBinding.tvError.text = string(R.string.error_user_email_empty)
+                return false
+            }
+            !password.invalidNormalPassword() -> {
+                viewBinding.tvError.text = string(R.string.error_user_password_empty)
+                return false
+            }
+            !rePassword.invalidNormalPassword() -> {
+                viewBinding.tvError.text = string(R.string.error_user_re_password_empty)
+                return false
+            }
+            password != rePassword -> {
+                viewBinding.tvError.text = string(R.string.error_user_repeated_password_incorrect)
+                return false
+            }
+            else -> {
+                return true
+            }
+        }
+    }
+
+    private fun compareUser(firebaseUser: FirebaseUser?): User? {
+        val profileUpdate = UserProfileChangeRequest.Builder()
+            .setPhotoUri(Uri.parse("https://firebasestorage.googleapis.com/v0/b/fox-tech.appspot.com/o/user_avatar.png?alt=$PATH_ALT&token=$PATH_TOKEN"))
+            .build()
+        firebaseUser?.updateProfile(profileUpdate)
+        return User(
+            uid = firebaseUser?.uid,
+            username = firebaseUser?.displayName,
+            email = firebaseUser?.email,
+            phone = firebaseUser?.phoneNumber,
+            pictureUrl = firebaseUser?.photoUrl?.toString()
+        )
+    }
+
+    companion object{
+        const val PATH_ALT = "media"
+        const val PATH_TOKEN = "21b1d2e5-a4e5-4b9f-9d9e-a6895fb98a9b"
     }
 }

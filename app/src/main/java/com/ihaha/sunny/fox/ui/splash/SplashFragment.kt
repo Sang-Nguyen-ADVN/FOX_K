@@ -2,7 +2,9 @@ package com.ihaha.sunny.fox.ui.splash
 
 import android.content.Context
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -48,6 +50,15 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding, SplashViewMode
         }
     }
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return super.onCreateView(inflater, container, savedInstanceState)
+        getData()
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initSubscribeRegister()
@@ -55,14 +66,13 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding, SplashViewMode
         initEventListener()
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        isAuth = arguments?.getBoolean("isAuth", false) ?: false
-    }
-
     override fun onResume() {
         super.onResume()
         viewBinding.mlContainer.transitionToEnd()
+    }
+
+    private fun getData(){
+        isAuth = arguments?.getBoolean("isAuth") ?: false
     }
 
     private fun initComponents() {
@@ -81,7 +91,6 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding, SplashViewMode
                 delay(2000)
                 findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToBoardingFragment())
             }
-
         }
     }
 

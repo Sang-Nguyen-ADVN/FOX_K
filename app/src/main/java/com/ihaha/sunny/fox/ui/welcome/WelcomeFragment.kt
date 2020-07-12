@@ -4,20 +4,16 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import com.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
 import com.ihaha.sunny.fox.R
 import com.ihaha.sunny.fox.databinding.FragmentWelcomeBinding
 import com.ihaha.sunny.fox.domain.model.auth.User
 import com.ihaha.sunny.ui.extensions.drawable
-import com.ihaha.sunny.ui.extensions.hide
-import com.ihaha.sunny.ui.extensions.show
-import com.ihaha.sunny.ui.extensions.string
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 @FlowPreview
@@ -50,32 +46,33 @@ class WelcomeFragment : BaseBindingFragment<FragmentWelcomeBinding, WelcomeViewM
     private fun initEventListener() {
         launch {
             delay(2000)
-            if(currentUser != null){
+            if (currentUser != null) {
                 viewBinding.ivAvatar.setImageURI(Uri.parse(currentUser?.pictureUrl))
-                WelcomeFragmentArgs.fromBundle(bundleOf("isAuth" to true))
-            }
-            else{
+                val bundle = bundleOf("isAuth" to true)
+                findNavController().navigate(R.id.action_welcomeFragment_to_splashFragment, bundle)
+            } else {
                 viewBinding.ivAvatar.setImageDrawable(drawable(R.drawable.ic_account_circle_white_24))
-                WelcomeFragmentArgs.fromBundle(bundleOf("isAuth" to false))
+                val bundle = bundleOf("isAuth" to false)
+                findNavController().navigate(R.id.action_welcomeFragment_to_splashFragment, bundle)
             }
-            findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToSplashFragment())
+
         }
     }
 
     private fun initSubscribeRegister() {
         launch {
-            viewModel.getCurrentUser().observe(viewLifecycleOwner, Observer {
-                currentUser = User(
-                    uid = it?.uid,
-                    username = it?.displayName,
-                    email = it?.email,
-                    phone = it?.phoneNumber,
-                    pictureUrl = it?.photoUrl.toString()
-                )
-            })
+            val user = viewModel.getCurrentUser()
+            currentUser = User(
+                uid = user?.uid,
+                username = user?.displayName,
+                email = user?.email,
+                phone = user?.phoneNumber,
+                pictureUrl = user?.photoUrl.toString()
+            )
         }
     }
-
     //endregion
 }
+
+
 

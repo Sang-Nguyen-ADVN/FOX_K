@@ -23,51 +23,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d90871a5-66de-424e-bf9c-8ccd127c4c2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/fragment_sign_in_xml_constraintlayout_scene.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/fragment_splash_xml_constraintlayout_scene.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/fragment_welcome_xml_constraint_layout_scene.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/remote/StateResource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/resource/NetworkBoundResourceNoCache.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-hdpi/Background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-hdpi/background_container.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-hdpi/background_login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-ldpi/Background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-ldpi/background_container.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-ldpi/background_login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-mdpi/Background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-mdpi/background_container.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-mdpi/background_login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-xhdpi/Background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-xhdpi/background_container.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-xhdpi/background_login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-xxhdpi/Background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-xxhdpi/background_container.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-xxhdpi/background_login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-xxxhdpi/Background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-xxxhdpi/background_container.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable-xxxhdpi/background_login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable/background_edittext_line_color.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable/background_progress_loading.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/drawable/ic_account_circle_white_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/ui/src/main/res/layout/layout_welcome_loading.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/domain/src/main/java/com/ihaha/sunny/fox/domain/viewstate/AuthViewState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/src/main/java/com/ihaha/sunny/fox/data/utils/Constants.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/FOX.buildSrc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/FOX.buildSrc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/FOX.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/FOX.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/commons/base/FOX.commons.base.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/commons/base/FOX.commons.base.iml" afterDir="false" />
@@ -86,100 +64,40 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules/features/ui_organizations/FOX.features.ui_organizations.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/features/ui_organizations/FOX.features.ui_organizations.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/features/ui_settings/FOX.features.ui_settings.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/features/ui_settings/FOX.features.ui_settings.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/features/ui_tags/FOX.features.ui_tags.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/features/ui_tags/FOX.features.ui_tags.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/Constants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/di/ViewModelModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/di/ViewModelModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/ResetPasswordFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/ResetPasswordFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/ResetPasswordViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/ResetPasswordViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignInFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignInFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignInViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignInViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignUpFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignUpFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignUpViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignUpViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/boarding/BoardingFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/boarding/BoardingFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/callback/OnListenerNavigationToMainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/callback/OnListenerNavigationToMainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/splash/SplashFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/splash/SplashFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/welcome/WelcomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/welcome/WelcomeActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/welcome/WelcomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/welcome/WelcomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/logo_onbroading.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/logo_broading.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/logo_onbroading.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/logo_broading.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/logo_onbroading.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/logo_broading.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/logo_onbroading.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/logo_broading.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/logo_onbroading.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/logo_broading.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background_welcome_image_avatar_circle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background_welcome_image_avatar_circle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_boarding.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_boarding.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_reset_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_reset_password.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_in.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_up.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_splash.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/navigation_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/navigation_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/welcome/WelcomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/welcome/WelcomeViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/navigation_welcome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/navigation_welcome.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/generated-sources/kotlin-dsl-external-plugin-spec-builders/kotlin/gradle/kotlin/dsl/plugins/_524ba0864d58e956d664dac09d46a96a/PluginSpecBuilders.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin-dsl/plugins-blocks/compiled/META-INF/precompiled-script-plugin-plugins.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin-dsl/plugins-blocks/compiled/META-INF/precompiled-script-plugin-plugins.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin-dsl/precompiled-script-plugins-metadata/plugin-spec-builders/implicit-imports" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin-dsl/precompiled-script-plugins-metadata/plugin-spec-builders/implicit-imports" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/BuildDependenciesVersions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/BuildDependenciesVersions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/BuildTypes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/BuildTypes.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/dependencies/Dependencies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/dependencies/Dependencies.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/plugins/spotless.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/plugins/spotless.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/domain/BaseUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/domain/BaseUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/remote/Resource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/remote/DataState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/resource/DbBoundResource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/resource/DbBoundResource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/resource/NetworkBoundResource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/resource/NetworkBoundResource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/resource/SingleFetchNetworkBoundResource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/resource/SingleFetchNetworkBoundResource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/presentation/fragment/BaseBindingFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/presentation/fragment/BaseBindingFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/presentation/fragment/BaseFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/presentation/fragment/BaseFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/presentation/viewpager/BaseTabViewPagerFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/presentation/viewpager/BaseTabViewPagerFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/presentation/viewpager/BaseViewPagerFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/presentation/viewpager/BaseViewPagerFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/presentation/webview/BaseWebViewFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/presentation/webview/BaseWebViewFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/utils/lifecycle/LifeCycleObserverUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/utils/lifecycle/LifeCycleObserverUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/base/src/main/res/layout/layout_loading.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/src/main/res/layout/layout_loading.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/base/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/commons/base/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commons/ui/src/main/java/com/ihaha/sunny/ui/extensions/StringExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/commons/ui/src/main/java/com/ihaha/sunny/ui/extensions/StringExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/ui/src/main/res/drawable/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/ui/src/main/res/values-en-rUS/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commons/ui/src/main/res/values-en-rUS/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/ui/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commons/ui/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/ui/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commons/ui/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/ui/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commons/ui/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/data/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/core/data/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/data/src/main/java/com/ihaha/sunny/fox/data/di/DataModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/data/src/main/java/com/ihaha/sunny/fox/data/di/DataModule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/data/src/main/java/com/ihaha/sunny/fox/data/repository/auth/FirebaseAuthRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/data/src/main/java/com/ihaha/sunny/fox/data/repository/auth/FirebaseAuthRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/data/src/main/java/com/ihaha/sunny/fox/data/repository/home/NewestRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/data/src/main/java/com/ihaha/sunny/fox/data/repository/home/NewestRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/domain/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/core/domain/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/domain/src/main/java/com/ihaha/sunny/fox/domain/di/DomainModules.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/domain/src/main/java/com/ihaha/sunny/fox/domain/di/DomainModules.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/domain/src/main/java/com/ihaha/sunny/fox/domain/repository/auth/FirebaseAuthRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/domain/src/main/java/com/ihaha/sunny/fox/domain/repository/auth/FirebaseAuthRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/domain/src/main/java/com/ihaha/sunny/fox/domain/repository/home/NewestRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/domain/src/main/java/com/ihaha/sunny/fox/domain/repository/home/NewestRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/domain/src/main/java/com/ihaha/sunny/fox/domain/usecase/auth/AuthUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/domain/src/main/java/com/ihaha/sunny/fox/domain/usecase/auth/AuthUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_events/src/main/java/com/ihaha/sunny/fox/events/EventsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_events/src/main/java/com/ihaha/sunny/fox/events/EventsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/HomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/di/HomeModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/di/HomeModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/editors_choice/EditorsChoiceFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/editors_choice/EditorsChoiceFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/newest/NewestFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/newest/NewestFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/series/SeriesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/series/SeriesFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/trending/TrendingFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/trending/TrendingFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/video/VideoFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/video/VideoFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_more/src/main/java/com/ihaha/sunny/fox/more/MoreFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_more/src/main/java/com/ihaha/sunny/fox/more/MoreFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_organizations/src/main/java/com/ihaha/sunny/fox/organizations/OriganizationsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_organizations/src/main/java/com/ihaha/sunny/fox/organizations/OriganizationsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_settings/src/main/java/com/ihaha/sunny/fox/settings/SettingsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_settings/src/main/java/com/ihaha/sunny/fox/settings/SettingsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/ui_tags/src/main/java/com/ihaha/sunny/fox/tags/TagsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/features/ui_tags/src/main/java/com/ihaha/sunny/fox/tags/TagsFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3a_XL_API_27]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -202,7 +120,12 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FOX" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -215,8 +138,8 @@
         <option value="layoutResourceFile" />
         <option value="navigationResourceFile" />
         <option value="Kotlin File" />
-        <option value="Kotlin Class" />
         <option value="resourceFile" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -256,7 +179,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="PsdUISettings">
     <option name="BUILD_VARIANTS_TAB" value="Build Types" />
@@ -264,12 +187,12 @@
     <option name="LAST_EDITED_FLAVOR_OR_DIMENSION" value="ProductFlavorDevelop" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/commons/ui/src/main/res/layout" />
-      <recent name="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/resource" />
-      <recent name="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/remote" />
-      <recent name="$PROJECT_DIR$/core/domain/src/main/java/net/ihaha/sunny/fox/domain/model/home" />
-      <recent name="$PROJECT_DIR$/commons/base/src/main/java/net/ihaha/sunny/base/network/resource" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/commons/ui/src/main/java/net/ihaha/sunny/ui/extensions" />
+      <recent name="$PROJECT_DIR$/commons/base/src/main/java/net/ihaha/sunny/base/utils/extentions" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/navigation" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/commons/navigation/src/main/res/navigation" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="net.ihaha.sunny.fox.data" />
@@ -284,18 +207,18 @@
       <recent name="net.ihaha.sunny.fox.local.room.tags" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.ihaha.sunny.fox.domain.repository.auth" />
+      <recent name="com.ihaha.sunny.fox.data.repository.auth" />
       <recent name="net.ihaha.sunny.base.data" />
       <recent name="net.ihaha.sunny.fox.data.model" />
       <recent name="net.ihaha.sunny.fox.data.repository.auth" />
-      <recent name="net.ihaha.sunny.base.domain" />
-      <recent name="net.ihaha.sunny.fox.domain.viewstate" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/commons/ui/src/main/java/net/ihaha/sunny/ui/extensions" />
-      <recent name="$PROJECT_DIR$/commons/base/src/main/java/net/ihaha/sunny/base/utils/extentions" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/navigation" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
-      <recent name="$PROJECT_DIR$/commons/navigation/src/main/res/navigation" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/commons/ui/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/resource" />
+      <recent name="$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/network/remote" />
+      <recent name="$PROJECT_DIR$/core/domain/src/main/java/net/ihaha/sunny/fox/domain/model/home" />
+      <recent name="$PROJECT_DIR$/commons/base/src/main/java/net/ihaha/sunny/base/network/resource" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.FOX.app">
@@ -401,10 +324,10 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FOX_K [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FOX_K:app [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -412,7 +335,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value="buildDependents" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -420,10 +343,10 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FOX_K [lintFix]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FOX_K:app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -431,7 +354,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="lintFix" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -439,10 +362,10 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FOX_K [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FOX_K:app [cleanBuildCache]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -450,7 +373,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="signingReport" />
+            <option value="cleanBuildCache" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -458,13 +381,21 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Android App.FOX.app" />
+      <item itemvalue="Gradle.FOX_K [build]" />
+      <item itemvalue="Gradle.FOX_K [cleanBuildCache]" />
+      <item itemvalue="Gradle.FOX_K:app [build]" />
+      <item itemvalue="Gradle.FOX_K:app [cleanBuildCache]" />
+      <item itemvalue="Gradle.FOX_K:app [buildDependents]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.FOX_K [signingReport]" />
-        <item itemvalue="Gradle.FOX_K [lintFix]" />
-        <item itemvalue="Gradle.FOX_K [clean]" />
-        <item itemvalue="Gradle.FOX_K [cleanBuildCache]" />
+        <item itemvalue="Gradle.FOX_K:app [buildDependents]" />
+        <item itemvalue="Gradle.FOX_K:app [cleanBuildCache]" />
+        <item itemvalue="Gradle.FOX_K:app [build]" />
         <item itemvalue="Gradle.FOX_K [build]" />
+        <item itemvalue="Gradle.FOX_K [cleanBuildCache]" />
       </list>
     </recent_temporary>
   </component>
@@ -494,11 +425,15 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="384" y="113" key="#Project_Structure/0.23.1792.1017@0.23.1792.1017" timestamp="1591989199159" />
-    <state x="683" y="254" key="#com.intellij.ide.util.MemberChooser" timestamp="1593354876345">
+    <state x="360" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593961466632">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="360" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1593961466632" />
+    <state x="683" y="254" key="#com.intellij.ide.util.MemberChooser" timestamp="1593971617593">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="683" y="254" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1593240837252" />
-    <state x="683" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1017@0.23.1792.1017" timestamp="1593354876345" />
+    <state x="683" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1017@0.23.1792.1017" timestamp="1593971617593" />
     <state x="457" y="485" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593009897386">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -523,10 +458,10 @@
     </state>
     <state x="454" y="327" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1593009845089" />
     <state x="454" y="320" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1592673578044" />
-    <state x="100" y="123" width="1592" height="817" key="AVDManager" timestamp="1592016372803">
+    <state x="100" y="123" width="1592" height="817" key="AVDManager" timestamp="1593466576193">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state x="100" y="123" width="1592" height="817" key="AVDManager/0.23.1792.1017@0.23.1792.1017" timestamp="1592016372803" />
+    <state x="100" y="123" width="1592" height="817" key="AVDManager/0.23.1792.1017@0.23.1792.1017" timestamp="1593466576193" />
     <state x="484" y="293" key="AndroidCreateResourceDirectoryDialog" timestamp="1593345903350">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
@@ -540,10 +475,10 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="708" y="316" key="AndroidCreateXmlResourceDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1593262605419" />
-    <state x="1071" y="199" key="AndroidProcessChooserDialog" timestamp="1593261402436">
+    <state x="1071" y="199" key="AndroidProcessChooserDialog" timestamp="1593971233254">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state x="1071" y="199" key="AndroidProcessChooserDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1593261402436" />
+    <state x="1071" y="199" key="AndroidProcessChooserDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1593971233254" />
     <state x="484" y="243" key="AndroidThemeDialog" timestamp="1593279140989">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
@@ -552,55 +487,55 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="0" y="0" width="1792" height="1120" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1593013150988" />
-    <state width="482" height="466" key="DebuggerActiveHint" timestamp="1593261156274">
+    <state width="580" height="466" key="DebuggerActiveHint" timestamp="1593969542130">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="482" height="466" key="DebuggerActiveHint/0.23.1792.1017@0.23.1792.1017" timestamp="1593261156274" />
-    <state width="1318" height="250" key="GridCell.Tab.0.bottom" timestamp="1593365374854">
+    <state width="580" height="466" key="DebuggerActiveHint/0.23.1792.1017@0.23.1792.1017" timestamp="1593969542130" />
+    <state width="1043" height="353" key="GridCell.Tab.0.bottom" timestamp="1593971830164">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state width="1748" height="405" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1593194240402" />
-    <state width="1318" height="250" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1593365374854" />
-    <state width="1318" height="250" key="GridCell.Tab.0.center" timestamp="1593365374854">
+    <state width="1043" height="353" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1593971830164" />
+    <state width="1043" height="353" key="GridCell.Tab.0.center" timestamp="1593971830163">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state width="1748" height="405" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1593194240401" />
-    <state width="1318" height="250" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1593365374854" />
-    <state width="1318" height="250" key="GridCell.Tab.0.left" timestamp="1593365374853">
+    <state width="1043" height="353" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1593971830163" />
+    <state width="1043" height="353" key="GridCell.Tab.0.left" timestamp="1593971830163">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state width="1748" height="405" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1593194240400" />
-    <state width="1318" height="250" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1593365374853" />
-    <state width="1318" height="250" key="GridCell.Tab.0.right" timestamp="1593365374854">
+    <state width="1043" height="353" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1593971830163" />
+    <state width="1043" height="353" key="GridCell.Tab.0.right" timestamp="1593971830163">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state width="1748" height="405" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1593194240401" />
-    <state width="1318" height="250" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1593365374854" />
-    <state width="1748" height="219" key="GridCell.Tab.1.bottom" timestamp="1593279297533">
+    <state width="1043" height="353" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1593971830163" />
+    <state width="1043" height="353" key="GridCell.Tab.1.bottom" timestamp="1593971830164">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1748" height="219" key="GridCell.Tab.1.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1593279297533" />
-    <state width="1748" height="219" key="GridCell.Tab.1.center" timestamp="1593279297533">
+    <state width="1043" height="353" key="GridCell.Tab.1.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1593971830164" />
+    <state width="1043" height="353" key="GridCell.Tab.1.center" timestamp="1593971830164">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1748" height="219" key="GridCell.Tab.1.center/0.23.1792.1017@0.23.1792.1017" timestamp="1593279297533" />
-    <state width="1748" height="219" key="GridCell.Tab.1.left" timestamp="1593279297532">
+    <state width="1043" height="353" key="GridCell.Tab.1.center/0.23.1792.1017@0.23.1792.1017" timestamp="1593971830164" />
+    <state width="1043" height="353" key="GridCell.Tab.1.left" timestamp="1593971830164">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1748" height="219" key="GridCell.Tab.1.left/0.23.1792.1017@0.23.1792.1017" timestamp="1593279297532" />
-    <state width="1748" height="219" key="GridCell.Tab.1.right" timestamp="1593279297533">
+    <state width="1043" height="353" key="GridCell.Tab.1.left/0.23.1792.1017@0.23.1792.1017" timestamp="1593971830164" />
+    <state width="1043" height="353" key="GridCell.Tab.1.right" timestamp="1593971830164">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1748" height="219" key="GridCell.Tab.1.right/0.23.1792.1017@0.23.1792.1017" timestamp="1593279297533" />
-    <state x="484" y="281" key="IDE.errors.dialog" timestamp="1593282663641">
+    <state width="1043" height="353" key="GridCell.Tab.1.right/0.23.1792.1017@0.23.1792.1017" timestamp="1593971830164" />
+    <state x="484" y="281" key="IDE.errors.dialog" timestamp="1593958367804">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state x="484" y="281" key="IDE.errors.dialog/0.23.1792.1017@0.23.1792.1017" timestamp="1593282663641" />
-    <state x="397" y="170" key="SettingsEditor" timestamp="1593366128227">
+    <state x="484" y="281" key="IDE.errors.dialog/0.23.1792.1017@0.23.1792.1017" timestamp="1593958367804" />
+    <state x="397" y="170" key="SettingsEditor" timestamp="1593962237329">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="397" y="162" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1593238068348" />
-    <state x="397" y="170" key="SettingsEditor/0.23.1792.1017@0.23.1792.1017" timestamp="1593366128227" />
+    <state x="397" y="170" key="SettingsEditor/0.23.1792.1017@0.23.1792.1017" timestamp="1593962237329" />
     <state x="698" y="316" key="chooseDestDirectoryDialog" timestamp="1593287416023">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
@@ -609,16 +544,17 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="511" y="149" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1792.1017@0.23.1792.1017" timestamp="1593318687099" />
-    <state x="580" y="293" width="865" height="534" key="find.popup" timestamp="1593359442285">
+    <state x="580" y="293" width="865" height="534" key="find.popup" timestamp="1593966394335">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="507" y="275" width="1285" height="589" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1593240546211" />
-    <state x="580" y="293" width="865" height="534" key="find.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1593359442285" />
-    <state x="561" y="248" width="670" height="676" key="search.everywhere.popup" timestamp="1593364760457">
-      <screen x="0" y="23" width="1792" height="1017" />
+    <state x="580" y="293" width="865" height="534" key="find.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1593966394335" />
+    <state x="561" y="250" width="670" height="681" key="search.everywhere.popup" timestamp="1594492980085">
+      <screen x="0" y="23" width="1792" height="1024" />
     </state>
     <state x="561" y="248" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1593236640512" />
-    <state x="561" y="248" width="670" height="676" key="search.everywhere.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1593364760457" />
+    <state x="561" y="248" width="670" height="676" key="search.everywhere.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1593967803686" />
+    <state x="561" y="250" width="670" height="681" key="search.everywhere.popup/0.23.1792.1024@0.23.1792.1024" timestamp="1594492980085" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -644,16 +580,44 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/features/ui_home/src/main/java/com/ihaha/sunny/fox/home/HomeFragment.kt</url>
-          <line>97</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignUpViewModel.kt</url>
+          <line>23</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/commons/base/src/main/java/com/ihaha/sunny/base/presentation/fragment/BaseFragment.kt</url>
-          <line>71</line>
-          <option name="timeStamp" value="20" />
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignUpViewModel.kt</url>
+          <line>19</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignUpFragment.kt</url>
+          <line>123</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/auth/SignUpFragment.kt</url>
+          <line>118</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/welcome/WelcomeActivity.kt</url>
+          <line>36</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/splash/SplashFragment.kt</url>
+          <line>83</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/ihaha/sunny/fox/ui/welcome/WelcomeFragment.kt</url>
+          <line>48</line>
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
+      <breakpoints-defaults>
+        <breakpoint type="kotlin-line" />
+      </breakpoints-defaults>
     </breakpoint-manager>
   </component>
 </project>
