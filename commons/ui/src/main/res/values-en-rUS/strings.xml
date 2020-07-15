@@ -100,5 +100,23 @@
     <string name="title_reset_password_input">Email</string>
     <string name="title_reset_password_send">Send</string>
 
+    <string name="title_on_boarding_one_title">Tài nguyên phong phú</string>
+    <string name="title_on_boarding_two_title">Kiến thức bổ ích</string>
+    <string name="title_on_boarding_three_title">Kiểm tra tư duy</string>
+    <string name="title_on_boarding_four_title">Sân chơi vui nhộn</string>
+    <string name="title_on_boarding_five_title">Hỗ trợ trực tiếp</string>
+
+    <string name="title_on_boarding_one_sub">Cung cấp nhiều tài nguyên từ cộng đồng lập trình</string>
+    <string name="title_on_boarding_two_sub">Liên tục cập nhật công nghệ</string>
+    <string name="title_on_boarding_three_sub">kiểm tra kiến thức online</string>
+    <string name="title_on_boarding_four_sub">Tạo sân chơi vui nhộn cho các lập trình viên</string>
+    <string name="title_on_boarding_five_sub">Những câu hỏi sẽ được cộng đồng giúp đỡ</string>
+
+    <string name="title_on_boarding_one_des"></string>
+    <string name="title_on_boarding_two_des">Từ cộng đồng lập trình</string>
+    <string name="title_on_boarding_three_des">Nâng cao khả năng lập trình</string>
+    <string name="title_on_boarding_four_des"></string>
+    <string name="title_on_boarding_five_des">Trả lời trực tiếp dưới bài </string>
+
 
 </resources>

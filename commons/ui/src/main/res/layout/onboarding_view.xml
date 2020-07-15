@@ -16,13 +16,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-    <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.8"/>
-
     <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
             android:id="@+id/page_indicator"
             android:layout_width="wrap_content"
@@ -33,10 +26,8 @@
             app:dotsSize="@dimen/dp_8"
             app:dotsSpacing="@dimen/dp_8"
             app:dotsStrokeWidth="1dp"
-            app:layout_constraintTop_toBottomOf="@+id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-    />
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     <com.google.android.material.button.MaterialButton

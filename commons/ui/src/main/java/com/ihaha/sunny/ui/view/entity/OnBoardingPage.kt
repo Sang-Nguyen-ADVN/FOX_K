@@ -10,8 +10,10 @@ enum class OnBoardingPage(
     @DrawableRes val logoResource: Int
 ) {
 
-    ONE(R.string.onboarding_slide1_title, R.string.onboarding_slide1_subtitle,R.string.onboarding_slide1_desc, R.drawable.ic_directions),
-    TWO(R.string.onboarding_slide2_title, R.string.onboarding_slide2_subtitle,R.string.onboarding_slide2_desc, R.drawable.ic_hang_out),
-    THREE(R.string.onboarding_slide2_title, R.string.onboarding_slide3_subtitle,R.string.onboarding_slide1_desc, R.drawable.ic_a_day_at_the_park)
+    ONE(R.string.title_on_boarding_one_title, R.string.title_on_boarding_one_sub,R.string.title_on_boarding_one_des, R.drawable.image_onboarding_one),
+    TWO(R.string.title_on_boarding_two_title, R.string.title_on_boarding_two_sub,R.string.title_on_boarding_two_des, R.drawable.image_onboarding_two),
+    THREE(R.string.title_on_boarding_three_title, R.string.title_on_boarding_three_sub,R.string.title_on_boarding_three_des, R.drawable.image_onboarding_three),
+    FOUR(R.string.title_on_boarding_four_title, R.string.title_on_boarding_four_sub,R.string.title_on_boarding_four_des, R.drawable.image_onboarding_four),
+    FIVE(R.string.title_on_boarding_five_title, R.string.title_on_boarding_five_sub,R.string.title_on_boarding_five_des, R.drawable.image_onboarding_five)
 
 }
