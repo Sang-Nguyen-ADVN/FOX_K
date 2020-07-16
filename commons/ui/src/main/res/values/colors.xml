@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--    100% — FF-->
+<!--    95% — F2-->
+<!--    90% — E6-->
+<!--    85% — D9-->
+<!--    80% — CC-->
+<!--    75% — BF-->
+<!--    70% — B3-->
+<!--    65% — A6-->
+<!--    60% — 99-->
+<!--    55% — 8C-->
+<!--    50% — 80-->
+<!--    45% — 73-->
+<!--    40% — 66-->
+<!--    35% — 59-->
+<!--    30% — 4D-->
+<!--    25% — 40-->
+<!--    20% — 33-->
+<!--    15% — 26-->
+<!--    10% — 1A-->
+<!--    5% — 0D-->
+<!--    0% — 00-->
+
 <resources>
     <color name="color_primary">#f78500</color>
     <color name="color_primary_variant">#fba31d</color>
@@ -290,6 +313,7 @@ https://material.io/design/color/ -->
     <color name="orange_600">#FB8C00</color>
     <color name="orange_700">#F57C00</color>
     <color name="orange_800">#EF6C00</color>
+    <color name="orange_800_90">#E6EF6C00</color>
     <color name="orange_900">#E65100</color>
     <color name="orange_A100">#FFD180</color>
     <color name="orange_A200">#FFAB40</color>

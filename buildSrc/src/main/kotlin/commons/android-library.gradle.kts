@@ -107,6 +107,9 @@ dependencies {
     implementation(Dependencies.KOIN)
     implementation(Dependencies.KOIN_VIEW_MODEL)
     implementation(Dependencies.KOIN_EXT)
+
+    implementation(Dependencies.SDP)
+    implementation(Dependencies.SSP)
 //    api(Dependencies.DAGGER)
 //    kapt(AnnotationProcessorsDependencies.DAGGER)
 

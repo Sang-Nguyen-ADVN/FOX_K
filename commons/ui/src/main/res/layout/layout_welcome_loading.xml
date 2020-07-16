@@ -7,27 +7,12 @@
     android:orientation="vertical"
     android:visibility="visible">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
     <TextView
         android:id="@+id/loadingTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_8"
-        android:text="@string/title_loading"
-        android:textColor="@color/white" />
-
-    <ImageView
-        android:id="@+id/loadingImage"
-        android:layout_width="@dimen/dp_20"
-        android:layout_height="@dimen/dp_20"
-        android:layout_marginTop="@dimen/dp_8"
-        android:background="@drawable/ic_spinner_loading"/>
-
-    </LinearLayout>
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/title_loading"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -37,7 +22,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:indeterminate="true"
-        android:indeterminateTintMode="src_atop"
-        android:indeterminateTint="@color/color_primary"/>
+        android:indeterminateTint="@color/color_primary"
+        android:indeterminateTintMode="src_atop" />
 
 </LinearLayout>

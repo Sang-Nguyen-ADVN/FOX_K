@@ -13,13 +13,13 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="0dp"
-            android:layout_height="@dimen/dp_48"
+            android:layout_height="@dimen/_48sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@color/color_primary"
             app:tabIndicatorColor="@color/color_Accent"
-            app:tabIndicatorHeight="@dimen/dp_2"
+            app:tabIndicatorHeight="@dimen/_2sdp"
             app:tabMode="scrollable"/>
 
         <androidx.viewpager2.widget.ViewPager2

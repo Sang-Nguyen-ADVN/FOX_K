@@ -64,6 +64,9 @@ object BuildDependenciesVersions {
     //IMAGE
     const val COIL = "0.8.0"
     const val GLIDE = "4.11.0"
+    //SIZE
+    const val SDP = "1.0.6"
+    const val SSP = "1.0.6"
 
     //GOOGLE
     const val CRASHLYTICS = "17.0.1"

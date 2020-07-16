@@ -161,6 +161,9 @@ dependencies {
     implementation(Dependencies.PAGING)
     implementation(Dependencies.PROGRESS_BUTTON)
     implementation(Dependencies.PROGRESS_BAR)
+    implementation(Dependencies.SDP)
+    implementation(Dependencies.SSP)
+
 
     //NAVIGATION
     implementation(Dependencies.NAVIGATION_FRAGMENT)

@@ -41,6 +41,8 @@ dependencies {
     implementation(Dependencies.PRO_PROGRESS_VIEWS)
     implementation(Dependencies.SWIPE_REFRESH_LAYOUT)
     implementation(Dependencies.MATERIAL_DIALOG)
+    implementation(Dependencies.SDP)
+    implementation(Dependencies.SSP)
 
     //PAGER
     implementation(Dependencies.NAVIGATION_FRAGMENT)

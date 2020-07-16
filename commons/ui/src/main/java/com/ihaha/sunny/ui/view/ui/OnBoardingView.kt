@@ -8,6 +8,8 @@ import android.widget.FrameLayout
 import androidx.viewpager2.widget.ViewPager2
 import kotlinx.android.synthetic.main.onboarding_view.view.*
 import com.ihaha.sunny.ui.R
+import com.ihaha.sunny.ui.extensions.hide
+import com.ihaha.sunny.ui.extensions.show
 import com.ihaha.sunny.ui.view.adapter.OnBoardingPagerAdapter
 import com.ihaha.sunny.ui.view.anim.setParallaxTransformation
 import com.ihaha.sunny.ui.view.domain.OnBoardingPrefManager
@@ -53,12 +55,34 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
         slider.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
-                if (numberOfPages > 1) {
-                    val newProgress = (position + positionOffset) / (numberOfPages - 1)
-                    onboardingRoot.progress = newProgress
+//                if (numberOfPages > 1) {
+//                    val newProgress = (position + positionOffset) / (numberOfPages - 1)
+//                    onboardingRoot.progress = newProgress
+//                    showView()
+//                }
+                if(position >= numberOfPages - 1){
+                    hideView()
+                }else{
+                    showView()
                 }
             }
         })
+    }
+
+    private fun showView(){
+        view_bottom.show()
+        nextBtn.show()
+        skipBtn.show()
+        page_indicator.show()
+        startBtn.hide()
+    }
+
+    private fun hideView(){
+        view_bottom.hide()
+        nextBtn.hide()
+        skipBtn.hide()
+        page_indicator.hide()
+        startBtn.show()
     }
 
     private fun addingButtonsClickListeners() {

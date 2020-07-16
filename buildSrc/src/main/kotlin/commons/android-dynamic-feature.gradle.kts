@@ -110,6 +110,9 @@ dependencies {
     implementation(Dependencies.CORE_KTX)
     implementation(Dependencies.FRAGMENT_KTX)
     implementation(Dependencies.CONSTRAIN_LAYOUT)
+    implementation(Dependencies.SDP)
+    implementation(Dependencies.SSP)
+
 
     //NAVIGATION
     implementation(Dependencies.NAVIGATION_FRAGMENT)

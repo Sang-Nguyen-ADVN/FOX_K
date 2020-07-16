@@ -60,6 +60,10 @@ object Dependencies {
     const val GLIDE = "com.github.bumptech.glide:glide:${BuildDependenciesVersions.GLIDE}"
     const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:${BuildDependenciesVersions.GLIDE}"
 
+    //SIZE
+    const val SDP = "com.intuit.sdp:sdp-android:${BuildDependenciesVersions.SDP}"
+    const val SSP = "com.intuit.ssp:ssp-android:${BuildDependenciesVersions.SSP}"
+
     //COROUTINE
     const val COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${BuildDependenciesVersions.COROUTINES}"
     const val COROUTINES_ANDROID = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${BuildDependenciesVersions.COROUTINES}"

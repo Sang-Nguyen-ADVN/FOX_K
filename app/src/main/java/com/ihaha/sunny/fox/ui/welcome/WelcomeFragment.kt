@@ -1,13 +1,16 @@
 package com.ihaha.sunny.fox.ui.welcome
 
 import android.annotation.SuppressLint
+import android.graphics.ImageDecoder
 import android.graphics.drawable.AnimatedImageDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.ihaha.sunny.base.presentation.fragment.BaseBindingFragment
+import com.ihaha.sunny.fox.Constants
 import com.ihaha.sunny.fox.R
 import com.ihaha.sunny.fox.databinding.FragmentWelcomeBinding
 import com.ihaha.sunny.fox.domain.model.auth.User
@@ -41,19 +44,54 @@ class WelcomeFragment : BaseBindingFragment<FragmentWelcomeBinding, WelcomeViewM
         initEventListener()
     }
 
-    @SuppressLint("NewApi")
     private fun initComponents() {
         viewBinding.mlContainer.transitionToStart()
         viewBinding.mlContainer.transitionToEnd()
-        val iconLoading = viewBinding.layoutLoading.loadingImage
-        iconLoading.setImageResource(R.drawable.ic_spinner_loading)
-        iconLoading.drawable
-        if(iconLoading is AnimatedImageDrawable){
-            iconLoading.start();
-        }
     }
 
     private fun initEventListener() {
+
+    }
+
+    private fun initSubscribeRegister() {
+        launch {
+            val user = viewModel.getCurrentUser()
+//            if (user?.isAnonymous != null) {
+            signInAnonymous()
+//            } else {
+//                currentUser = User(
+//                    uid = user?.uid,
+//                    username = user?.displayName,
+//                    email = user?.email,
+//                    phone = user?.phoneNumber,
+//                    pictureUrl = user?.photoUrl.toString()
+//                )
+//                gotoSplashScreen()
+//            }
+        }
+    }
+
+    private fun signInAnonymous() {
+        launch {
+            viewModel.signInAnonymous()
+                .observe(viewLifecycleOwner, Observer {
+                    it.addOnCompleteListener { result ->
+                        when {
+                            result.isSuccessful -> {
+                                if (result.result != null) {
+                                    gotoSplashScreen()
+                                }
+                            }
+                            else -> {
+                                gotoSplashScreen()
+                            }
+                        }
+                    }
+                })
+        }
+    }
+
+    private fun gotoSplashScreen() {
         launch {
             delay(2000)
             if (currentUser != null) {
@@ -65,26 +103,10 @@ class WelcomeFragment : BaseBindingFragment<FragmentWelcomeBinding, WelcomeViewM
                 val bundle = bundleOf("isAuth" to false)
                 findNavController().navigate(R.id.action_welcomeFragment_to_splashFragment, bundle)
             }
-
         }
     }
 
-    private fun initSubscribeRegister() {
-        launch {
-            val user = viewModel.getCurrentUser()
-            if(user != null) {
-                currentUser = User(
-                    uid = user?.uid,
-                    username = user?.displayName,
-                    email = user?.email,
-                    phone = user?.phoneNumber,
-                    pictureUrl = user?.photoUrl.toString()
-                )
-            }
-        }
-    }
-
-    private fun animation(view: View){
+    private fun animation(view: View) {
 
     }
     //endregion

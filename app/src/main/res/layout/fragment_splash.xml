@@ -19,12 +19,12 @@
             android:id="@+id/ml_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layoutDescription="@xml/fragment_splash_xml_constraintlayout_scene">
+            app:layoutDescription="@xml/fragment_splash_motion_scene">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/appCompatImageView"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_80"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
                 android:src="@drawable/logo_broading"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

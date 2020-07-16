@@ -2,27 +2,27 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="true">
         <shape android:shape="rectangle">
-            <stroke android:color="@color/color_primary" android:width="@dimen/dp_2"/>
+            <stroke android:color="@color/color_primary" android:width="@dimen/_2sdp"/>
             <solid android:color="@color/white" />
-            <corners android:radius="@dimen/dp_4" />
-            <size android:height="@dimen/dp_36"/>
+            <corners android:radius="@dimen/_2sdp" />
+            <size android:height="@dimen/_36ssp"/>
         </shape>
     </item>
 
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <stroke android:color="@color/color_primary" android:width="@dimen/dp_2"/>
+            <stroke android:color="@color/color_primary" android:width="@dimen/_2sdp"/>
             <solid android:color="@color/color_primary" />
-            <corners android:radius="@dimen/dp_4" />
-            <size android:height="@dimen/dp_4"/>
+            <corners android:radius="@dimen/_4sdp" />
+            <size android:height="@dimen/_4sdp"/>
         </shape>
     </item>
 
     <item android:state_enabled="false">
         <shape android:shape="rectangle">
             <solid android:color="@android:color/transparent" />
-            <corners android:radius="@dimen/dp_4" />
-            <size android:height="@dimen/dp_36"/>
+            <corners android:radius="@dimen/_4sdp" />
+            <size android:height="@dimen/_36sdp"/>
         </shape>
     </item>
 </selector>

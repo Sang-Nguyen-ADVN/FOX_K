@@ -16,8 +16,7 @@
         android:id="@+id/ml_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
-        app:layoutDescription="@xml/fragment_welcome_xml_constraint_layout_scene">
+        app:layoutDescription="@xml/fragment_welcome_xml_motion_scene">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivAvatar"
@@ -32,11 +31,11 @@
         <include
             android:id="@+id/layout_loading"
             layout="@layout/layout_welcome_loading"
-            android:layout_width="@dimen/dp_250"
+            android:layout_width="@dimen/_200sdp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dp_10"
-            android:layout_marginBottom="@dimen/material_margin_bottom"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

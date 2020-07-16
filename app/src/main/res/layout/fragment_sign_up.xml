@@ -19,24 +19,24 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_title"
-            style="@style/textAppearanceHeadline4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/material_margin_start"
-            android:layout_marginTop="@dimen/dp_70"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_70sdp"
             android:text="@string/title_sign_up_create_account"
+            android:textAppearance="@style/textAppearanceHeadlineTitleLarge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_sub_title"
-            style="@style/textAppearanceHeadlineTextMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_sign_up_create_continue"
+            android:textAppearance="@style/textAppearanceHeadlineTitleMedium"
             android:textColor="@color/color_secondary"
-            android:textSize="@dimen/sp_20"
+            android:textSize="@dimen/_20ssp"
             app:layout_constraintEnd_toEndOf="@+id/tv_title"
             app:layout_constraintStart_toStartOf="@+id/tv_title"
             app:layout_constraintTop_toBottomOf="@+id/tv_title" />
@@ -44,8 +44,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
             android:layout_width="0dp"
-            android:layout_height="@dimen/dp_580"
-            android:layout_marginTop="@dimen/dp_10"
+            android:layout_height="@dimen/_500sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/background_container"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,15 +56,15 @@
                 android:id="@+id/til_user_name"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_60"
-                android:layout_marginStart="@dimen/dp_30"
-                android:layout_marginTop="@dimen/dp_30"
-                android:layout_marginEnd="@dimen/dp_30"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
                 app:boxBackgroundColor="@color/color_secondary"
-                app:boxCornerRadiusBottomEnd="@dimen/dp_40"
-                app:boxCornerRadiusBottomStart="@dimen/dp_40"
-                app:boxCornerRadiusTopEnd="@dimen/dp_40"
-                app:boxCornerRadiusTopStart="@dimen/dp_40"
+                app:boxCornerRadiusBottomEnd="@dimen/_40sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_40sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_40sdp"
+                app:boxCornerRadiusTopStart="@dimen/_40sdp"
                 app:endIconMode="clear_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -73,12 +73,12 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edt_user_name"
-                    style="@style/textAppearanceHeadlineTextMedium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/title_sign_in_user_name"
                     android:inputType="textPersonName"
-                    android:textSize="@dimen/sp_18" />
+                    android:textAppearance="@style/textAppearanceBodyTitleMedium"
+                    android:textSize="@dimen/_18ssp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,15 +86,15 @@
                 android:id="@+id/til_email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_60"
-                android:layout_marginStart="@dimen/dp_30"
-                android:layout_marginTop="@dimen/dp_20"
-                android:layout_marginEnd="@dimen/dp_30"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
                 app:boxBackgroundColor="@color/color_secondary"
-                app:boxCornerRadiusBottomEnd="@dimen/dp_40"
-                app:boxCornerRadiusBottomStart="@dimen/dp_40"
-                app:boxCornerRadiusTopEnd="@dimen/dp_40"
-                app:boxCornerRadiusTopStart="@dimen/dp_40"
+                app:boxCornerRadiusBottomEnd="@dimen/_40sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_40sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_40sdp"
+                app:boxCornerRadiusTopStart="@dimen/_40sdp"
                 app:endIconMode="clear_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -103,12 +103,12 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edt_email"
-                    style="@style/textAppearanceHeadlineTextMedium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/title_sign_up_email_address"
                     android:inputType="textPersonName"
-                    android:textSize="@dimen/sp_18" />
+                    android:textAppearance="@style/textAppearanceBodyTitleMedium"
+                    android:textSize="@dimen/_18ssp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -116,15 +116,15 @@
                 android:id="@+id/til_user_password"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_60"
-                android:layout_marginStart="@dimen/dp_30"
-                android:layout_marginTop="@dimen/dp_20"
-                android:layout_marginEnd="@dimen/dp_30"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
                 app:boxBackgroundColor="@color/color_secondary"
-                app:boxCornerRadiusBottomEnd="@dimen/dp_40"
-                app:boxCornerRadiusBottomStart="@dimen/dp_40"
-                app:boxCornerRadiusTopEnd="@dimen/dp_40"
-                app:boxCornerRadiusTopStart="@dimen/dp_40"
+                app:boxCornerRadiusBottomEnd="@dimen/_40sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_40sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_40sdp"
+                app:boxCornerRadiusTopStart="@dimen/_40sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/til_email"
@@ -134,12 +134,12 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edt_user_password"
-                    style="@style/textAppearanceHeadlineTextMedium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/title_sign_up_password"
                     android:inputType="textPassword"
-                    android:textSize="@dimen/sp_18" />
+                    android:textAppearance="@style/textAppearanceBodyTitleMedium"
+                    android:textSize="@dimen/_18ssp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -147,15 +147,15 @@
                 android:id="@+id/til_re_password"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_60"
-                android:layout_marginStart="@dimen/dp_30"
-                android:layout_marginTop="@dimen/dp_20"
-                android:layout_marginEnd="@dimen/dp_30"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
                 app:boxBackgroundColor="@color/color_secondary"
-                app:boxCornerRadiusBottomEnd="@dimen/dp_40"
-                app:boxCornerRadiusBottomStart="@dimen/dp_40"
-                app:boxCornerRadiusTopEnd="@dimen/dp_40"
-                app:boxCornerRadiusTopStart="@dimen/dp_40"
+                app:boxCornerRadiusBottomEnd="@dimen/_40sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_40sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_40sdp"
+                app:boxCornerRadiusTopStart="@dimen/_40sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/til_user_password"
@@ -165,12 +165,12 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edt_re_password"
-                    style="@style/textAppearanceHeadlineTextMedium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/title_sign_up_re_password"
                     android:inputType="textPassword"
-                    android:textSize="@dimen/sp_18" />
+                    android:textAppearance="@style/textAppearanceBodyTitleMedium"
+                    android:textSize="@dimen/_18ssp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -178,37 +178,37 @@
                 android:id="@+id/btn_sign_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_30"
-                android:layout_marginTop="@dimen/dp_40"
-                android:layout_marginEnd="@dimen/dp_30"
-                android:padding="@dimen/material_padding"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:padding="@dimen/_16sdp"
                 android:text="@string/title_sign_up"
-                app:cornerRadius="@dimen/dp_40"
+                app:cornerRadius="@dimen/_40sdp"
                 app:layout_constraintTop_toBottomOf="@+id/til_re_password" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_error"
-                style="@style/textAppearanceLineError"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_20"
-                android:visibility="visible"
-                android:maxLines="2"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
                 android:gravity="center"
-                android:layout_marginStart="@dimen/dp_30"
-                android:layout_marginEnd="@dimen/dp_30"
+                android:maxLines="2"
+                android:textAppearance="@style/textAppearanceBodyTitleMedium"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="@+id/btn_sign_up"
                 app:layout_constraintStart_toStartOf="@+id/btn_sign_up"
                 app:layout_constraintTop_toBottomOf="@+id/btn_sign_up" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_sign_up_contain"
-                style="@style/textAppearanceHeadlineTextMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/_20sdp"
                 android:text="@string/title_sign_up_already_account"
-                android:textSize="@dimen/sp_20"
+                android:textAppearance="@style/textAppearanceBodyTitleMedium"
+                android:textSize="@dimen/_20ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/tv_sign_in"
                 app:layout_constraintHorizontal_chainStyle="packed"
@@ -217,14 +217,14 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_sign_in"
-                style="@style/textAppearanceSubtitle1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/material_margin_start"
+                android:layout_marginLeft="@dimen/_16sdp"
                 android:text="@string/title_sign_up_to_sign_in"
+                android:textAppearance="@style/textAppearanceBodyTitleMedium"
                 android:textColor="@color/color_Accent"
                 android:textColorLink="@color/color_Accent"
-                android:textSize="@dimen/sp_20"
+                android:textSize="@dimen/_20ssp"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_sign_up_contain"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -235,9 +235,9 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_logo"
-            android:layout_width="@dimen/dp_60"
-            android:layout_height="@dimen/dp_60"
-            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

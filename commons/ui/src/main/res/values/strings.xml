@@ -86,22 +86,22 @@
     <string name="title_reset_password_input">Nhập địa chỉ email</string>
     <string name="title_reset_password_send">Gửi</string>
 
-    <string name="title_on_boarding_one_title">Tài nguyên phong phú</string>
+    <string name="title_on_boarding_one_title">Năng cao kỹ năng</string>
     <string name="title_on_boarding_two_title">Kiến thức bổ ích</string>
-    <string name="title_on_boarding_three_title">Kiểm tra tư duy</string>
+    <string name="title_on_boarding_three_title">Kết nối tất cả</string>
     <string name="title_on_boarding_four_title">Sân chơi vui nhộn</string>
     <string name="title_on_boarding_five_title">Hỗ trợ trực tiếp</string>
 
-    <string name="title_on_boarding_one_sub">Cung cấp nhiều tài nguyên từ cộng đồng lập trình</string>
-    <string name="title_on_boarding_two_sub">Liên tục cập nhật công nghệ</string>
-    <string name="title_on_boarding_three_sub">kiểm tra kiến thức online</string>
-    <string name="title_on_boarding_four_sub">Tạo sân chơi vui nhộn cho các lập trình viên</string>
-    <string name="title_on_boarding_five_sub">Những câu hỏi sẽ được cộng đồng giúp đỡ</string>
+    <string name="title_on_boarding_one_sub">Thử thách bản thân vượt qua giới hạn</string>
+    <string name="title_on_boarding_two_sub">Liên tục cập nhật những thông tin mới nhất</string>
+    <string name="title_on_boarding_three_sub">Cộng đồng lập trình kết nối mọi người</string>
+    <string name="title_on_boarding_four_sub">Tham gia những cuộc thi, kiểm tra kiến thức</string>
+    <string name="title_on_boarding_five_sub">Những khó khăn cộng đồng sẽ giúp đỡ bạn</string>
 
-    <string name="title_on_boarding_one_des"></string>
-    <string name="title_on_boarding_two_des">Từ cộng đồng lập trình</string>
-    <string name="title_on_boarding_three_des">Nâng cao khả năng lập trình</string>
-    <string name="title_on_boarding_four_des"></string>
-    <string name="title_on_boarding_five_des">Trả lời trực tiếp dưới bài </string>
+    <string name="title_on_boarding_one_des">Rèn luyện những ký năng, hoàn thành để được xếp hạng với những cuộc thi để đánh giá khả năng</string>
+    <string name="title_on_boarding_two_des">Tài liệu, nhiều nội dung phong phú từ cộng đồng hỗ trợ nhiều ngôn ngữ, giúp bạn có nhiều trải nghiệm</string>
+    <string name="title_on_boarding_three_des">Tìm hiểu và thảo luận về các giải pháp và thực tiễn tốt nhất với các lập trình viên đồng nghiệp</string>
+    <string name="title_on_boarding_four_des">Vượt qua các cuộc thi, sẽ được xếp hạng với thành tích đạt được giúp bạn có nhiều kiến thức bổ ích</string>
+    <string name="title_on_boarding_five_des">Những câu hỏi sẽ được cộng đồng trả lời trực tiếp nâng cao khả năng và kiến thức</string>
 
 </resources>

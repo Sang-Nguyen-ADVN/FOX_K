@@ -1,73 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/onboardingRoot"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutDescription="@xml/oboarding_main_scene">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/onboardingRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/slider"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:id="@+id/slider"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/white_20"
+        app:layout_constraintBottom_toTopOf="@+id/skipBtn"
+        app:layout_constraintTop_toBottomOf="@+id/skipBtn" />
 
     <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
-            android:id="@+id/page_indicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:dotsColor="@color/color_primary"
-            app:dotsStrokeColor="@color/color_primary"
-            app:dotsCornerRadius="8dp"
-            app:dotsSize="@dimen/dp_8"
-            app:dotsSpacing="@dimen/dp_8"
-            app:dotsStrokeWidth="1dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/page_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        app:dotsColor="@color/blue_400"
+        app:dotsCornerRadius="@dimen/_8sdp"
+        app:dotsSize="@dimen/_8sdp"
+        app:dotsSpacing="@dimen/_8sdp"
+        app:dotsStrokeColor="@color/blue_400"
+        app:dotsStrokeWidth="@dimen/_1sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <com.google.android.material.button.MaterialButton
-            android:id="@+id/nextBtn"
-            style="@style/Widget.MaterialComponents.Button.TextButton.OnBoardTextButton"
-            android:text="@string/title_next"
-            android:layout_marginBottom="@dimen/dp_16"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="@dimen/dp_16"
-            android:layout_marginEnd="@dimen/dp_16"
-            app:layout_constraintTop_toBottomOf="@+id/page_indicator"
-            app:layout_constraintHorizontal_chainStyle="spread"/>
+        android:id="@+id/nextBtn"
+        style="@style/Widget.MaterialComponents.Button.TextButton.OnBoardTextButton"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="@string/title_next"
+        app:layout_constraintBottom_toBottomOf="@+id/page_indicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toTopOf="@+id/page_indicator" />
 
     <com.google.android.material.button.MaterialButton
-            android:id="@+id/startBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dp_16"
-            android:backgroundTint="@color/color_primary"
-            app:cornerRadius="24dp"
-            android:paddingStart="@dimen/dp_30"
-            android:paddingEnd="@dimen/dp_30"
-            android:paddingTop="@dimen/dp_16"
-            android:paddingBottom="@dimen/dp_16"
-            android:text="@string/title_started"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/page_indicator"/>
+        android:id="@+id/startBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:backgroundTint="@color/blue_400"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_30sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:text="@string/title_started"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/_24sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <com.google.android.material.button.MaterialButton
-            android:id="@+id/skipBtn"
-            style="@style/Widget.MaterialComponents.Button.TextButton.OnBoardTextButton"
-            android:text="@string/title_skip"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/page_indicator"
-            android:layout_marginBottom="@dimen/dp_16"
-            android:layout_marginStart="@dimen/dp_16"
-            android:layout_marginEnd="@dimen/dp_16"/>
-</androidx.constraintlayout.motion.widget.MotionLayout>
+        android:id="@+id/skipBtn"
+        style="@style/Widget.MaterialComponents.Button.TextButton.OnBoardTextButton"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="@string/title_skip"
+        app:layout_constraintBottom_toBottomOf="@+id/page_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/page_indicator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

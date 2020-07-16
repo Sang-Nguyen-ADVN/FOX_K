@@ -15,12 +15,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/dp_20">
+        android:layout_margin="@dimen/_20sdp">
 
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_settings"
-            style="@style/textAppearanceHeadline6"
+            style="@style/textAppearanceHeadlineTitleMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_settings"
@@ -30,11 +30,11 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_theme"
-            style="@style/textAppearanceSubtitle1"
+            android:textAppearance="@style/textAppearanceBodyTitleMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_20"
-            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
             android:text="@string/title_change_theme"
             app:layout_constraintEnd_toEndOf="@+id/gl_group"
             app:layout_constraintTop_toBottomOf="@+id/tv_settings" />
@@ -56,16 +56,16 @@
             app:layout_constraintTop_toTopOf="@id/swc_theme"
             app:layout_constraintBottom_toBottomOf="@+id/swc_theme"
             app:layout_constraintStart_toEndOf="@+id/swc_theme"
-            android:layout_marginStart="@dimen/dp_2"
+            android:layout_marginStart="@dimen/_2sdp"
             android:text="@string/title_theme_light"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_language"
-            style="@style/textAppearanceSubtitle1"
+            android:textAppearance="@style/textAppearanceBodyTitleMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_20"
-            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
             android:text="@string/title_change_language"
             app:layout_constraintEnd_toEndOf="@+id/gl_group"
             app:layout_constraintTop_toBottomOf="@+id/tv_theme" />
@@ -85,7 +85,7 @@
             app:layout_constraintTop_toTopOf="@id/swc_language"
             app:layout_constraintBottom_toBottomOf="@+id/swc_language"
             app:layout_constraintStart_toEndOf="@+id/swc_language"
-            android:layout_marginStart="@dimen/dp_2"
+            android:layout_marginStart="@dimen/_2sdp"
             android:text="@string/title_language_vietnamese"/>
 
         <androidx.constraintlayout.widget.Guideline
@@ -93,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="@dimen/dp_140" />
+            app:layout_constraintGuide_begin="@dimen/_140sdp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -36,8 +36,8 @@
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@+id/ivAvatar"
-            android:layout_width="@dimen/dp_48"
-            android:layout_height="@dimen/dp_48"
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_48sdp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
@@ -47,8 +47,8 @@
     <ConstraintSet android:id="@+id/end">
         <Constraint
             android:id="@+id/ivAvatar"
-            android:layout_width="@dimen/dp_72"
-            android:layout_height="@dimen/dp_72"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"

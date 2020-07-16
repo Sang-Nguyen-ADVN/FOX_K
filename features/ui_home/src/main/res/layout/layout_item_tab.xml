@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dp_48"
+    android:layout_height="@dimen/_48sdp"
     android:background="@color/transparent">
 
     <TextView
@@ -12,10 +12,10 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingStart="@dimen/dp_10"
-        android:paddingEnd="@dimen/dp_10"
-        android:paddingTop="@dimen/dp_10"
-        android:paddingBottom="@dimen/dp_10"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
         tools:text="All"
         tools:background="@drawable/bg_tab_selected"/>
 
