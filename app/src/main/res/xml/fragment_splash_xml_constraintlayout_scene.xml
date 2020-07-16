@@ -13,8 +13,8 @@
         <Constraint
             android:id="@+id/appCompatImageView"
             motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="@dimen/dp_100"
-            android:layout_height="@dimen/dp_100"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_70"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent" />
@@ -24,8 +24,8 @@
         <Constraint
             android:id="@+id/appCompatImageView"
             motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="@dimen/dp_120"
-            android:layout_height="@dimen/dp_120"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent" />

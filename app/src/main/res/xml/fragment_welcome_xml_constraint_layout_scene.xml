@@ -6,6 +6,31 @@
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
         motion:duration="1000">
+        <KeyFrameSet >
+            <KeyAttribute
+                motion:motionTarget="@+id/ivAvatar"
+                motion:framePosition="20"
+                android:scaleX="0.2"
+                android:scaleY="0.2" />
+            <KeyAttribute
+                motion:motionTarget="@+id/ivAvatar"
+                motion:framePosition="50"
+                android:scaleX="0.5"
+                android:scaleY="0.5" />
+
+            <KeyAttribute
+                motion:motionTarget="@+id/ivAvatar"
+                motion:framePosition="80"
+                android:scaleX="0.8"
+                android:scaleY="0.8" />
+
+            <KeyAttribute
+                motion:motionTarget="@+id/ivAvatar"
+                motion:framePosition="100"
+                android:scaleX="1"
+                android:scaleY="1" />
+
+        </KeyFrameSet>
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -22,12 +47,15 @@
     <ConstraintSet android:id="@+id/end">
         <Constraint
             android:id="@+id/ivAvatar"
-            android:layout_width="@dimen/dp_86"
-            android:layout_height="@dimen/dp_86"
+            android:layout_width="@dimen/dp_72"
+            android:layout_height="@dimen/dp_72"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
     </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end" />
 
 </MotionScene>

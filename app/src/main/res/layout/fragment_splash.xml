@@ -23,14 +23,13 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/appCompatImageView"
-                android:layout_width="@dimen/dp_120"
-                android:layout_height="@dimen/dp_120"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
                 android:src="@drawable/logo_broading"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
         </androidx.constraintlayout.motion.widget.MotionLayout>
 

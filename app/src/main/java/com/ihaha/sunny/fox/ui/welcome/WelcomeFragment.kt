@@ -1,5 +1,7 @@
 package com.ihaha.sunny.fox.ui.welcome
 
+import android.annotation.SuppressLint
+import android.graphics.drawable.AnimatedImageDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
@@ -39,8 +41,16 @@ class WelcomeFragment : BaseBindingFragment<FragmentWelcomeBinding, WelcomeViewM
         initEventListener()
     }
 
+    @SuppressLint("NewApi")
     private fun initComponents() {
+        viewBinding.mlContainer.transitionToStart()
         viewBinding.mlContainer.transitionToEnd()
+        val iconLoading = viewBinding.layoutLoading.loadingImage
+        iconLoading.setImageResource(R.drawable.ic_spinner_loading)
+        iconLoading.drawable
+        if(iconLoading is AnimatedImageDrawable){
+            iconLoading.start();
+        }
     }
 
     private fun initEventListener() {
@@ -62,14 +72,20 @@ class WelcomeFragment : BaseBindingFragment<FragmentWelcomeBinding, WelcomeViewM
     private fun initSubscribeRegister() {
         launch {
             val user = viewModel.getCurrentUser()
-            currentUser = User(
-                uid = user?.uid,
-                username = user?.displayName,
-                email = user?.email,
-                phone = user?.phoneNumber,
-                pictureUrl = user?.photoUrl.toString()
-            )
+            if(user != null) {
+                currentUser = User(
+                    uid = user?.uid,
+                    username = user?.displayName,
+                    email = user?.email,
+                    phone = user?.phoneNumber,
+                    pictureUrl = user?.photoUrl.toString()
+                )
+            }
         }
+    }
+
+    private fun animation(view: View){
+
     }
     //endregion
 }

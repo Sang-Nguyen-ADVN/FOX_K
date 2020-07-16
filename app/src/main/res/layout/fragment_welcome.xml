@@ -16,20 +16,21 @@
         android:id="@+id/ml_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/black"
         app:layoutDescription="@xml/fragment_welcome_xml_constraint_layout_scene">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivAvatar"
-            android:layout_width="@dimen/dp_86"
-            android:layout_height="@dimen/dp_86"
-            android:src="@drawable/ic_account_circle_white_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_account_circle_white_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <include
-            android:id="@+id/include2"
+            android:id="@+id/layout_loading"
             layout="@layout/layout_welcome_loading"
             android:layout_width="@dimen/dp_250"
             android:layout_height="wrap_content"
